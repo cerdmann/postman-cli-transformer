@@ -7,7 +7,7 @@
 
 Initially created from: `https://github.com/simonw/click-app`
 
-This package will output the STDOUT from Postman CLI collection run and transform the output text to a JSON doc which may in turn be transformed.
+This package will take as input the STDOUT from a Postman CLI collection run and transform the output text to a JSON doc which may in turn be transformed.
 
 ## Installation
 

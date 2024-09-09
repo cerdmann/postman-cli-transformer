@@ -1,7 +1,7 @@
 [project]
 name = "postman-cli-transformer"
 version = "0.1"
-description = "This package will output the STDOUT from Postman CLI collection run and transform the output text to a JSON doc which may in turn be transformed."
+description = "This package will take as input the STDOUT from a Postman CLI collection run and transform the output text to a JSON doc which may in turn be transformed."
 readme = "README.md"
 authors = [{name = "Craig Erdmann"}]
 license = {text = "Apache-2.0"}

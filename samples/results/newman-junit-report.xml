@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Craig Private Pinball Map Collection" tests="8" time="1.660">
+  <testsuite name="Regions / Get location and machine counts" id="84b05d9a-c43f-4bbc-9955-261e4dfc8a8b" timestamp="2024-09-06T16:44:39.226Z" tests="3" failures="0" errors="0" time="0.404">
+    <testcase name="Response status code is 200" time="0.404" classname="RegionsGetLocationAndMachineCounts"/>
+    <testcase name="Response time is less than 500ms" time="0.404" classname="RegionsGetLocationAndMachineCounts"/>
+    <testcase name="Response has the required fields - num_locations and num_lmxes" time="0.404" classname="RegionsGetLocationAndMachineCounts"/>
+  </testsuite>
+  <testsuite name="Regions / Fetch all regions" id="6523295f-9ea3-405c-a687-f66ad68c40cf" timestamp="2024-09-06T16:44:39.226Z" tests="3" failures="0" errors="0" time="0.164">
+    <testcase name="Response status code is 200" time="0.164" classname="RegionsFetchAllRegions"/>
+    <testcase name="Response time is less than 500ms" time="0.164" classname="RegionsFetchAllRegions"/>
+    <testcase name="Validate the response schema for the presence of all required fields" time="0.164" classname="RegionsFetchAllRegions"/>
+  </testsuite>
+  <testsuite name="Regions / Find if name corresponds to a known region" id="d11abc73-fba7-4008-8bd1-f010dce7490b" timestamp="2024-09-06T16:44:39.226Z" tests="5" failures="1" errors="0" time="0.109">
+    <testcase name="Response status code is 200" time="0.109" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Response time is within an acceptable range" time="0.109" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Region object structure is as expected" time="0.109" classname="RegionsFindIfNameCorrespondsToAKnownRegion">
+      <failure type="AssertionFailure" message="expected null to be a number">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c0e8c839-7ec2-4d32-a577-5932b2a72304.]]>
+        <![CDATA[Collection name: Craig Private Pinball Map Collection.]]>
+        <![CDATA[Request name: Regions / Find if name corresponds to a known region.]]>
+        <![CDATA[Test description: Region object structure is as expected.]]>
+        <![CDATA[Error message: expected null to be a number.]]>
+        <![CDATA[Stacktrace: AssertionError: expected null to be a number
+   at Object.eval sandbox-script.js:3:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="All required fields in the 'region' object are present and not empty" time="0.109" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Region object has correct data types for fields" time="0.109" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
+  </testsuite>
+  <testsuite name="Machines / Fetch all machines" id="3bc107ff-5d64-42dc-8b50-dbaaa0bdba45" timestamp="2024-09-06T16:44:39.226Z" tests="4" failures="0" errors="0" time="0.312">
+    <testcase name="Response status code is 200" time="0.312" classname="MachinesFetchAllMachines"/>
+    <testcase name="Response time is less than 500ms" time="0.312" classname="MachinesFetchAllMachines"/>
+    <testcase name="Response has the required fields" time="0.312" classname="MachinesFetchAllMachines"/>
+    <testcase name="Response content type is application/json" time="0.312" classname="MachinesFetchAllMachines"/>
+  </testsuite>
+  <testsuite name="Repeats / Regions Copy / Get location and machine counts" id="430952c4-6112-4818-beb7-f2eb010b5c7e" timestamp="2024-09-06T16:44:39.226Z" tests="3" failures="0" errors="0" time="0.251">
+    <testcase name="Response status code is 200" time="0.251" classname="RepeatsRegionsCopyGetLocationAndMachineCounts"/>
+    <testcase name="Response time is less than 500ms" time="0.251" classname="RepeatsRegionsCopyGetLocationAndMachineCounts"/>
+    <testcase name="Response has the required fields - num_locations and num_lmxes" time="0.251" classname="RepeatsRegionsCopyGetLocationAndMachineCounts"/>
+  </testsuite>
+  <testsuite name="Repeats / Regions Copy / Fetch all regions" id="f693bcaa-2f21-4cb1-b195-68c9b0f90c44" timestamp="2024-09-06T16:44:39.226Z" tests="3" failures="0" errors="0" time="0.118">
+    <testcase name="Response status code is 200" time="0.118" classname="RepeatsRegionsCopyFetchAllRegions"/>
+    <testcase name="Response time is less than 500ms" time="0.118" classname="RepeatsRegionsCopyFetchAllRegions"/>
+    <testcase name="Validate the response schema for the presence of all required fields" time="0.118" classname="RepeatsRegionsCopyFetchAllRegions"/>
+  </testsuite>
+  <testsuite name="Repeats / Regions Copy / Find if name corresponds to a known region" id="f81cc8cc-2bcc-49f8-977e-e2d420bce580" timestamp="2024-09-06T16:44:39.226Z" tests="5" failures="1" errors="0" time="0.095">
+    <testcase name="Response status code is 200" time="0.095" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Response time is within an acceptable range" time="0.095" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Region object structure is as expected" time="0.095" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion">
+      <failure type="AssertionFailure" message="expected null to be a number">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: c0e8c839-7ec2-4d32-a577-5932b2a72304.]]>
+        <![CDATA[Collection name: Craig Private Pinball Map Collection.]]>
+        <![CDATA[Request name: Repeats / Regions Copy / Find if name corresponds to a known region.]]>
+        <![CDATA[Test description: Region object structure is as expected.]]>
+        <![CDATA[Error message: expected null to be a number.]]>
+        <![CDATA[Stacktrace: AssertionError: expected null to be a number
+   at Object.eval sandbox-script.js:3:7).]]>
+      </failure>
+    </testcase>
+    <testcase name="All required fields in the 'region' object are present and not empty" time="0.095" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Region object has correct data types for fields" time="0.095" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
+  </testsuite>
+  <testsuite name="Repeats / Machines Copy / Fetch all machines" id="6952662f-0a68-4835-92cf-f72206f7bf95" timestamp="2024-09-06T16:44:39.226Z" tests="2" failures="0" errors="0" time="0.207">
+    <testcase name="Response status code is 200" time="0.207" classname="RepeatsMachinesCopyFetchAllMachines"/>
+    <testcase name="Response time is less than 500ms" time="0.207" classname="RepeatsMachinesCopyFetchAllMachines"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,747 @@
+{
+	"info": {
+		"_postman_id": "c0e8c839-7ec2-4d32-a577-5932b2a72304",
+		"name": "Craig Private Pinball Map Collection",
+		"description": "Not my own work, this comes from:[https://pinballmap.com/](https://pinballmap.com/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33123329",
+		"_collection_link": "https://technology-demo.postman.co/workspace/%255BCraig%255D-Team-Workspace-Sandbox~71a6b37b-a01d-43b4-bcf2-4cc75f1d3d7b/collection/33123329-c0e8c839-7ec2-4d32-a577-5932b2a72304?action=share&source=collection_link&creator=33123329"
+	},
+	"item": [
+		{
+			"name": "Regions",
+			"item": [
+				{
+					"name": "Get location and machine counts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"  pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields - num_locations and num_lmxes\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.property('num_locations');",
+									"    pm.expect(responseData).to.have.property('num_lmxes');",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/regions/location_and_machine_counts.json",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"regions",
+								"location_and_machine_counts.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch all regions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"  pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Validate the response schema for the presence of all required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.regions).to.be.an('array');",
+									"",
+									"    responseData.regions.forEach(region => {",
+									"        pm.expect(region).to.include.all.keys('id', 'name', 'full_name', 'motd', 'lat', 'lon', 'state', 'effective_radius');",
+									"    });",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/regions.json",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"regions.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find if name corresponds to a known region",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Updated the response time test to 300ms",
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response time is within an acceptable range\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(300);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Region object structure is as expected\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.region).to.be.an('object');",
+									"    pm.expect(responseData.region.id).to.exist.and.to.be.a('number');",
+									"    pm.expect(responseData.region.name).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.region.created_at).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.region.updated_at).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.region.full_name).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.region.motd).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.region.lat).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.region.lon).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.region.n_search_no).to.be.a('number').or.to.be.null;",
+									"    pm.expect(responseData.region.default_search_type).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.region.should_email_machine_removal).to.exist.and.to.be.a('boolean');",
+									"    pm.expect(responseData.region.should_auto_delete_empty_locations).to.exist.and.to.be.a('boolean');",
+									"    pm.expect(responseData.region.send_digest_comment_emails).to.exist.and.to.be.a('boolean');",
+									"    pm.expect(responseData.region.send_digest_removal_emails).to.exist.and.to.be.a('boolean');",
+									"    pm.expect(responseData.region.state).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.region.effective_radius).to.exist.and.to.be.a('number');",
+									"});",
+									"",
+									"",
+									"pm.test(\"All required fields in the 'region' object are present and not empty\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.region).to.be.an('object');",
+									"    pm.expect(responseData.region.id).to.exist.and.to.be.a('number');",
+									"    pm.expect(responseData.region.name).to.exist.and.to.not.be.empty;",
+									"    pm.expect(responseData.region.created_at).to.exist.and.to.not.be.empty;",
+									"    pm.expect(responseData.region.updated_at).to.exist.and.to.not.be.empty;",
+									"    pm.expect(responseData.region.full_name).to.exist.and.to.not.be.empty;",
+									"    pm.expect(responseData.region.lat).to.exist.and.to.not.be.empty;",
+									"    pm.expect(responseData.region.lon).to.exist.and.to.not.be.empty;",
+									"    pm.expect(responseData.region.state).to.exist.and.to.not.be.empty;",
+									"    pm.expect(responseData.region.effective_radius).to.exist.and.to.be.a('number');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Region object has correct data types for fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    const region = responseData.region;",
+									"",
+									"    pm.expect(region).to.be.an('object');",
+									"    pm.expect(region.id).to.be.a('number');",
+									"    pm.expect(region.name).to.be.a('string');",
+									"    pm.expect(region.created_at).to.be.a('string');",
+									"    pm.expect(region.updated_at).to.be.a('string');",
+									"    pm.expect(region.full_name).to.be.a('string');",
+									"    pm.expect(region.motd).to.be.a('string');",
+									"    pm.expect(region.lat).to.be.a('string');",
+									"    pm.expect(region.lon).to.be.a('string');",
+									"    pm.expect(region.default_search_type).to.be.a('string');",
+									"    pm.expect(region.should_email_machine_removal).to.be.a('boolean');",
+									"    pm.expect(region.should_auto_delete_empty_locations).to.be.a('boolean');",
+									"    pm.expect(region.send_digest_comment_emails).to.be.a('boolean');",
+									"    pm.expect(region.send_digest_removal_emails).to.be.a('boolean');",
+									"    pm.expect(region.state).to.be.a('string');",
+									"    pm.expect(region.effective_radius).to.be.a('number');",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/regions/does_region_exist.json?name=minnesota",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"regions",
+								"does_region_exist.json"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "minnesota"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "This should fail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/regions/does_region_exist.json?name=test",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"regions",
+										"does_region_exist.json"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "test"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Find if name corresponds to a known region",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/regions/does_region_exist.json?name=minnesota",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"regions",
+										"does_region_exist.json"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "minnesota"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "Region Management\n\nToDo - Change visualizaition of regions to show location on map"
+		},
+		{
+			"name": "Machines",
+			"item": [
+				{
+					"name": "Fetch all machines",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.property('machines').that.is.an('array');",
+									"",
+									"    responseData.machines.forEach(function(machine) {",
+									"        pm.expect(machine).to.have.property('id');",
+									"        pm.expect(machine).to.have.property('name');",
+									"        pm.expect(machine).to.have.property('is_active');",
+									"        pm.expect(machine).to.have.property('created_at');",
+									"        pm.expect(machine).to.have.property('updated_at');",
+									"        pm.expect(machine).to.have.property('ipdb_link');",
+									"        pm.expect(machine).to.have.property('year');",
+									"        pm.expect(machine).to.have.property('manufacturer');",
+									"        pm.expect(machine).to.have.property('machine_group_id');",
+									"        pm.expect(machine).to.have.property('ipdb_id')",
+									"        pm.expect(machine).to.have.property('opdb_id');",
+									"        pm.expect(machine).to.have.property('opdb_img');",
+									"        pm.expect(machine).to.have.property('opdb_img_height');",
+									"        pm.expect(machine).to.have.property('opdb_img_width');",
+									"        pm.expect(machine).to.have.property('machine_type');",
+									"        pm.expect(machine).to.have.property('machine_display');",
+									"        pm.expect(machine).to.have.property('ic_eligible');",
+									"        pm.expect(machine).to.have.property('kineticist_url');",
+									"    });",
+									"});",
+									"",
+									"",
+									"",
+									"",
+									"pm.test(\"Response content type is application/json\", function () {",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/machines.json?region_id=119&manufacturer=Stern",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"machines.json"
+							],
+							"query": [
+								{
+									"key": "no_details",
+									"value": "0",
+									"description": "Omit unnecessary metadata for initial app loading",
+									"disabled": true
+								},
+								{
+									"key": "region_id",
+									"value": "119",
+									"description": "show only machines from this region"
+								},
+								{
+									"key": "manufacturer",
+									"value": "Stern",
+									"description": "show only machines from this manufacturer"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Repeats",
+			"item": [
+				{
+					"name": "Regions Copy",
+					"item": [
+						{
+							"name": "Get location and machine counts",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response time is less than 500ms\", function () {",
+											"  pm.expect(pm.response.responseTime).to.be.below(500);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response has the required fields - num_locations and num_lmxes\", function () {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData).to.be.an('object');",
+											"    pm.expect(responseData).to.have.property('num_locations');",
+											"    pm.expect(responseData).to.have.property('num_lmxes');",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/regions/location_and_machine_counts.json",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"regions",
+										"location_and_machine_counts.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch all regions",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response time is less than 500ms\", function () {",
+											"  pm.expect(pm.response.responseTime).to.be.below(500);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Validate the response schema for the presence of all required fields\", function () {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData).to.be.an('object');",
+											"    pm.expect(responseData.regions).to.be.an('array');",
+											"",
+											"    responseData.regions.forEach(region => {",
+											"        pm.expect(region).to.include.all.keys('id', 'name', 'full_name', 'motd', 'lat', 'lon', 'state', 'effective_radius');",
+											"    });",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/regions.json",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"regions.json"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find if name corresponds to a known region",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Updated the response time test to 300ms",
+											"pm.test(\"Response status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response time is within an acceptable range\", function () {",
+											"    pm.expect(pm.response.responseTime).to.be.below(300);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Region object structure is as expected\", function () {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData.region).to.be.an('object');",
+											"    pm.expect(responseData.region.id).to.exist.and.to.be.a('number');",
+											"    pm.expect(responseData.region.name).to.exist.and.to.be.a('string');",
+											"    pm.expect(responseData.region.created_at).to.exist.and.to.be.a('string');",
+											"    pm.expect(responseData.region.updated_at).to.exist.and.to.be.a('string');",
+											"    pm.expect(responseData.region.full_name).to.exist.and.to.be.a('string');",
+											"    pm.expect(responseData.region.motd).to.exist.and.to.be.a('string');",
+											"    pm.expect(responseData.region.lat).to.exist.and.to.be.a('string');",
+											"    pm.expect(responseData.region.lon).to.exist.and.to.be.a('string');",
+											"    pm.expect(responseData.region.n_search_no).to.be.a('number').or.to.be.null;",
+											"    pm.expect(responseData.region.default_search_type).to.exist.and.to.be.a('string');",
+											"    pm.expect(responseData.region.should_email_machine_removal).to.exist.and.to.be.a('boolean');",
+											"    pm.expect(responseData.region.should_auto_delete_empty_locations).to.exist.and.to.be.a('boolean');",
+											"    pm.expect(responseData.region.send_digest_comment_emails).to.exist.and.to.be.a('boolean');",
+											"    pm.expect(responseData.region.send_digest_removal_emails).to.exist.and.to.be.a('boolean');",
+											"    pm.expect(responseData.region.state).to.exist.and.to.be.a('string');",
+											"    pm.expect(responseData.region.effective_radius).to.exist.and.to.be.a('number');",
+											"});",
+											"",
+											"",
+											"pm.test(\"All required fields in the 'region' object are present and not empty\", function () {",
+											"    const responseData = pm.response.json();",
+											"    ",
+											"    pm.expect(responseData.region).to.be.an('object');",
+											"    pm.expect(responseData.region.id).to.exist.and.to.be.a('number');",
+											"    pm.expect(responseData.region.name).to.exist.and.to.not.be.empty;",
+											"    pm.expect(responseData.region.created_at).to.exist.and.to.not.be.empty;",
+											"    pm.expect(responseData.region.updated_at).to.exist.and.to.not.be.empty;",
+											"    pm.expect(responseData.region.full_name).to.exist.and.to.not.be.empty;",
+											"    pm.expect(responseData.region.lat).to.exist.and.to.not.be.empty;",
+											"    pm.expect(responseData.region.lon).to.exist.and.to.not.be.empty;",
+											"    pm.expect(responseData.region.state).to.exist.and.to.not.be.empty;",
+											"    pm.expect(responseData.region.effective_radius).to.exist.and.to.be.a('number');",
+											"});",
+											"",
+											"",
+											"pm.test(\"Region object has correct data types for fields\", function () {",
+											"    const responseData = pm.response.json();",
+											"    const region = responseData.region;",
+											"",
+											"    pm.expect(region).to.be.an('object');",
+											"    pm.expect(region.id).to.be.a('number');",
+											"    pm.expect(region.name).to.be.a('string');",
+											"    pm.expect(region.created_at).to.be.a('string');",
+											"    pm.expect(region.updated_at).to.be.a('string');",
+											"    pm.expect(region.full_name).to.be.a('string');",
+											"    pm.expect(region.motd).to.be.a('string');",
+											"    pm.expect(region.lat).to.be.a('string');",
+											"    pm.expect(region.lon).to.be.a('string');",
+											"    pm.expect(region.default_search_type).to.be.a('string');",
+											"    pm.expect(region.should_email_machine_removal).to.be.a('boolean');",
+											"    pm.expect(region.should_auto_delete_empty_locations).to.be.a('boolean');",
+											"    pm.expect(region.send_digest_comment_emails).to.be.a('boolean');",
+											"    pm.expect(region.send_digest_removal_emails).to.be.a('boolean');",
+											"    pm.expect(region.state).to.be.a('string');",
+											"    pm.expect(region.effective_radius).to.be.a('number');",
+											"});",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/regions/does_region_exist.json?name=minnesota",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"regions",
+										"does_region_exist.json"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "minnesota"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "This should fail",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/api/v1/regions/does_region_exist.json?name=test",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"regions",
+												"does_region_exist.json"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "test"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "Find if name corresponds to a known region",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/api/v1/regions/does_region_exist.json?name=minnesota",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"regions",
+												"does_region_exist.json"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "minnesota"
+												}
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					],
+					"description": "Region Management\n\nToDo - Change visualizaition of regions to show location on map"
+				},
+				{
+					"name": "Machines Copy",
+					"item": [
+						{
+							"name": "Fetch all machines",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response time is less than 500ms\", function () {",
+											"  pm.expect(pm.response.responseTime).to.be.below(500);",
+											"});",
+											"",
+											"",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/machines.json?region_id=119&manufacturer=stern",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"machines.json"
+									],
+									"query": [
+										{
+											"key": "no_details",
+											"value": "0",
+											"description": "Omit unnecessary metadata for initial app loading",
+											"disabled": true
+										},
+										{
+											"key": "region_id",
+											"value": "119",
+											"description": "show only machines from this region"
+										},
+										{
+											"key": "manufacturer",
+											"value": "stern",
+											"description": "show only machines from this manufacturer"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
