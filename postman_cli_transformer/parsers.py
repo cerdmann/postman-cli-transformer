@@ -1,4 +1,6 @@
 from postman_cli_transformer.unicode_constants import CHECKMARK_ICON
+from postman_cli_transformer.unicode_constants import BOX_ICON
+from postman_cli_transformer.unicode_constants import ENTER_ICON
 
 
 def parse_test(test):
@@ -37,3 +39,15 @@ def parse_url(url, request_name):
         },
         "tests": [],
     }
+
+
+def parse_folder(folder):
+    folder_name = folder.lstrip(BOX_ICON).strip()
+    return {
+        "name": folder_name,
+        "requests": [],
+    }
+
+
+def parse_request(request):
+    return request.lstrip(ENTER_ICON).strip()

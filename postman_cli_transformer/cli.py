@@ -7,6 +7,7 @@ from postman_cli_transformer.decipherer import line_decipherer
 from postman_cli_transformer.parsers import parse_test
 from postman_cli_transformer.parsers import parse_url
 from postman_cli_transformer.unicode_constants import *
+from postman_cli_transformer.processor import Processor
 
 
 @click.command()
@@ -49,7 +50,6 @@ def cli(output, unicode_out_file):
 
     for line in io.StringIO(stdin_data):
         my_results.append(line_decipherer(line))
-
     print(my_results)
 
     if unicode_out_file:
@@ -73,159 +73,13 @@ def process_as_unicode(file, output):
 
 
 def parse(data):
-    parsed = {"collectionName": "", "folders": []}
-
+    raw_lines = []
     data_as_file = io.StringIO(data)
-    data_as_file.readline()  # postman
-    # Empty line
-    data_as_file.readline()
+    for line in data_as_file:
+        raw_lines.append(line)
 
-    collection_line = data_as_file.readline()
-    collection_name = collection_line.strip()
-    parsed["collectionName"] = collection_name
-
-    # Empty line
-    data_as_file.readline()
-
-    # Start First Folder
-    folder_line = data_as_file.readline()
-    folder_name = folder_line.lstrip(BOX_ICON).strip()
-    parsed["folders"].append({"name": folder_name, "requests": []})
-    current_folder = parsed["folders"][0]
-
-    # Start First Request
-    request_line = data_as_file.readline()
-    request_name = request_line.lstrip(ENTER_ICON).strip()
-    data_as_file.readline()
-
-    url_line = data_as_file.readline()
-    url_result = parse_url(url_line, request_name)
-
-    current_folder["requests"].append(url_result)
-    current_request = current_folder["requests"][0]
-
-    # Start First Test of First Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Second Test of First Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Third Test of First Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Empty line
-    data_as_file.readline()
-
-    # Start Second Request
-    request_line = data_as_file.readline()
-    request_name = request_line.lstrip(ENTER_ICON).strip()
-    data_as_file.readline()
-
-    url_line = data_as_file.readline()
-    url_result = parse_url(url_line, request_name)
-
-    current_folder["requests"].append(url_result)
-    current_request = current_folder["requests"][1]
-
-    # Start First Test of Second Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Second Test of Second Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Third Test of Second Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Empty line
-    data_as_file.readline()
-
-    # Start Third Request
-    request_line = data_as_file.readline()
-    request_name = request_line.lstrip(ENTER_ICON).strip()
-    data_as_file.readline()
-
-    url_line = data_as_file.readline()
-    url_result = parse_url(url_line, request_name)
-
-    current_folder["requests"].append(url_result)
-    current_request = current_folder["requests"][2]
-
-    # Start First Test of Third Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Second Test of Third Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Third Test of Third Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Fourth Test of Third Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Fifth Test of Third Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Empty line
-    data_as_file.readline()
-
-    # Start Second Folder
-    folder_line = data_as_file.readline()
-    folder_name = folder_line.lstrip(BOX_ICON).strip()
-    parsed["folders"].append({"name": folder_name, "requests": []})
-    current_folder = parsed["folders"][1]
-
-    # Start First Request of Second Folder
-    request_line = data_as_file.readline()
-    request_name = request_line.lstrip(ENTER_ICON).strip()
-    data_as_file.readline()
-
-    url_line = data_as_file.readline()
-    url_result = parse_url(url_line, request_name)
-
-    current_folder["requests"].append(url_result)
-    current_request = current_folder["requests"][0]
-
-    # Start First Test of First Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Second Test of First Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Third Test of First Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
-
-    # Start Fourth Test of First Request
-    test_line = data_as_file.readline()
-    test_result = parse_test(test_line)
-    current_request["tests"].append(test_result)
+    processor = Processor(raw_lines)
+    results = processor.parsed
 
     # if line.startswith(ENTER_ICON):
 
@@ -256,6 +110,6 @@ def parse(data):
     #                                                       .strip())
     #     line_number += 1
 
-    json_str = json.dumps(parsed)
+    json_str = json.dumps(results)
 
     return json_str
