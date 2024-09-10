@@ -352,9 +352,6 @@ Pinball Map Collection
 
     processor = Processor(lines)
     results = processor.parsed
-    print(results)
-
-    folders_node = results["folders"]
 
     expected_results = {
         "collectionName": "Pinball Map Collection",
@@ -528,6 +525,127 @@ Pinball Map Collection
                 ],
             },
         ],
+    }
+
+    assert json.dumps(results) == json.dumps(expected_results)
+
+
+def test_should_be_able_to_process_the_summary_table():
+    lines = create_array_from_text("""postman
+
+Deactivate User Accounts
+
+→ Deactivate a user
+
+  GET https://api.getpostman.com/scim/v2/Users?count=10000 [401 Unauthorized, 485B, 261ms]
+  PATCH https://api.getpostman.com/scim/v2/Users/{{userId}} [401 Unauthorized, 485B, 64ms]                                   
+
+→ Change a user
+
+  GET https://api.getpostman.com/scim/v2/Users?count=10000 [401 Unauthorized, 485B, 261ms]
+  PATCH https://api.getpostman.com/scim/v2/Users/{{userId}} [401 Unauthorized, 485B, 64ms]                                   
+
+┌─────────────────────────┬────────────────────┬───────────────────┐
+│                         │           executed │            failed │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              iterations │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│                requests │                  4 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│            test-scripts │                  2 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│      prerequest-scripts │                  4 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              assertions │                  0 │                 0 │
+├─────────────────────────┴────────────────────┴───────────────────┤
+│ total run duration: 487ms                                        │
+├──────────────────────────────────────────────────────────────────┤
+│ total data received: 604B (approx)                               │
+├──────────────────────────────────────────────────────────────────┤
+│ average response time: 103ms [min: 51ms, max: 253ms, s.d.: 86ms] │
+└──────────────────────────────────────────────────────────────────┘
+
+Postman CLI run data uploaded to Postman Cloud successfully.
+You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37b-a01d-43b4-bcf2-4cc75f1d3d7b/run/33123329-986f44d8-9cda-4445-9179-137678aa1303                             
+""")
+
+    processor = Processor(lines)
+    results = processor.parsed
+
+    expected_results = {
+        "collectionName": "Deactivate User Accounts",
+        "folders": [
+            {
+                "name": "<REQUESTS_WITHOUT_FOLDER>",
+                "requests": [
+                    {
+                        "name": "Deactivate a user",
+                        "urls": [
+                            {
+                                "url": "https://api.getpostman.com/scim/v2/Users?count=10000",
+                                "httpVerb": "GET",
+                                "response": {
+                                    "code": "401 Unauthorized",
+                                    "size": "485B",
+                                    "time": "261ms",
+                                },
+                            },
+                            {
+                                "url": "https://api.getpostman.com/scim/v2/Users/{{userId}}",
+                                "httpVerb": "PATCH",
+                                "response": {
+                                    "code": "401 Unauthorized",
+                                    "size": "485B",
+                                    "time": "64ms",
+                                },
+                            },
+                        ],
+                        "tests": [],
+                    },
+                    {
+                        "name": "Change a user",
+                        "urls": [
+                            {
+                                "url": "https://api.getpostman.com/scim/v2/Users?count=10000",
+                                "httpVerb": "GET",
+                                "response": {
+                                    "code": "401 Unauthorized",
+                                    "size": "485B",
+                                    "time": "261ms",
+                                },
+                            },
+                            {
+                                "url": "https://api.getpostman.com/scim/v2/Users/{{userId}}",
+                                "httpVerb": "PATCH",
+                                "response": {
+                                    "code": "401 Unauthorized",
+                                    "size": "485B",
+                                    "time": "64ms",
+                                },
+                            },
+                        ],
+                        "tests": [],
+                    },
+                ],
+            },
+        ],
+        "summary": {
+            "iterations": {"executed": "1", "failed": "0"},
+            "requests": {"executed": "4", "failed": "0"},
+            "test-scripts": {"executed": "2", "failed": "0"},
+            "prerequest-scripts": {"executed": "4", "failed": "0"},
+            "assertions": {"executed": "0", "failed": "0"},
+            "totals": {
+                "totalRunDuration": "487ms",
+                "totalDataReceived": "604B (approx)",
+                "responseTimes": {
+                    "average": "103ms",
+                    "min": "51ms",
+                    "max": "253ms",
+                    "s.d.": "86ms",
+                },
+            },
+        },
     }
 
     assert json.dumps(results) == json.dumps(expected_results)

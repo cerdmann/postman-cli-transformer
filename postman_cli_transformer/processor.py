@@ -94,6 +94,59 @@ class Processor:
                     self.parsed["folders"][self.processing_helper.current_folder][
                         "requests"
                     ][self.processing_helper.current_request]["tests"].append(test_json)
+                case LINE_TYPES.SUMMARY_LINE:
+                    if not self.processing_helper.started_table:
+                        self.processing_helper.started_table = True
+                        self.parsed["summary"] = {
+                            "iterations": {},
+                            "requests": {},
+                            "test-scripts": {},
+                            "prerequest-scripts": {},
+                            "assertions": {},
+                            "totals": {
+                                "totalRunDuration": "",
+                                "totalDataReceived": "",
+                                "responseTimes": {
+                                    "average": "",
+                                    "min": "",
+                                    "max": "",
+                                    "s.d.": "",
+                                },
+                            },
+                        }
+                    else:
+                        summary_parts = line.split()
+                        if "iterations" in line:
+                            self._add_summary("iterations", summary_parts)
+                        elif "requests" in line:
+                            self._add_summary("requests", summary_parts)
+                        elif "test-scripts" in line:
+                            self._add_summary("test-scripts", summary_parts)
+                        elif "prerequest-scripts" in line:
+                            self._add_summary("prerequest-scripts", summary_parts)
+                        elif "assertions" in line:
+                            self._add_summary("assertions", summary_parts)
+                        elif "run" in line:
+                            self.parsed["summary"]["totals"]["totalRunDuration"] = (
+                                summary_parts[4]
+                            )
+                        elif "data" in line:
+                            self.parsed["summary"]["totals"]["totalDataReceived"] = (
+                                "%s %s" % (summary_parts[4], summary_parts[5])
+                            )
+                        elif "response" in line:
+                            self.parsed["summary"]["totals"]["responseTimes"] = {
+                                "average": summary_parts[4],
+                                "min": summary_parts[6].rstrip(","),
+                                "max": summary_parts[8].rstrip(","),
+                                "s.d.": summary_parts[10].rstrip("]"),
+                            }
+
+    def _add_summary(self, title, parts):
+        self.parsed["summary"][title] = {
+            "executed": parts[3],
+            "failed": parts[5],
+        }
 
 
 class ProcessingHelper:
@@ -102,6 +155,7 @@ class ProcessingHelper:
     current_folder = -1
     current_request = -1
     root_request_folder = -1
+    started_table = False
 
     def update_current_line_type(self, new_line_type):
         self.previous_line_type = self.current_line_type
