@@ -5,21 +5,21 @@ Craig Private Pinball Map Collection
 ❏ Regions
 ↳ Get location and machine counts
 
-  GET https://pinballmap.com//api/v1/regions/location_and_machine_counts.json [200 OK, 1.34kB, 274ms]
+  GET https://pinballmap.com//api/v1/regions/location_and_machine_counts.json [200 OK, 1.31kB, 279ms]
   ✓  Response status code is 200
   ✓  Response time is less than 500ms
   ✓  Response has the required fields - num_locations and num_lmxes
 
 ↳ Fetch all regions
 
-  GET https://pinballmap.com//api/v1/regions.json [200 OK, 29.2kB, 114ms]
+  GET https://pinballmap.com//api/v1/regions.json [200 OK, 29.2kB, 117ms]
   ✓  Response status code is 200
   ✓  Response time is less than 500ms
   ✓  Validate the response schema for the presence of all required fields
 
 ↳ Find if name corresponds to a known region
 
-  GET https://pinballmap.com//api/v1/regions/does_region_exist.json?name=minnesota [200 OK, 1.84kB, 78ms]
+  GET https://pinballmap.com//api/v1/regions/does_region_exist.json?name=minnesota [200 OK, 1.82kB, 77ms]
   ✓  Response status code is 200
   ✓  Response time is within an acceptable range
   1. Region object structure is as expected
@@ -29,7 +29,7 @@ Craig Private Pinball Map Collection
 ❏ Machines
 ↳ Fetch all machines
 
-  GET https://pinballmap.com//api/v1/machines.json?region_id=119&manufacturer=Stern [200 OK, 65.14kB, 151ms]
+  GET https://pinballmap.com//api/v1/machines.json?region_id=119&manufacturer=Stern [200 OK, 65.13kB, 194ms]
   ✓  Response status code is 200
   ✓  Response time is less than 500ms
   ✓  Response has the required fields
@@ -38,21 +38,21 @@ Craig Private Pinball Map Collection
 ❏ Repeats / Regions Copy
 ↳ Get location and machine counts
 
-  GET https://pinballmap.com//api/v1/regions/location_and_machine_counts.json [200 OK, 1.33kB, 100ms]
+  GET https://pinballmap.com//api/v1/regions/location_and_machine_counts.json [200 OK, 1.33kB, 103ms]
   ✓  Response status code is 200
   ✓  Response time is less than 500ms
   ✓  Response has the required fields - num_locations and num_lmxes
 
 ↳ Fetch all regions
 
-  GET https://pinballmap.com//api/v1/regions.json [200 OK, 29.2kB, 120ms]
+  GET https://pinballmap.com//api/v1/regions.json [200 OK, 29.19kB, 91ms]
   ✓  Response status code is 200
   ✓  Response time is less than 500ms
   ✓  Validate the response schema for the presence of all required fields
 
 ↳ Find if name corresponds to a known region
 
-  GET https://pinballmap.com//api/v1/regions/does_region_exist.json?name=minnesota [200 OK, 1.83kB, 85ms]
+  GET https://pinballmap.com//api/v1/regions/does_region_exist.json?name=minnesota [200 OK, 1.81kB, 84ms]
   ✓  Response status code is 200
   ✓  Response time is within an acceptable range
   2. Region object structure is as expected
@@ -62,28 +62,33 @@ Craig Private Pinball Map Collection
 ❏ Repeats / Machines Copy
 ↳ Fetch all machines
 
-  GET https://pinballmap.com//api/v1/machines.json?region_id=119&manufacturer=stern [200 OK, 1.33kB, 122ms]
+  GET https://pinballmap.com//api/v1/machines.json?region_id=119&manufacturer=stern [200 OK, 1.31kB, 134ms]
   ✓  Response status code is 200
   ✓  Response time is less than 500ms
+
+→ Deactivate a user Copy 2
+
+  GET https://api.getpostman.com/scim/v2/Users?count=10000 [401 Unauthorized, 485B, 233ms]
+  PATCH https://api.getpostman.com/scim/v2/Users/{{userId}} [401 Unauthorized, 485B, 61ms]
 
 [90m┌─────────────────────────[39m[90m┬────────────────────[39m[90m┬───────────────────┐[39m
 [90m│[39m                         [90m│[39m           executed [90m│[39m            failed [90m│[39m
 [90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼───────────────────┤[39m
 [90m│[39m              iterations [90m│[39m                  1 [90m│[39m                 0 [90m│[39m
 [90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼───────────────────┤[39m
-[90m│[39m                requests [90m│[39m                  8 [90m│[39m                 0 [90m│[39m
+[90m│[39m                requests [90m│[39m                 10 [90m│[39m                 0 [90m│[39m
 [90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼───────────────────┤[39m
 [90m│[39m            test-scripts [90m│[39m                  8 [90m│[39m                 0 [90m│[39m
 [90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼───────────────────┤[39m
-[90m│[39m      prerequest-scripts [90m│[39m                  2 [90m│[39m                 0 [90m│[39m
+[90m│[39m      prerequest-scripts [90m│[39m                  3 [90m│[39m                 0 [90m│[39m
 [90m├─────────────────────────[39m[90m┼────────────────────[39m[90m┼───────────────────┤[39m
 [90m│[39m              assertions [90m│[39m                 28 [90m│[39m                 2 [90m│[39m
 [90m├─────────────────────────┴────────────────────┴───────────────────┤[39m
-[90m│[39m total run duration: 1317ms                                       [90m│[39m
+[90m│[39m total run duration: 1674ms                                       [90m│[39m
 [90m├──────────────────────────────────────────────────────────────────┤[39m
-[90m│[39m total data received: 120.8kB (approx)                            [90m│[39m
+[90m│[39m total data received: 121.11kB (approx)                           [90m│[39m
 [90m├──────────────────────────────────────────────────────────────────┤[39m
-[90m│[39m average response time: 130ms [min: 78ms, max: 274ms, s.d.: 58ms] [90m│[39m
+[90m│[39m average response time: 137ms [min: 61ms, max: 279ms, s.d.: 69ms] [90m│[39m
 [90m└──────────────────────────────────────────────────────────────────┘[39m
 
 [31m  # [39m[31m failure        [39m[31m detail                                                                       [39m
@@ -99,4 +104,4 @@ Craig Private Pinball Map Collection
                      inside "Repeats / Regions Copy / Find if name corresponds to a known region" 
 
 Postman CLI run data uploaded to Postman Cloud successfully.
-You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37b-a01d-43b4-bcf2-4cc75f1d3d7b/run/33123329-8f0fd124-0f81-4513-bc7b-2addad984241
+You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37b-a01d-43b4-bcf2-4cc75f1d3d7b/run/33123329-120e725b-7b8b-46da-bf0f-6cbf76fabec2

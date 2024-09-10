@@ -7,7 +7,7 @@
     },
     "item": [
       {
-        "id": "c29eddd8-c619-4074-9636-68ef8387a304",
+        "id": "aaaedd95-0cbf-4f4c-9d72-7b0b61910466",
         "name": "Regions",
         "description": {
           "content": "Region Management\n\nToDo - Change visualizaition of regions to show location on map",
@@ -15,7 +15,7 @@
         },
         "item": [
           {
-            "id": "84b05d9a-c43f-4bbc-9955-261e4dfc8a8b",
+            "id": "c0ddfc3e-553d-4bb9-924d-3e67aaad9cfc",
             "name": "Get location and machine counts",
             "request": {
               "url": {
@@ -38,7 +38,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "3f368167-b330-40e3-91e1-ea3d7aa14eee",
+                  "id": "626e9889-ea84-45ce-bb92-5b4210ba3ba3",
                   "type": "text/javascript",
                   "packages": {},
                   "exec": [
@@ -61,13 +61,13 @@
                     "});",
                     ""
                   ],
-                  "_lastExecutionId": "9fd6a517-f6c3-436f-bbbe-c3e1c4589527"
+                  "_lastExecutionId": "8e62f998-c093-4109-8f1c-b7b0e4a4f7cf"
                 }
               }
             ]
           },
           {
-            "id": "6523295f-9ea3-405c-a687-f66ad68c40cf",
+            "id": "270a5b3c-6799-497e-b3a0-dbc4afaf50a0",
             "name": "Fetch all regions",
             "request": {
               "url": {
@@ -89,7 +89,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "ce7fa0ee-f0f1-47fc-bb3c-9707abde8d9b",
+                  "id": "7f6fc187-8f07-42d6-96c2-6589f05b6507",
                   "type": "text/javascript",
                   "packages": {},
                   "exec": [
@@ -115,13 +115,13 @@
                     "});",
                     ""
                   ],
-                  "_lastExecutionId": "23cf3c92-38dd-47be-8cf6-87ca3cd19bb0"
+                  "_lastExecutionId": "945c532c-6e36-43d5-987b-435d7268727a"
                 }
               }
             ]
           },
           {
-            "id": "d11abc73-fba7-4008-8bd1-f010dce7490b",
+            "id": "a01f070e-d02e-4cc8-8e68-6a735c0e5605",
             "name": "Find if name corresponds to a known region",
             "request": {
               "url": {
@@ -149,7 +149,7 @@
                 "_": {
                   "postman_previewlanguage": null
                 },
-                "id": "b2cc1538-45df-4361-b0c3-722c1e7eff6c",
+                "id": "6b48dafa-8dec-4f15-8d9b-343b22a2a044",
                 "name": "This should fail",
                 "originalRequest": {
                   "url": {
@@ -180,7 +180,7 @@
                 "_": {
                   "postman_previewlanguage": null
                 },
-                "id": "4744ff1a-60c5-4af2-b878-37f64d93ef8f",
+                "id": "9f31a5a9-67a2-4620-96e0-546c6a0641d3",
                 "name": "Find if name corresponds to a known region",
                 "originalRequest": {
                   "url": {
@@ -212,7 +212,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "dcdcac2c-9e1c-4443-ad7b-22abe3b4923d",
+                  "id": "606e5b32-3856-485b-bc7a-9f8c0d34d8e8",
                   "type": "text/javascript",
                   "packages": {},
                   "exec": [
@@ -289,19 +289,19 @@
                     "});",
                     ""
                   ],
-                  "_lastExecutionId": "bf8f62fb-33f3-4e8e-9861-5b4b02efc062"
+                  "_lastExecutionId": "92e0a2d5-a463-4af1-ba30-0614efc56305"
                 }
               },
               {
                 "listen": "prerequest",
                 "script": {
-                  "id": "d23e4e30-672a-4988-bcdf-77f7b002a72d",
+                  "id": "918061b4-8da3-4cf3-a30d-57123119b942",
                   "type": "text/javascript",
                   "packages": {},
                   "exec": [
                     ""
                   ],
-                  "_lastExecutionId": "625fe1e6-4cb2-4944-885c-ae011422a041"
+                  "_lastExecutionId": "d2aa0e70-00db-4ba5-9f3b-57c1fd9431c4"
                 }
               }
             ]
@@ -310,11 +310,11 @@
         "event": []
       },
       {
-        "id": "cba6b6bb-e865-46bd-92e7-7d9619796bd6",
+        "id": "3a35af3d-5b00-4875-8bf3-4c7d07561e45",
         "name": "Machines",
         "item": [
           {
-            "id": "3bc107ff-5d64-42dc-8b50-dbaaa0bdba45",
+            "id": "1bb03005-b22b-4547-91c3-3544ecd8ef2a",
             "name": "Fetch all machines",
             "request": {
               "url": {
@@ -362,7 +362,7 @@
               {
                 "listen": "test",
                 "script": {
-                  "id": "c6685435-27f6-4a92-b230-336baf36b9d7",
+                  "id": "6bcd078e-5050-477c-9002-e2deaa7978a8",
                   "type": "text/javascript",
                   "packages": {},
                   "exec": [
@@ -412,7 +412,7 @@
                     "});",
                     ""
                   ],
-                  "_lastExecutionId": "dfc5dde4-83d3-4133-aca2-fa01f0651fca"
+                  "_lastExecutionId": "4be4a7e2-3ae0-4c5a-9835-1fbe7bde03ae"
                 }
               }
             ]
@@ -421,11 +421,11 @@
         "event": []
       },
       {
-        "id": "c147406f-b935-4fbd-ae7b-db379bdb96e0",
+        "id": "417cb7c9-8859-434c-ad75-cd24f2c808ab",
         "name": "Repeats",
         "item": [
           {
-            "id": "fb763617-ec65-4fef-a006-1b6f845d753d",
+            "id": "6620834a-356d-4790-8443-4750b927797f",
             "name": "Regions Copy",
             "description": {
               "content": "Region Management\n\nToDo - Change visualizaition of regions to show location on map",
@@ -433,7 +433,7 @@
             },
             "item": [
               {
-                "id": "430952c4-6112-4818-beb7-f2eb010b5c7e",
+                "id": "3d7d6007-a653-4a17-89d7-241c4ff9ca38",
                 "name": "Get location and machine counts",
                 "request": {
                   "url": {
@@ -456,7 +456,7 @@
                   {
                     "listen": "test",
                     "script": {
-                      "id": "f1be5e3b-c74c-4e1f-be2c-40b8f42a8c04",
+                      "id": "5a70b75e-8f67-4b3f-ab8a-dae8fbbc9c39",
                       "type": "text/javascript",
                       "packages": {},
                       "exec": [
@@ -479,13 +479,13 @@
                         "});",
                         ""
                       ],
-                      "_lastExecutionId": "b912c51f-1f7e-45b3-bc63-d188678971fa"
+                      "_lastExecutionId": "5ebe71b3-dcd1-4bfb-8654-54511c09dd57"
                     }
                   }
                 ]
               },
               {
-                "id": "f693bcaa-2f21-4cb1-b195-68c9b0f90c44",
+                "id": "fafbad0b-6a1a-4d33-bcf4-4cff5e06d6f7",
                 "name": "Fetch all regions",
                 "request": {
                   "url": {
@@ -507,7 +507,7 @@
                   {
                     "listen": "test",
                     "script": {
-                      "id": "c1eedb60-e09b-43ce-bd61-f8cc9fbcb9fb",
+                      "id": "ac574251-6f7c-400b-bba7-1c33cd7db552",
                       "type": "text/javascript",
                       "packages": {},
                       "exec": [
@@ -533,13 +533,13 @@
                         "});",
                         ""
                       ],
-                      "_lastExecutionId": "1c4737ec-499c-453b-baa8-d481edc18644"
+                      "_lastExecutionId": "97a345c9-1a1f-42ff-8862-859cc049b5cf"
                     }
                   }
                 ]
               },
               {
-                "id": "f81cc8cc-2bcc-49f8-977e-e2d420bce580",
+                "id": "35aff95e-6bf0-4474-89c9-03e9c5ff8cbe",
                 "name": "Find if name corresponds to a known region",
                 "request": {
                   "url": {
@@ -567,7 +567,7 @@
                     "_": {
                       "postman_previewlanguage": null
                     },
-                    "id": "bc69a71b-0c05-478e-b293-d9e61c6e4243",
+                    "id": "3c556b9f-04b6-4fc1-949f-b46beb6a3271",
                     "name": "This should fail",
                     "originalRequest": {
                       "url": {
@@ -598,7 +598,7 @@
                     "_": {
                       "postman_previewlanguage": null
                     },
-                    "id": "5adaee73-5af4-478a-8463-b9c03fe67a83",
+                    "id": "9eca60a8-b055-4267-a1ad-ed40c731d98c",
                     "name": "Find if name corresponds to a known region",
                     "originalRequest": {
                       "url": {
@@ -630,7 +630,7 @@
                   {
                     "listen": "test",
                     "script": {
-                      "id": "82e46993-3552-48cc-86d2-1f5909b64fcd",
+                      "id": "d12d4c1c-386e-45fc-aac9-db9c5157356e",
                       "type": "text/javascript",
                       "packages": {},
                       "exec": [
@@ -707,19 +707,19 @@
                         "});",
                         ""
                       ],
-                      "_lastExecutionId": "abbdfe66-0c1e-4258-8130-6b84ea978879"
+                      "_lastExecutionId": "6353f0dd-3f91-46e9-9511-4baeab52dc11"
                     }
                   },
                   {
                     "listen": "prerequest",
                     "script": {
-                      "id": "73256aec-74d7-4143-9878-bffa9936cfdb",
+                      "id": "c3b36f19-0743-4d4c-ac8a-afd531a6a037",
                       "type": "text/javascript",
                       "packages": {},
                       "exec": [
                         ""
                       ],
-                      "_lastExecutionId": "02311882-56d4-49c3-914e-bc8f0f2a2b30"
+                      "_lastExecutionId": "ba3da770-a034-40b3-bce3-c6692a8d770f"
                     }
                   }
                 ]
@@ -728,11 +728,11 @@
             "event": []
           },
           {
-            "id": "76bcdd8f-2cc2-47ef-93f6-77ea8134e105",
+            "id": "b8ba2fc3-ae86-4e6d-8d01-01526911e9c4",
             "name": "Machines Copy",
             "item": [
               {
-                "id": "6952662f-0a68-4835-92cf-f72206f7bf95",
+                "id": "018f9514-f4c5-4bbf-8386-f77096adb13e",
                 "name": "Fetch all machines",
                 "request": {
                   "url": {
@@ -780,7 +780,7 @@
                   {
                     "listen": "test",
                     "script": {
-                      "id": "dccd0adf-ad2d-4cad-802e-b853980ec1db",
+                      "id": "97254cae-0883-464a-8195-7a9efd41317c",
                       "type": "text/javascript",
                       "packages": {},
                       "exec": [
@@ -796,7 +796,7 @@
                         "",
                         ""
                       ],
-                      "_lastExecutionId": "67b0be26-7c62-4092-b511-93d95a670004"
+                      "_lastExecutionId": "c0fe967e-5f71-4121-b48d-1d41e43dd225"
                     }
                   }
                 ]
@@ -806,6 +806,551 @@
           }
         ],
         "event": []
+      },
+      {
+        "id": "0f17ff8d-6b38-401a-bd8b-cf8c203f3d9c",
+        "name": "Deactivate a user Copy 2",
+        "request": {
+          "description": {
+            "content": "Removes a user from your Postman team and deactivates the account. This blocks the user from authenticating in to Postman.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "scim",
+              "v2",
+              "Users",
+              "{{userId}}"
+            ],
+            "host": [
+              "api",
+              "getpostman",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "{{apiKey}}"
+            }
+          ],
+          "method": "PATCH",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": [
+          {
+            "_": {
+              "postman_previewlanguage": "json"
+            },
+            "id": "a807eff1-fe60-4143-945e-c1edef55ca0a",
+            "name": "Successful Response",
+            "originalRequest": {
+              "url": {
+                "protocol": "https",
+                "path": [
+                  "scim",
+                  "v2",
+                  "Users",
+                  "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                ],
+                "host": [
+                  "api",
+                  "getpostman",
+                  "com"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{apikey}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PATCH",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              }
+            },
+            "status": "OK",
+            "code": 200,
+            "header": [
+              {
+                "name": "Content-Type",
+                "description": {
+                  "content": "",
+                  "type": "text/plain"
+                },
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:User\"\n    ],\n    \"id\": \"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99\",\n    \"userName\": \"taylor-lee@example.com\",\n    \"name\": {\n        \"givenName\": \"Taylor\",\n        \"familyName\": \"Lee\"\n    },\n    \"externalId\": \"12345678\",\n    \"active\": false,\n    \"meta\": {\n        \"resourceType\": \"User\",\n        \"created\": \"2021-02-22T04:24:13.000Z\",\n        \"lastModified\": \"2021-02-22T04:24:13.000Z\"\n    }\n}",
+            "cookie": []
+          },
+          {
+            "_": {
+              "postman_previewlanguage": "json"
+            },
+            "id": "60dc2bf2-5c0a-46a8-8393-cbb806f59bd0",
+            "name": "Bad Request",
+            "originalRequest": {
+              "url": {
+                "protocol": "https",
+                "path": [
+                  "scim",
+                  "v2",
+                  "Users",
+                  "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                ],
+                "host": [
+                  "api",
+                  "getpostman",
+                  "com"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PATCH",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              }
+            },
+            "status": "Bad Request",
+            "code": 400,
+            "header": [],
+            "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"scimType\": \"invalidSyntax\",\n    \"detail\": \"You’ve used operation that Postman doesn’t support.\",\n    \"status\": \"400\"\n}",
+            "cookie": []
+          },
+          {
+            "_": {
+              "postman_previewlanguage": "json"
+            },
+            "id": "522e65e9-dd73-465d-ae67-c8db47b41632",
+            "name": "Invalid Team",
+            "originalRequest": {
+              "url": {
+                "protocol": "https",
+                "path": [
+                  "scim",
+                  "v2",
+                  "Users",
+                  "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                ],
+                "host": [
+                  "api",
+                  "getpostman",
+                  "com"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "invalidApiKey"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PATCH",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              }
+            },
+            "status": "Bad Request",
+            "code": 400,
+            "header": [],
+            "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Team doesn't exist.\",\n    \"status\": \"400\"\n}",
+            "cookie": []
+          },
+          {
+            "_": {
+              "postman_previewlanguage": "json"
+            },
+            "id": "ba67d711-6604-4286-8ad1-5ac706600008",
+            "name": "Unauthorized",
+            "originalRequest": {
+              "url": {
+                "protocol": "https",
+                "path": [
+                  "scim",
+                  "v2",
+                  "Users",
+                  "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                ],
+                "host": [
+                  "api",
+                  "getpostman",
+                  "com"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "invalidApiKey"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PATCH",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              }
+            },
+            "status": "Unauthorized",
+            "code": 401,
+            "header": [],
+            "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Unable to access the team. Check if you have entered a valid API key.\",\n    \"status\": \"401\"\n}",
+            "cookie": []
+          },
+          {
+            "_": {
+              "postman_previewlanguage": "json"
+            },
+            "id": "a352139d-221c-469f-967c-60fc4388eabc",
+            "name": "Forbidden",
+            "originalRequest": {
+              "url": {
+                "protocol": "https",
+                "path": [
+                  "scim",
+                  "v2",
+                  "Users",
+                  "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                ],
+                "host": [
+                  "api",
+                  "getpostman",
+                  "com"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PATCH",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              }
+            },
+            "status": "Forbidden",
+            "code": 403,
+            "header": [],
+            "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"This person isn’t a member of the team.\",\n    \"status\": \"403\"\n}",
+            "cookie": []
+          },
+          {
+            "_": {
+              "postman_previewlanguage": "json"
+            },
+            "id": "0c21616f-1786-4916-b000-c3ca635796ec",
+            "name": "Admin Team Mismatch",
+            "originalRequest": {
+              "url": {
+                "protocol": "https",
+                "path": [
+                  "scim",
+                  "v2",
+                  "Users",
+                  "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                ],
+                "host": [
+                  "api",
+                  "getpostman",
+                  "com"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PATCH",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              }
+            },
+            "status": "Forbidden",
+            "code": 403,
+            "header": [],
+            "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Your API key was generated by a Team Admin who is no longer on your team. Use an API key generated by a Team Admin.\",\n    \"status\": \"403\"\n}",
+            "cookie": []
+          },
+          {
+            "_": {
+              "postman_previewlanguage": "json"
+            },
+            "id": "1b6d8121-750f-4156-85c0-35d48b8d6ac5",
+            "name": "Not Found",
+            "originalRequest": {
+              "url": {
+                "protocol": "https",
+                "path": [
+                  "scim",
+                  "v2",
+                  "Users",
+                  "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                ],
+                "host": [
+                  "api",
+                  "getpostman",
+                  "com"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PATCH",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              }
+            },
+            "status": "Not Found",
+            "code": 404,
+            "header": [],
+            "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"This person isn’t a member of the team.\",\n    \"status\": \"404\"\n}",
+            "cookie": []
+          },
+          {
+            "_": {
+              "postman_previewlanguage": "json"
+            },
+            "id": "21756463-3fa3-4583-b1e5-d8053b7d7159",
+            "name": "Too Many Requests",
+            "originalRequest": {
+              "url": {
+                "protocol": "https",
+                "path": [
+                  "scim",
+                  "v2",
+                  "Users",
+                  "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                ],
+                "host": [
+                  "api",
+                  "getpostman",
+                  "com"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{apiKey}}"
+                }
+              ],
+              "method": "PATCH",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              }
+            },
+            "status": "Too Many Requests",
+            "header": [],
+            "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"That’s 180 attempts in less than a minute. Wait for a minute and then try again.\",\n    \"status\": 429\n}",
+            "cookie": []
+          },
+          {
+            "_": {
+              "postman_previewlanguage": "json"
+            },
+            "id": "72be44a5-ec5c-4b02-b8fc-7fdba4ca3016",
+            "name": "Internal Server Error",
+            "originalRequest": {
+              "url": {
+                "protocol": "https",
+                "path": [
+                  "scim",
+                  "v2",
+                  "Users",
+                  "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                ],
+                "host": [
+                  "api",
+                  "getpostman",
+                  "com"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PATCH",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              }
+            },
+            "status": "Internal Server Error",
+            "code": 500,
+            "header": [],
+            "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Couldn’t update this team member’s information. Try again — it should work next time around.\",\n    \"status\": \"500\"\n}",
+            "cookie": []
+          }
+        ],
+        "event": [
+          {
+            "listen": "prerequest",
+            "script": {
+              "id": "72a5fa70-bdd9-4c1d-9cf5-7f31999364cb",
+              "type": "text/javascript",
+              "exec": [
+                "const email = pm.iterationData.get('email')",
+                "const users = pm.collectionVariables.get('users')",
+                "",
+                "if (!users) {",
+                "  const apiKey = pm.collectionVariables.get('apiKey')",
+                "  const getAllUsers = {",
+                "    url: 'https://api.getpostman.com/scim/v2/Users?count=10000',",
+                "    method: 'GET',",
+                "    header: `Authorization:${apiKey}`",
+                "  }",
+                "",
+                "  pm.sendRequest(getAllUsers, mapUserList)",
+                "} else {",
+                "  setUserToBeDeactivated(JSON.parse(users))",
+                "}",
+                "",
+                "function mapUserList (err, res) {",
+                "  const userList = res.json().Resources",
+                "  const users = userList.map(user => {",
+                "    return {",
+                "      id: user.id,",
+                "      email: user.emails[0].value",
+                "    }",
+                "  })",
+                "",
+                "  pm.collectionVariables.set('users', JSON.stringify(users))",
+                "  setUserToBeDeactivated(users)",
+                "}",
+                "",
+                "function setUserToBeDeactivated (users) {",
+                "  const userId = users.find(user => user.email === email).id",
+                "  pm.collectionVariables.set('userId', userId)",
+                "}",
+                ""
+              ],
+              "_lastExecutionId": "1a2a4f4c-4164-4a07-b568-3f758ec0416f"
+            }
+          }
+        ]
       }
     ],
     "event": [],
@@ -823,7 +1368,7 @@
   "environment": {
     "_": {
       "postman_variable_scope": "environment",
-      "postman_exported_at": "2024-09-05T15:40:26.899Z",
+      "postman_exported_at": "2024-09-10T02:36:53.606Z",
       "postman_exported_using": "Postman/11.2.33-240730-1143"
     },
     "id": "dc25303c-b56c-4d1c-b7fb-bdb2e95d4b9e",
@@ -837,7 +1382,7 @@
     ]
   },
   "globals": {
-    "id": "954162ac-38ab-4a3c-b34b-6bef86b65ebc",
+    "id": "d3346407-5e10-4e0c-a638-cf9f5816002a",
     "values": []
   },
   "run": {
@@ -848,27 +1393,27 @@
         "failed": 0
       },
       "items": {
-        "total": 8,
+        "total": 9,
         "pending": 0,
         "failed": 0
       },
       "scripts": {
-        "total": 10,
+        "total": 11,
         "pending": 0,
         "failed": 0
       },
       "prerequests": {
-        "total": 8,
+        "total": 9,
         "pending": 0,
         "failed": 0
       },
       "requests": {
-        "total": 8,
+        "total": 10,
         "pending": 0,
         "failed": 0
       },
       "tests": {
-        "total": 8,
+        "total": 9,
         "pending": 0,
         "failed": 0
       },
@@ -883,16 +1428,16 @@
         "failed": 0
       },
       "prerequestScripts": {
-        "total": 2,
+        "total": 3,
         "pending": 0,
         "failed": 0
       }
     },
     "timings": {
-      "responseAverage": 207.5,
-      "responseMin": 95,
-      "responseMax": 404,
-      "responseSd": 102.27780795460959,
+      "responseAverage": 137.9,
+      "responseMin": 59,
+      "responseMax": 285,
+      "responseSd": 76.45188029080778,
       "dnsAverage": 0,
       "dnsMin": 0,
       "dnsMax": 0,
@@ -901,25 +1446,25 @@
       "firstByteMin": 0,
       "firstByteMax": 0,
       "firstByteSd": 0,
-      "started": 1725641079226,
-      "completed": 1725641081146
+      "started": 1725935918463,
+      "completed": 1725935920098
     },
     "executions": [
       {
         "cursor": {
           "position": 0,
           "iteration": 0,
-          "length": 8,
+          "length": 9,
           "cycles": 1,
           "empty": false,
           "eof": false,
           "bof": true,
           "cr": false,
-          "ref": "ad870af3-c696-49a3-b6ad-a5af150fb336",
-          "httpRequestId": "7f6ef130-7012-46a0-8bd8-e555575b6a16"
+          "ref": "02ec2784-b933-4c70-9731-83836d398b4e",
+          "httpRequestId": "6f428b81-912f-438f-9245-bdd9aa50c1e9"
         },
         "item": {
-          "id": "84b05d9a-c43f-4bbc-9955-261e4dfc8a8b",
+          "id": "c0ddfc3e-553d-4bb9-924d-3e67aaad9cfc",
           "name": "Get location and machine counts",
           "request": {
             "url": {
@@ -942,7 +1487,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "3f368167-b330-40e3-91e1-ea3d7aa14eee",
+                "id": "626e9889-ea84-45ce-bb92-5b4210ba3ba3",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
@@ -965,7 +1510,7 @@
                   "});",
                   ""
                 ],
-                "_lastExecutionId": "9fd6a517-f6c3-436f-bbbe-c3e1c4589527"
+                "_lastExecutionId": "8e62f998-c093-4109-8f1c-b7b0e4a4f7cf"
               }
             }
           ]
@@ -1005,7 +1550,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "2831934d-7013-40b6-94dd-162c3641fa40",
+              "value": "182b34db-8e0e-49c1-9460-767612f40c6a",
               "system": true
             },
             {
@@ -1027,7 +1572,7 @@
           "method": "GET"
         },
         "response": {
-          "id": "914029c0-306d-4fc5-a17f-acdf467bcad1",
+          "id": "3fbc2b3f-3468-43c8-8bb1-862f432a4f37",
           "status": "OK",
           "code": 200,
           "header": [
@@ -1037,7 +1582,7 @@
             },
             {
               "key": "Date",
-              "value": "Fri, 06 Sep 2024 16:44:39 GMT"
+              "value": "Tue, 10 Sep 2024 02:38:38 GMT"
             },
             {
               "key": "Content-Type",
@@ -1062,10 +1607,6 @@
             {
               "key": "X-Content-Type-Options",
               "value": "nosniff"
-            },
-            {
-              "key": "X-Download-Options",
-              "value": "noopen"
             },
             {
               "key": "X-Permitted-Cross-Domain-Policies",
@@ -1093,7 +1634,7 @@
             },
             {
               "key": "ETag",
-              "value": "W/\"66ef896bd2762846b5779f3a77bd1f24\""
+              "value": "W/\"f561bc9bb4f35217c98daa3b487e9c2d\""
             },
             {
               "key": "Cache-Control",
@@ -1101,19 +1642,19 @@
             },
             {
               "key": "Set-Cookie",
-              "value": "_pbm_session=QpmMEQx5dJep4nup5CiXIUzSOKDLZ3fv2vS4%2BoZItpxO2MoNTMZxPWHxoHzs7OfK68iniqOSiyFHML4mBgcztjCSltLZ%2Foh2EAwYDSkFcUngQCL2sxJ7CaSb2XOHG4Pp%2FJZjx%2Fe5k23NgB7gBvteebCjJ2vQUABGrSMjUr%2BbmmIHoNp%2Bzikr8jnbWupRHwz9y%2BDsK3cWVRWWAXQCb8b8OoxdFbBUmhlnpYFhZzO%2Fhx0EquAs%2FUleP24kT%2FVAhyk7XO%2Fnry75u%2BwLcN54bSgI0RF%2F2aRDxVOEEyKNXw%3D%3D--bBYyB5F5L9dUBioS--i9m9dTq%2B7xVJexLq%2FWwdSw%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
+              "value": "_pbm_session=Tdj5GCU4PWuPkzkQXcvjUXmtkeE75kC8ZgHcy4QrVZU6almdnaO62ezcK1JACncrGSaFA5HGYhsERLSRiBwPapJJFNgQa%2BnOh4RrY0kkLOLe0zN8azuSONwQbjf%2F43VFaq3JBWQpGJoicc5W05dIwaFy4NDcx2LlnE37abLtYYiA%2Fmvx9tWHSbcexFwmfrr5MT3mcky0UHfpEG9kzojyWf7LQaZv01iP4sKRIhDuHrTzLHWq971KQ%2Bi6A20tWTOU6vPRkqsDbWw%2FuszAdxRNC1IDUXlYXnoxI9IZ2g%3D%3D--n8TziKPfE1fHCek%2B--%2BiN0otCg7u4jqqDdGnvN%2FQ%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
             },
             {
               "key": "X-Request-Id",
-              "value": "2858fe5c-af27-42a5-9e3b-a10fdfa71fb7"
+              "value": "d723de42-d778-4a75-8f06-4208c5dc29de"
             },
             {
               "key": "X-Runtime",
-              "value": "0.125176"
+              "value": "0.030127"
             },
             {
               "key": "Strict-Transport-Security",
-              "value": "max-age=63072000"
+              "value": "max-age=63072000; includeSubDomains"
             },
             {
               "key": "Strict-Transport-Security",
@@ -1144,7 +1685,7 @@
               48,
               55,
               50,
-              56,
+              55,
               44,
               34,
               110,
@@ -1160,17 +1701,17 @@
               58,
               52,
               52,
-              50,
-              57,
-              50,
+              51,
+              49,
+              51,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 404,
+          "responseTime": 285,
           "responseSize": 41
         },
-        "id": "84b05d9a-c43f-4bbc-9955-261e4dfc8a8b",
+        "id": "c0ddfc3e-553d-4bb9-924d-3e67aaad9cfc",
         "assertions": [
           {
             "assertion": "Response status code is 200",
@@ -1188,15 +1729,15 @@
       },
       {
         "cursor": {
-          "ref": "2fb9d01f-95ee-4b8f-b705-ef40ee4c1839",
-          "length": 8,
+          "ref": "a58e131c-9f24-45d9-a0d9-e34e97582c93",
+          "length": 9,
           "cycles": 1,
           "position": 1,
           "iteration": 0,
-          "httpRequestId": "6f39b597-2fe0-4d04-be82-dd749a392494"
+          "httpRequestId": "a2f68adb-2674-445d-8135-5a9ba2eb0422"
         },
         "item": {
-          "id": "6523295f-9ea3-405c-a687-f66ad68c40cf",
+          "id": "270a5b3c-6799-497e-b3a0-dbc4afaf50a0",
           "name": "Fetch all regions",
           "request": {
             "url": {
@@ -1218,7 +1759,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "ce7fa0ee-f0f1-47fc-bb3c-9707abde8d9b",
+                "id": "7f6fc187-8f07-42d6-96c2-6589f05b6507",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
@@ -1244,7 +1785,7 @@
                   "});",
                   ""
                 ],
-                "_lastExecutionId": "23cf3c92-38dd-47be-8cf6-87ca3cd19bb0"
+                "_lastExecutionId": "945c532c-6e36-43d5-987b-435d7268727a"
               }
             }
           ]
@@ -1283,7 +1824,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "ebe7db37-4408-429a-919e-40cff424e676",
+              "value": "ad184597-8e32-41fb-89cd-76fb754928d8",
               "system": true
             },
             {
@@ -1303,14 +1844,14 @@
             },
             {
               "key": "Cookie",
-              "value": "_pbm_session=QpmMEQx5dJep4nup5CiXIUzSOKDLZ3fv2vS4%2BoZItpxO2MoNTMZxPWHxoHzs7OfK68iniqOSiyFHML4mBgcztjCSltLZ%2Foh2EAwYDSkFcUngQCL2sxJ7CaSb2XOHG4Pp%2FJZjx%2Fe5k23NgB7gBvteebCjJ2vQUABGrSMjUr%2BbmmIHoNp%2Bzikr8jnbWupRHwz9y%2BDsK3cWVRWWAXQCb8b8OoxdFbBUmhlnpYFhZzO%2Fhx0EquAs%2FUleP24kT%2FVAhyk7XO%2Fnry75u%2BwLcN54bSgI0RF%2F2aRDxVOEEyKNXw%3D%3D--bBYyB5F5L9dUBioS--i9m9dTq%2B7xVJexLq%2FWwdSw%3D%3D",
+              "value": "_pbm_session=Tdj5GCU4PWuPkzkQXcvjUXmtkeE75kC8ZgHcy4QrVZU6almdnaO62ezcK1JACncrGSaFA5HGYhsERLSRiBwPapJJFNgQa%2BnOh4RrY0kkLOLe0zN8azuSONwQbjf%2F43VFaq3JBWQpGJoicc5W05dIwaFy4NDcx2LlnE37abLtYYiA%2Fmvx9tWHSbcexFwmfrr5MT3mcky0UHfpEG9kzojyWf7LQaZv01iP4sKRIhDuHrTzLHWq971KQ%2Bi6A20tWTOU6vPRkqsDbWw%2FuszAdxRNC1IDUXlYXnoxI9IZ2g%3D%3D--n8TziKPfE1fHCek%2B--%2BiN0otCg7u4jqqDdGnvN%2FQ%3D%3D",
               "system": true
             }
           ],
           "method": "GET"
         },
         "response": {
-          "id": "74b89ee6-0b82-4bb5-8a24-6dbcd7aeaf84",
+          "id": "cdfe646b-02ab-4376-87b1-b750e749c0c9",
           "status": "OK",
           "code": 200,
           "header": [
@@ -1320,7 +1861,7 @@
             },
             {
               "key": "Date",
-              "value": "Fri, 06 Sep 2024 16:44:39 GMT"
+              "value": "Tue, 10 Sep 2024 02:38:38 GMT"
             },
             {
               "key": "Content-Type",
@@ -1349,10 +1890,6 @@
             {
               "key": "X-Content-Type-Options",
               "value": "nosniff"
-            },
-            {
-              "key": "X-Download-Options",
-              "value": "noopen"
             },
             {
               "key": "X-Permitted-Cross-Domain-Policies",
@@ -1388,19 +1925,19 @@
             },
             {
               "key": "Set-Cookie",
-              "value": "_pbm_session=5aXTTBhWBiL5bONVjN9UdoT0U5F2NBEUTlUnCqkapEMPODS8OgCyupTtcSrX6cDKa1iMrAM9evoo0dw7LNH%2FMM8gutM9XWzH7n%2BldTNGIzM0UrDrd4szEcEUAd779UHjSjtdipt4yfMYJneMTS7FegLlGWq41hFrxq4t1%2FD48QNGxqy0yp19oL%2BP%2FXSgT%2Fboq77l5U3C9eDtaXwS03401pIVEUg4hQx3UZp4FZhojI1%2BE%2Fy0--A2pQ0FrLC0J%2BAtOa--xb80VcKj%2F6MeAFGq8FEJ4w%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
+              "value": "_pbm_session=c%2FZuJFM%2BsH0HB93FP%2F9gIwGDOc8NB5ffF%2F%2B1qjDWC7l8PFz0v6130IPANQrz8y28QYAjB8koII%2Bjpf72%2FqDtCwKkjRqZFCGy4kKcIlyPsYfaPel1ux9JEXzOcUXJloLZqz2NwOhcmcE5dA9%2Fm%2FAaBMXGtNVMFru%2F0PX%2B4%2FgreZKvjmyAEIz2B5jtC3R1YNkQ%2FITgLk9KLK%2FyJENwoQE1%2BYpnoADyu0caMGI6aEXmqYmE1kRd--pLF98KZY%2FyE2NO2j--RV8zx%2BKcu7A4LmCCgWNd9g%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
             },
             {
               "key": "X-Request-Id",
-              "value": "1d7ed916-2084-44e3-beb1-6ef5d51546bb"
+              "value": "688348fa-323f-40e5-a746-fbb3e503b61b"
             },
             {
               "key": "X-Runtime",
-              "value": "0.059992"
+              "value": "0.018161"
             },
             {
               "key": "Strict-Transport-Security",
-              "value": "max-age=63072000"
+              "value": "max-age=63072000; includeSubDomains"
             },
             {
               "key": "Strict-Transport-Security",
@@ -29339,10 +29876,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 164,
+          "responseTime": 98,
           "responseSize": 27922
         },
-        "id": "6523295f-9ea3-405c-a687-f66ad68c40cf",
+        "id": "270a5b3c-6799-497e-b3a0-dbc4afaf50a0",
         "assertions": [
           {
             "assertion": "Response status code is 200",
@@ -29360,15 +29897,15 @@
       },
       {
         "cursor": {
-          "ref": "4493a0a7-8fdb-47e0-848e-164a7fa16dc0",
-          "length": 8,
+          "ref": "285da6e6-c432-42b5-87a4-7041d2495a03",
+          "length": 9,
           "cycles": 1,
           "position": 2,
           "iteration": 0,
-          "httpRequestId": "3aa6cdf0-9e20-4734-95e4-80906d770cd4"
+          "httpRequestId": "cab95c02-2d6d-41e7-9d3f-0698d260d511"
         },
         "item": {
-          "id": "d11abc73-fba7-4008-8bd1-f010dce7490b",
+          "id": "a01f070e-d02e-4cc8-8e68-6a735c0e5605",
           "name": "Find if name corresponds to a known region",
           "request": {
             "url": {
@@ -29396,7 +29933,7 @@
               "_": {
                 "postman_previewlanguage": null
               },
-              "id": "b2cc1538-45df-4361-b0c3-722c1e7eff6c",
+              "id": "6b48dafa-8dec-4f15-8d9b-343b22a2a044",
               "name": "This should fail",
               "originalRequest": {
                 "url": {
@@ -29427,7 +29964,7 @@
               "_": {
                 "postman_previewlanguage": null
               },
-              "id": "4744ff1a-60c5-4af2-b878-37f64d93ef8f",
+              "id": "9f31a5a9-67a2-4620-96e0-546c6a0641d3",
               "name": "Find if name corresponds to a known region",
               "originalRequest": {
                 "url": {
@@ -29459,7 +29996,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "dcdcac2c-9e1c-4443-ad7b-22abe3b4923d",
+                "id": "606e5b32-3856-485b-bc7a-9f8c0d34d8e8",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
@@ -29536,19 +30073,19 @@
                   "});",
                   ""
                 ],
-                "_lastExecutionId": "bf8f62fb-33f3-4e8e-9861-5b4b02efc062"
+                "_lastExecutionId": "92e0a2d5-a463-4af1-ba30-0614efc56305"
               }
             },
             {
               "listen": "prerequest",
               "script": {
-                "id": "d23e4e30-672a-4988-bcdf-77f7b002a72d",
+                "id": "918061b4-8da3-4cf3-a30d-57123119b942",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
                   ""
                 ],
-                "_lastExecutionId": "625fe1e6-4cb2-4944-885c-ae011422a041"
+                "_lastExecutionId": "d2aa0e70-00db-4ba5-9f3b-57c1fd9431c4"
               }
             }
           ]
@@ -29593,7 +30130,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "b79d3359-c601-4936-8820-98cb95f6349a",
+              "value": "75e303c1-6f05-4b7b-a8c0-2b44ff07b3df",
               "system": true
             },
             {
@@ -29613,14 +30150,14 @@
             },
             {
               "key": "Cookie",
-              "value": "_pbm_session=5aXTTBhWBiL5bONVjN9UdoT0U5F2NBEUTlUnCqkapEMPODS8OgCyupTtcSrX6cDKa1iMrAM9evoo0dw7LNH%2FMM8gutM9XWzH7n%2BldTNGIzM0UrDrd4szEcEUAd779UHjSjtdipt4yfMYJneMTS7FegLlGWq41hFrxq4t1%2FD48QNGxqy0yp19oL%2BP%2FXSgT%2Fboq77l5U3C9eDtaXwS03401pIVEUg4hQx3UZp4FZhojI1%2BE%2Fy0--A2pQ0FrLC0J%2BAtOa--xb80VcKj%2F6MeAFGq8FEJ4w%3D%3D",
+              "value": "_pbm_session=c%2FZuJFM%2BsH0HB93FP%2F9gIwGDOc8NB5ffF%2F%2B1qjDWC7l8PFz0v6130IPANQrz8y28QYAjB8koII%2Bjpf72%2FqDtCwKkjRqZFCGy4kKcIlyPsYfaPel1ux9JEXzOcUXJloLZqz2NwOhcmcE5dA9%2Fm%2FAaBMXGtNVMFru%2F0PX%2B4%2FgreZKvjmyAEIz2B5jtC3R1YNkQ%2FITgLk9KLK%2FyJENwoQE1%2BYpnoADyu0caMGI6aEXmqYmE1kRd--pLF98KZY%2FyE2NO2j--RV8zx%2BKcu7A4LmCCgWNd9g%3D%3D",
               "system": true
             }
           ],
           "method": "GET"
         },
         "response": {
-          "id": "055de432-71fc-4fc7-b9ed-5b15f6e58573",
+          "id": "ce3547f2-4a9f-4f0d-9999-625f7288a327",
           "status": "OK",
           "code": 200,
           "header": [
@@ -29630,7 +30167,7 @@
             },
             {
               "key": "Date",
-              "value": "Fri, 06 Sep 2024 16:44:39 GMT"
+              "value": "Tue, 10 Sep 2024 02:38:38 GMT"
             },
             {
               "key": "Content-Type",
@@ -29655,10 +30192,6 @@
             {
               "key": "X-Content-Type-Options",
               "value": "nosniff"
-            },
-            {
-              "key": "X-Download-Options",
-              "value": "noopen"
             },
             {
               "key": "X-Permitted-Cross-Domain-Policies",
@@ -29694,19 +30227,19 @@
             },
             {
               "key": "Set-Cookie",
-              "value": "_pbm_session=%2BwUDr%2F%2Fq7txXKT8mRlBgRb8fc2fryd4SxhibBK2I4nvCIic4ywkDk3Fx%2FrcPptOnFDXHTZJ%2BY0O4XLuojd94qaqWpj6NmziXsMJv9wq5wZhsM222RWfwuGGsC2Puz8milcKId5T%2BdmSIEeyq9cbBAMFQD4TGLHo0ey42S10lJHnp%2BM7jLhf%2FWIs7YzL5jclsdt%2B19bNlFQswD1VVMtXnDoZyQqlSGqFKxfu1pNHct4tXA6FVYNA2JaZpY939o6enc8khQbe88ghciLCTjGLRkQGyQfcJqpRmdTN07%2FQe2n0%3D--9MqiZcOOis23TqFx--Qdvu1JDkYTqN3vzGnP48rg%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
+              "value": "_pbm_session=7Ty5aAxxfmpY4qtbBgNiLK1m8cgZ8TCBG9K%2Bm8SR6HAAXb8HMqDKwsCwLkk5dMM4zl%2BQTHfTa%2Fke9jw6W6SjW2yxgTQKCJTJwAn96UubbYf0ICCg0zMWQQX2a8%2FAFur8KpnDzpG9ndcWlLdJTaFZbYwG68qxTSFrpoTUZU4USuPJZnG9Rgc4FP1RbsuK%2FB1egViTPZtkG0t645tW%2F8ZNoJyum0GsDyjiuUSilNgJTtS380W0za41oIR09e%2Ft3aZyQOSHgUHstWsB7atwWPWzZ6CsaYk64c5GG6TKn4inRqY%3D--DMXlpsxbAJBuhn96--92CaoaKtZ%2B2ne%2BnudNukYQ%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
             },
             {
               "key": "X-Request-Id",
-              "value": "a9901917-f547-4ad7-9005-5605a1c8a42a"
+              "value": "90ad434b-a53e-4f6e-a246-4df257d60aef"
             },
             {
               "key": "X-Runtime",
-              "value": "0.029595"
+              "value": "0.012119"
             },
             {
               "key": "Strict-Transport-Security",
-              "value": "max-age=63072000"
+              "value": "max-age=63072000; includeSubDomains"
             },
             {
               "key": "Strict-Transport-Security",
@@ -30256,10 +30789,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 109,
+          "responseTime": 85,
           "responseSize": 537
         },
-        "id": "d11abc73-fba7-4008-8bd1-f010dce7490b",
+        "id": "a01f070e-d02e-4cc8-8e68-6a735c0e5605",
         "assertions": [
           {
             "assertion": "Response status code is 200",
@@ -30292,15 +30825,15 @@
       },
       {
         "cursor": {
-          "ref": "c234b526-da09-4d89-a816-531342788d73",
-          "length": 8,
+          "ref": "24fb636a-06d8-4e61-85a9-af0031182b0f",
+          "length": 9,
           "cycles": 1,
           "position": 3,
           "iteration": 0,
-          "httpRequestId": "543ba9f8-7b2b-4803-8c14-06d5cde1b6f9"
+          "httpRequestId": "9902fdf2-b58e-4e06-9722-3b4fd409355c"
         },
         "item": {
-          "id": "3bc107ff-5d64-42dc-8b50-dbaaa0bdba45",
+          "id": "1bb03005-b22b-4547-91c3-3544ecd8ef2a",
           "name": "Fetch all machines",
           "request": {
             "url": {
@@ -30348,7 +30881,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "c6685435-27f6-4a92-b230-336baf36b9d7",
+                "id": "6bcd078e-5050-477c-9002-e2deaa7978a8",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
@@ -30398,7 +30931,7 @@
                   "});",
                   ""
                 ],
-                "_lastExecutionId": "dfc5dde4-83d3-4133-aca2-fa01f0651fca"
+                "_lastExecutionId": "4be4a7e2-3ae0-4c5a-9835-1fbe7bde03ae"
               }
             }
           ]
@@ -30446,7 +30979,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "abf16f6b-644c-4a56-8303-49637537e0d8",
+              "value": "bd7c3086-036d-46d1-861c-c118b45ccc68",
               "system": true
             },
             {
@@ -30466,14 +30999,14 @@
             },
             {
               "key": "Cookie",
-              "value": "_pbm_session=%2BwUDr%2F%2Fq7txXKT8mRlBgRb8fc2fryd4SxhibBK2I4nvCIic4ywkDk3Fx%2FrcPptOnFDXHTZJ%2BY0O4XLuojd94qaqWpj6NmziXsMJv9wq5wZhsM222RWfwuGGsC2Puz8milcKId5T%2BdmSIEeyq9cbBAMFQD4TGLHo0ey42S10lJHnp%2BM7jLhf%2FWIs7YzL5jclsdt%2B19bNlFQswD1VVMtXnDoZyQqlSGqFKxfu1pNHct4tXA6FVYNA2JaZpY939o6enc8khQbe88ghciLCTjGLRkQGyQfcJqpRmdTN07%2FQe2n0%3D--9MqiZcOOis23TqFx--Qdvu1JDkYTqN3vzGnP48rg%3D%3D",
+              "value": "_pbm_session=7Ty5aAxxfmpY4qtbBgNiLK1m8cgZ8TCBG9K%2Bm8SR6HAAXb8HMqDKwsCwLkk5dMM4zl%2BQTHfTa%2Fke9jw6W6SjW2yxgTQKCJTJwAn96UubbYf0ICCg0zMWQQX2a8%2FAFur8KpnDzpG9ndcWlLdJTaFZbYwG68qxTSFrpoTUZU4USuPJZnG9Rgc4FP1RbsuK%2FB1egViTPZtkG0t645tW%2F8ZNoJyum0GsDyjiuUSilNgJTtS380W0za41oIR09e%2Ft3aZyQOSHgUHstWsB7atwWPWzZ6CsaYk64c5GG6TKn4inRqY%3D--DMXlpsxbAJBuhn96--92CaoaKtZ%2B2ne%2BnudNukYQ%3D%3D",
               "system": true
             }
           ],
           "method": "GET"
         },
         "response": {
-          "id": "758a75df-1957-445e-92b7-5f2b00d3589e",
+          "id": "a402c6c1-d4e5-451c-9fb8-d8782152e382",
           "status": "OK",
           "code": 200,
           "header": [
@@ -30483,7 +31016,7 @@
             },
             {
               "key": "Date",
-              "value": "Fri, 06 Sep 2024 16:44:40 GMT"
+              "value": "Tue, 10 Sep 2024 02:38:39 GMT"
             },
             {
               "key": "Content-Type",
@@ -30512,10 +31045,6 @@
             {
               "key": "X-Content-Type-Options",
               "value": "nosniff"
-            },
-            {
-              "key": "X-Download-Options",
-              "value": "noopen"
             },
             {
               "key": "X-Permitted-Cross-Domain-Policies",
@@ -30551,19 +31080,19 @@
             },
             {
               "key": "Set-Cookie",
-              "value": "_pbm_session=hbVtuookSTvSAayjrZ1EMu3QWGZgUswD8pCFs%2B4tT1DO4d9zKG4rcX1Wmv0MfNKXi6xCwS3nZikyA1O8PmWVA5lC73GymEUHBuPmB13uIc1s01InMdYL5U0peFR3JH1jVulIV3mOBkAeHaL3l40mYHgMMs1jIY7ygaEVRfG9h9iL%2BwhKOsQCp61ZLuMh4VMpLDV%2Bv2DdgMOkGx9W%2Fz6J15cqiEfaG7olZlhbgtpkjZP1MNHbCjlA%2FVfPfeM3u4ZfDhF7ccNfr8PJC7pOkPTiiFkxnpxWYJaiSwJs6S7gLJcyP9XWeiyagA%3D%3D--0fJcqO18uaggpX4S--nrKV0ohK1wugxRV3V93McQ%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
+              "value": "_pbm_session=4dcegb%2BnVzmH4jVDYES9vwjJu1perMq03Elpg1lnZN8GDQLp4yGHjUrbPu63mn5AMnp8IasdAqxp61s%2Fxx6kGrH97R8b4EZFg4dtpfWX0o7WRBAoM%2F7yAeM%2F%2BVq8NiXZvytw792ScBjdkHPnXr4kNLkc3ank1qzQPlU6FxjxXMLmXy22CjhjLhkTnzUv%2FiJwLyVrRMtbgb1MWeGvdw5rSgyUNziOADrui9d3XHxKLiHxiLRw1kU68UeTC8FgQzplmSy5fes8aRhsY4FLCeDpmHIE1B42HbxCKXaQftU7wtvGhvWbmagW0A%3D%3D--0Ps%2BryFlQ97vCWVO--x%2BttAzKJh7AuYvQJLhb7Bg%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
             },
             {
               "key": "X-Request-Id",
-              "value": "7b1a4a2f-7170-4bc4-9daa-7d9c5990bf1d"
+              "value": "6f5ee900-a198-41ec-a550-00581633d5c7"
             },
             {
               "key": "X-Runtime",
-              "value": "0.227684"
+              "value": "0.074975"
             },
             {
               "key": "Strict-Transport-Security",
-              "value": "max-age=63072000"
+              "value": "max-age=63072000; includeSubDomains"
             },
             {
               "key": "Strict-Transport-Security",
@@ -94361,10 +94890,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 312,
+          "responseTime": 153,
           "responseSize": 63781
         },
-        "id": "3bc107ff-5d64-42dc-8b50-dbaaa0bdba45",
+        "id": "1bb03005-b22b-4547-91c3-3544ecd8ef2a",
         "assertions": [
           {
             "assertion": "Response status code is 200",
@@ -94386,15 +94915,15 @@
       },
       {
         "cursor": {
-          "ref": "a8aa490d-32cc-442e-b5cd-fb09e8b601a9",
-          "length": 8,
+          "ref": "2b85e823-998b-44b4-a28c-731474bf5b9e",
+          "length": 9,
           "cycles": 1,
           "position": 4,
           "iteration": 0,
-          "httpRequestId": "aa4a352f-8392-44db-9416-a72489f4ce68"
+          "httpRequestId": "6564772b-2272-48d2-8ed6-d2f720fc9dd1"
         },
         "item": {
-          "id": "430952c4-6112-4818-beb7-f2eb010b5c7e",
+          "id": "3d7d6007-a653-4a17-89d7-241c4ff9ca38",
           "name": "Get location and machine counts",
           "request": {
             "url": {
@@ -94417,7 +94946,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "f1be5e3b-c74c-4e1f-be2c-40b8f42a8c04",
+                "id": "5a70b75e-8f67-4b3f-ab8a-dae8fbbc9c39",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
@@ -94440,7 +94969,7 @@
                   "});",
                   ""
                 ],
-                "_lastExecutionId": "b912c51f-1f7e-45b3-bc63-d188678971fa"
+                "_lastExecutionId": "5ebe71b3-dcd1-4bfb-8654-54511c09dd57"
               }
             }
           ]
@@ -94480,7 +95009,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "36fcb096-f6a6-46cd-8a4c-46f9c17e4cfa",
+              "value": "40ef06f8-378e-4410-b791-7771ec2f1042",
               "system": true
             },
             {
@@ -94500,14 +95029,14 @@
             },
             {
               "key": "Cookie",
-              "value": "_pbm_session=hbVtuookSTvSAayjrZ1EMu3QWGZgUswD8pCFs%2B4tT1DO4d9zKG4rcX1Wmv0MfNKXi6xCwS3nZikyA1O8PmWVA5lC73GymEUHBuPmB13uIc1s01InMdYL5U0peFR3JH1jVulIV3mOBkAeHaL3l40mYHgMMs1jIY7ygaEVRfG9h9iL%2BwhKOsQCp61ZLuMh4VMpLDV%2Bv2DdgMOkGx9W%2Fz6J15cqiEfaG7olZlhbgtpkjZP1MNHbCjlA%2FVfPfeM3u4ZfDhF7ccNfr8PJC7pOkPTiiFkxnpxWYJaiSwJs6S7gLJcyP9XWeiyagA%3D%3D--0fJcqO18uaggpX4S--nrKV0ohK1wugxRV3V93McQ%3D%3D",
+              "value": "_pbm_session=4dcegb%2BnVzmH4jVDYES9vwjJu1perMq03Elpg1lnZN8GDQLp4yGHjUrbPu63mn5AMnp8IasdAqxp61s%2Fxx6kGrH97R8b4EZFg4dtpfWX0o7WRBAoM%2F7yAeM%2F%2BVq8NiXZvytw792ScBjdkHPnXr4kNLkc3ank1qzQPlU6FxjxXMLmXy22CjhjLhkTnzUv%2FiJwLyVrRMtbgb1MWeGvdw5rSgyUNziOADrui9d3XHxKLiHxiLRw1kU68UeTC8FgQzplmSy5fes8aRhsY4FLCeDpmHIE1B42HbxCKXaQftU7wtvGhvWbmagW0A%3D%3D--0Ps%2BryFlQ97vCWVO--x%2BttAzKJh7AuYvQJLhb7Bg%3D%3D",
               "system": true
             }
           ],
           "method": "GET"
         },
         "response": {
-          "id": "09efadb7-2b75-427b-b4a4-7122af400d1d",
+          "id": "9a4e3957-15a5-4030-9af4-18e19bd559a5",
           "status": "OK",
           "code": 200,
           "header": [
@@ -94517,7 +95046,7 @@
             },
             {
               "key": "Date",
-              "value": "Fri, 06 Sep 2024 16:44:40 GMT"
+              "value": "Tue, 10 Sep 2024 02:38:39 GMT"
             },
             {
               "key": "Content-Type",
@@ -94542,10 +95071,6 @@
             {
               "key": "X-Content-Type-Options",
               "value": "nosniff"
-            },
-            {
-              "key": "X-Download-Options",
-              "value": "noopen"
             },
             {
               "key": "X-Permitted-Cross-Domain-Policies",
@@ -94573,7 +95098,7 @@
             },
             {
               "key": "ETag",
-              "value": "W/\"66ef896bd2762846b5779f3a77bd1f24\""
+              "value": "W/\"f561bc9bb4f35217c98daa3b487e9c2d\""
             },
             {
               "key": "Cache-Control",
@@ -94581,19 +95106,19 @@
             },
             {
               "key": "Set-Cookie",
-              "value": "_pbm_session=RDjUf80cudEoECG2Qf6U3EcxhELMW0CUEVulrT4fWCi1VzmIemDjZwXfNWB0OnUfQGDna33Hwku5irZuLyDNJUprrCTeqN5mwuenOC2gzihEsiLWmaGn8Rfaeow3PK59xTv8tJs1vBlYlnEl0knkHhPpN2Nc7HBlyJ0nbh1HGWOREm1XHcWhCh1Uy6wa4AtEE4wrj1o%2FFTfoRFp5k6jWwK4ivLCkvEOSbMUiq9FU6oys9kSjbugsaNn4G8EUJ8PzXMlSwOxBZyLtvnQniU40lhrhdXtZPjn6wduD%2Fw%3D%3D--rFiI9uodv%2BTX2hQR--k%2BEd0omHL85HQLN7xpxt6Q%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
+              "value": "_pbm_session=4mIuOKmZdL3V0hN2cQkFM2NH0sPcQgehpASBguWNgK85XZhX2N%2B5glWrATdEdh054izlJUEZGa%2Bju9obJR2Z8m5fT%2B%2FSvit0FQqhZDfe2EmOM8QewN86epk9ZTpTfmnfXfW8Nz8m4FJnuesq%2BdMirYV8hJCLWacTG6BK5B%2FKeGrpzqfOKJp8aA060gKTDSgYPh729IdKXrJn%2Fu7dcxIfKyUWAPV3MXwYmXz7Wxkw0BcXIqtTEm4jTkG22fxUIWdfMly1dcbBQl7EXju1nHD1hzb22kMo9aG9M2a6cA%3D%3D--283JJ315Zan3RN0r--PKTWZjd%2BmETAcUd8LiZGRw%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
             },
             {
               "key": "X-Request-Id",
-              "value": "b84467f4-9b7d-46fb-89f7-a40217bdd5dc"
+              "value": "6651445d-30d0-41bd-89e4-28ff92f926c7"
             },
             {
               "key": "X-Runtime",
-              "value": "0.172156"
+              "value": "0.026859"
             },
             {
               "key": "Strict-Transport-Security",
-              "value": "max-age=63072000"
+              "value": "max-age=63072000; includeSubDomains"
             },
             {
               "key": "Strict-Transport-Security",
@@ -94624,7 +95149,7 @@
               48,
               55,
               50,
-              56,
+              55,
               44,
               34,
               110,
@@ -94640,17 +95165,17 @@
               58,
               52,
               52,
-              50,
-              57,
-              50,
+              51,
+              49,
+              51,
               125
             ]
           },
           "cookie": [],
-          "responseTime": 251,
+          "responseTime": 96,
           "responseSize": 41
         },
-        "id": "430952c4-6112-4818-beb7-f2eb010b5c7e",
+        "id": "3d7d6007-a653-4a17-89d7-241c4ff9ca38",
         "assertions": [
           {
             "assertion": "Response status code is 200",
@@ -94668,15 +95193,15 @@
       },
       {
         "cursor": {
-          "ref": "c27811a4-7c0b-4c1f-9fe5-19b9f03ff21e",
-          "length": 8,
+          "ref": "9f2d0c2d-8859-4965-a9f6-de918e0ac8b9",
+          "length": 9,
           "cycles": 1,
           "position": 5,
           "iteration": 0,
-          "httpRequestId": "3434fe3f-81a5-478a-8191-8d6b28104a23"
+          "httpRequestId": "50692d4b-f34e-4b07-8ce0-c865c92e383d"
         },
         "item": {
-          "id": "f693bcaa-2f21-4cb1-b195-68c9b0f90c44",
+          "id": "fafbad0b-6a1a-4d33-bcf4-4cff5e06d6f7",
           "name": "Fetch all regions",
           "request": {
             "url": {
@@ -94698,7 +95223,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "c1eedb60-e09b-43ce-bd61-f8cc9fbcb9fb",
+                "id": "ac574251-6f7c-400b-bba7-1c33cd7db552",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
@@ -94724,7 +95249,7 @@
                   "});",
                   ""
                 ],
-                "_lastExecutionId": "1c4737ec-499c-453b-baa8-d481edc18644"
+                "_lastExecutionId": "97a345c9-1a1f-42ff-8862-859cc049b5cf"
               }
             }
           ]
@@ -94763,7 +95288,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "234e220d-ae01-46a6-9c4a-b0d94f79e13d",
+              "value": "553ec94d-52ab-4f36-a4ce-be6b08325631",
               "system": true
             },
             {
@@ -94783,14 +95308,14 @@
             },
             {
               "key": "Cookie",
-              "value": "_pbm_session=RDjUf80cudEoECG2Qf6U3EcxhELMW0CUEVulrT4fWCi1VzmIemDjZwXfNWB0OnUfQGDna33Hwku5irZuLyDNJUprrCTeqN5mwuenOC2gzihEsiLWmaGn8Rfaeow3PK59xTv8tJs1vBlYlnEl0knkHhPpN2Nc7HBlyJ0nbh1HGWOREm1XHcWhCh1Uy6wa4AtEE4wrj1o%2FFTfoRFp5k6jWwK4ivLCkvEOSbMUiq9FU6oys9kSjbugsaNn4G8EUJ8PzXMlSwOxBZyLtvnQniU40lhrhdXtZPjn6wduD%2Fw%3D%3D--rFiI9uodv%2BTX2hQR--k%2BEd0omHL85HQLN7xpxt6Q%3D%3D",
+              "value": "_pbm_session=4mIuOKmZdL3V0hN2cQkFM2NH0sPcQgehpASBguWNgK85XZhX2N%2B5glWrATdEdh054izlJUEZGa%2Bju9obJR2Z8m5fT%2B%2FSvit0FQqhZDfe2EmOM8QewN86epk9ZTpTfmnfXfW8Nz8m4FJnuesq%2BdMirYV8hJCLWacTG6BK5B%2FKeGrpzqfOKJp8aA060gKTDSgYPh729IdKXrJn%2Fu7dcxIfKyUWAPV3MXwYmXz7Wxkw0BcXIqtTEm4jTkG22fxUIWdfMly1dcbBQl7EXju1nHD1hzb22kMo9aG9M2a6cA%3D%3D--283JJ315Zan3RN0r--PKTWZjd%2BmETAcUd8LiZGRw%3D%3D",
               "system": true
             }
           ],
           "method": "GET"
         },
         "response": {
-          "id": "535aa4cd-d358-4d79-983c-e68eac25e911",
+          "id": "ba9bb1f5-cc92-4e88-bad7-c0c424fa1da4",
           "status": "OK",
           "code": 200,
           "header": [
@@ -94800,7 +95325,7 @@
             },
             {
               "key": "Date",
-              "value": "Fri, 06 Sep 2024 16:44:40 GMT"
+              "value": "Tue, 10 Sep 2024 02:38:39 GMT"
             },
             {
               "key": "Content-Type",
@@ -94829,10 +95354,6 @@
             {
               "key": "X-Content-Type-Options",
               "value": "nosniff"
-            },
-            {
-              "key": "X-Download-Options",
-              "value": "noopen"
             },
             {
               "key": "X-Permitted-Cross-Domain-Policies",
@@ -94868,19 +95389,19 @@
             },
             {
               "key": "Set-Cookie",
-              "value": "_pbm_session=wjlinCk5XooVX0wo43cn5VEFmWNecpegHQmM25Go4rmNjbrGtUvMAJqq2Hiwa9%2BdXtX3sdcwFzfyvMRQopNgshY6qxnOJvCs0YDNnDKuMtlGQu5xk%2BK2Om5fXn9iE16YKpDmt%2BDmKTNOXiE5byquwrkt52tDXx5uQWyOE0Unlhc6AemOyivq1pDi%2FBbx5kj9teiI9lo0nYlP6pq%2FNA94kkyUkGOZ54nZ6ifNdlXk1AnsIuZg--8CP1EFnkciUWHD4g--BxlFqeR027c4YdQSgYHZUg%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
+              "value": "_pbm_session=puYdKnX2PMN6390JxfJvXSN1m24DVOlSFcaWKL5PwTVfa4u7yIy6OP5rESvWWL7aMqfc7PzjS0LW1OhcW3DdS9Ov2esS%2FLn5Obp2Wv5aUU5kcPslowXOPt2grNy9PSKei%2B%2FtfWMguqGGaw0MljiqmfCExWZLQPz4towgdVzY9yrkKM0KJGSt%2FAgCOHB%2B0SjVR57%2B6HEY3Ayjx%2F7%2BcRFo2miZl9w51DvnHS19dYCPYP%2FVebmD--pgl%2BboO%2FYUw8%2FSbO--eW161ZuALUJrs%2Be0QG8HAA%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
             },
             {
               "key": "X-Request-Id",
-              "value": "ac072960-dd05-4a9c-b0f2-0ce19d8cc945"
+              "value": "11b869e1-b341-40dd-8787-4ffbe972a905"
             },
             {
               "key": "X-Runtime",
-              "value": "0.035806"
+              "value": "0.021118"
             },
             {
               "key": "Strict-Transport-Security",
-              "value": "max-age=63072000"
+              "value": "max-age=63072000; includeSubDomains"
             },
             {
               "key": "Strict-Transport-Security",
@@ -122819,10 +123340,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 118,
+          "responseTime": 96,
           "responseSize": 27922
         },
-        "id": "f693bcaa-2f21-4cb1-b195-68c9b0f90c44",
+        "id": "fafbad0b-6a1a-4d33-bcf4-4cff5e06d6f7",
         "assertions": [
           {
             "assertion": "Response status code is 200",
@@ -122840,15 +123361,15 @@
       },
       {
         "cursor": {
-          "ref": "a7a2dd03-4780-417d-aaf6-1b2be43967c1",
-          "length": 8,
+          "ref": "aa505550-4afa-4a7b-b43c-3ebc90479a68",
+          "length": 9,
           "cycles": 1,
           "position": 6,
           "iteration": 0,
-          "httpRequestId": "f2d1a8cc-5297-4bfb-ab40-6f58788fe0c8"
+          "httpRequestId": "eabc0dc9-6796-459c-993e-1a1145bf3f57"
         },
         "item": {
-          "id": "f81cc8cc-2bcc-49f8-977e-e2d420bce580",
+          "id": "35aff95e-6bf0-4474-89c9-03e9c5ff8cbe",
           "name": "Find if name corresponds to a known region",
           "request": {
             "url": {
@@ -122876,7 +123397,7 @@
               "_": {
                 "postman_previewlanguage": null
               },
-              "id": "bc69a71b-0c05-478e-b293-d9e61c6e4243",
+              "id": "3c556b9f-04b6-4fc1-949f-b46beb6a3271",
               "name": "This should fail",
               "originalRequest": {
                 "url": {
@@ -122907,7 +123428,7 @@
               "_": {
                 "postman_previewlanguage": null
               },
-              "id": "5adaee73-5af4-478a-8463-b9c03fe67a83",
+              "id": "9eca60a8-b055-4267-a1ad-ed40c731d98c",
               "name": "Find if name corresponds to a known region",
               "originalRequest": {
                 "url": {
@@ -122939,7 +123460,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "82e46993-3552-48cc-86d2-1f5909b64fcd",
+                "id": "d12d4c1c-386e-45fc-aac9-db9c5157356e",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
@@ -123016,19 +123537,19 @@
                   "});",
                   ""
                 ],
-                "_lastExecutionId": "abbdfe66-0c1e-4258-8130-6b84ea978879"
+                "_lastExecutionId": "6353f0dd-3f91-46e9-9511-4baeab52dc11"
               }
             },
             {
               "listen": "prerequest",
               "script": {
-                "id": "73256aec-74d7-4143-9878-bffa9936cfdb",
+                "id": "c3b36f19-0743-4d4c-ac8a-afd531a6a037",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
                   ""
                 ],
-                "_lastExecutionId": "02311882-56d4-49c3-914e-bc8f0f2a2b30"
+                "_lastExecutionId": "ba3da770-a034-40b3-bce3-c6692a8d770f"
               }
             }
           ]
@@ -123073,7 +123594,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "b2610b24-9b19-4d34-ab46-b97ddd7c3f75",
+              "value": "01bb6635-aa5a-4068-9084-14859ae12cad",
               "system": true
             },
             {
@@ -123093,14 +123614,14 @@
             },
             {
               "key": "Cookie",
-              "value": "_pbm_session=wjlinCk5XooVX0wo43cn5VEFmWNecpegHQmM25Go4rmNjbrGtUvMAJqq2Hiwa9%2BdXtX3sdcwFzfyvMRQopNgshY6qxnOJvCs0YDNnDKuMtlGQu5xk%2BK2Om5fXn9iE16YKpDmt%2BDmKTNOXiE5byquwrkt52tDXx5uQWyOE0Unlhc6AemOyivq1pDi%2FBbx5kj9teiI9lo0nYlP6pq%2FNA94kkyUkGOZ54nZ6ifNdlXk1AnsIuZg--8CP1EFnkciUWHD4g--BxlFqeR027c4YdQSgYHZUg%3D%3D",
+              "value": "_pbm_session=puYdKnX2PMN6390JxfJvXSN1m24DVOlSFcaWKL5PwTVfa4u7yIy6OP5rESvWWL7aMqfc7PzjS0LW1OhcW3DdS9Ov2esS%2FLn5Obp2Wv5aUU5kcPslowXOPt2grNy9PSKei%2B%2FtfWMguqGGaw0MljiqmfCExWZLQPz4towgdVzY9yrkKM0KJGSt%2FAgCOHB%2B0SjVR57%2B6HEY3Ayjx%2F7%2BcRFo2miZl9w51DvnHS19dYCPYP%2FVebmD--pgl%2BboO%2FYUw8%2FSbO--eW161ZuALUJrs%2Be0QG8HAA%3D%3D",
               "system": true
             }
           ],
           "method": "GET"
         },
         "response": {
-          "id": "0d66893c-afa6-4692-9ed6-b30ebda1533b",
+          "id": "62c4ee9e-8c60-40f3-b645-c8c3c736f546",
           "status": "OK",
           "code": 200,
           "header": [
@@ -123110,7 +123631,7 @@
             },
             {
               "key": "Date",
-              "value": "Fri, 06 Sep 2024 16:44:40 GMT"
+              "value": "Tue, 10 Sep 2024 02:38:39 GMT"
             },
             {
               "key": "Content-Type",
@@ -123135,10 +123656,6 @@
             {
               "key": "X-Content-Type-Options",
               "value": "nosniff"
-            },
-            {
-              "key": "X-Download-Options",
-              "value": "noopen"
             },
             {
               "key": "X-Permitted-Cross-Domain-Policies",
@@ -123174,19 +123691,19 @@
             },
             {
               "key": "Set-Cookie",
-              "value": "_pbm_session=MkPPCWIWnS8Zs2H7sNwYAGdboK8M0vcJakjQJRT%2BD5UuU67f02h3jPdALfS2q%2BRLThA4PkMmS%2BhGLBRbncgyljf1fhO7Dml2%2Be5BI92JRQEq2sTKW68n8%2BFoIzZ9zKixJ%2F7ZQGY3%2BUha4ylBs6rGffBxi3Eu2mfW8NGmFbXirTlHdMLjISBI725yotwHEwaHZ0S34SGF%2Bff8Bft7hzLBQNV35rqVb7IucqmWYnJANTYRjCXqkrcETqLQLDF48fjTv7Jhxx0EkI7xz812SqNwzkoosy1TVGzNUX%2B9HgPGcUU%3D--5IKxNGdKCdrppf%2FI--uuwoO7NY1JQnpWcKHp98NQ%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
+              "value": "_pbm_session=2lHSzR2s%2Fw2KJ77H6hPr0RiRVZ36iGVebcBfC%2BZFaVLHZRxxtSP1OpMlNExuCZTNe3g4HuIFVhh4G3rc4idIm8GYaYNEF3n8ID8BQMiDm5gtnui%2BZQDdaOnxfTUw%2FUvs%2FDTO9%2B7JBFd3wzcFaynWtIf0f8sVCPJ3Bep8Q8Ul%2FkGvrW493r0I%2BftELtLT3WpKsY%2FXnZIO2gN%2BYlfz9FcIT015v0YZcG0HddDom%2FJHgZTbe4YDN5suinKtYimyCtZMWL5%2BhUxlTW9B4w87jRMPyu2Idk7H1QD24VHVGbttGQA%3D--IQAsW2l9AuvGFdJK--6VFm54VT25U%2BVYTkt4uSZg%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
             },
             {
               "key": "X-Request-Id",
-              "value": "5ba3eab6-bb22-4f32-9c0a-a455173a1d25"
+              "value": "c90a58cf-a136-4b21-bedc-f28370559640"
             },
             {
               "key": "X-Runtime",
-              "value": "0.022638"
+              "value": "0.010833"
             },
             {
               "key": "Strict-Transport-Security",
-              "value": "max-age=63072000"
+              "value": "max-age=63072000; includeSubDomains"
             },
             {
               "key": "Strict-Transport-Security",
@@ -123736,10 +124253,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 95,
+          "responseTime": 81,
           "responseSize": 537
         },
-        "id": "f81cc8cc-2bcc-49f8-977e-e2d420bce580",
+        "id": "35aff95e-6bf0-4474-89c9-03e9c5ff8cbe",
         "assertions": [
           {
             "assertion": "Response status code is 200",
@@ -123772,15 +124289,15 @@
       },
       {
         "cursor": {
-          "ref": "5f630d5e-3c41-4842-a82b-74cadd6848d9",
-          "length": 8,
+          "ref": "47660332-fb3a-4528-9b65-dbc7f877a7d7",
+          "length": 9,
           "cycles": 1,
           "position": 7,
           "iteration": 0,
-          "httpRequestId": "b2b8a529-089f-4079-a37e-c48c7ac7ccdb"
+          "httpRequestId": "1da66d95-3a32-4172-9fea-3f54d5869c29"
         },
         "item": {
-          "id": "6952662f-0a68-4835-92cf-f72206f7bf95",
+          "id": "018f9514-f4c5-4bbf-8386-f77096adb13e",
           "name": "Fetch all machines",
           "request": {
             "url": {
@@ -123828,7 +124345,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "dccd0adf-ad2d-4cad-802e-b853980ec1db",
+                "id": "97254cae-0883-464a-8195-7a9efd41317c",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
@@ -123844,7 +124361,7 @@
                   "",
                   ""
                 ],
-                "_lastExecutionId": "67b0be26-7c62-4092-b511-93d95a670004"
+                "_lastExecutionId": "c0fe967e-5f71-4121-b48d-1d41e43dd225"
               }
             }
           ]
@@ -123892,7 +124409,7 @@
             },
             {
               "key": "Postman-Token",
-              "value": "6ceb8b96-453f-4ee1-9f32-eb9e4a7ce399",
+              "value": "e44e42d6-0296-4117-9b1f-4aceaf4bcd9e",
               "system": true
             },
             {
@@ -123912,14 +124429,14 @@
             },
             {
               "key": "Cookie",
-              "value": "_pbm_session=MkPPCWIWnS8Zs2H7sNwYAGdboK8M0vcJakjQJRT%2BD5UuU67f02h3jPdALfS2q%2BRLThA4PkMmS%2BhGLBRbncgyljf1fhO7Dml2%2Be5BI92JRQEq2sTKW68n8%2BFoIzZ9zKixJ%2F7ZQGY3%2BUha4ylBs6rGffBxi3Eu2mfW8NGmFbXirTlHdMLjISBI725yotwHEwaHZ0S34SGF%2Bff8Bft7hzLBQNV35rqVb7IucqmWYnJANTYRjCXqkrcETqLQLDF48fjTv7Jhxx0EkI7xz812SqNwzkoosy1TVGzNUX%2B9HgPGcUU%3D--5IKxNGdKCdrppf%2FI--uuwoO7NY1JQnpWcKHp98NQ%3D%3D",
+              "value": "_pbm_session=2lHSzR2s%2Fw2KJ77H6hPr0RiRVZ36iGVebcBfC%2BZFaVLHZRxxtSP1OpMlNExuCZTNe3g4HuIFVhh4G3rc4idIm8GYaYNEF3n8ID8BQMiDm5gtnui%2BZQDdaOnxfTUw%2FUvs%2FDTO9%2B7JBFd3wzcFaynWtIf0f8sVCPJ3Bep8Q8Ul%2FkGvrW493r0I%2BftELtLT3WpKsY%2FXnZIO2gN%2BYlfz9FcIT015v0YZcG0HddDom%2FJHgZTbe4YDN5suinKtYimyCtZMWL5%2BhUxlTW9B4w87jRMPyu2Idk7H1QD24VHVGbttGQA%3D--IQAsW2l9AuvGFdJK--6VFm54VT25U%2BVYTkt4uSZg%3D%3D",
               "system": true
             }
           ],
           "method": "GET"
         },
         "response": {
-          "id": "bbf2790c-975f-4d64-aeda-eb6d0b83803d",
+          "id": "9b492014-8d95-4620-8451-7dc4eb2a6bf3",
           "status": "OK",
           "code": 200,
           "header": [
@@ -123929,7 +124446,7 @@
             },
             {
               "key": "Date",
-              "value": "Fri, 06 Sep 2024 16:44:41 GMT"
+              "value": "Tue, 10 Sep 2024 02:38:39 GMT"
             },
             {
               "key": "Content-Type",
@@ -123954,10 +124471,6 @@
             {
               "key": "X-Content-Type-Options",
               "value": "nosniff"
-            },
-            {
-              "key": "X-Download-Options",
-              "value": "noopen"
             },
             {
               "key": "X-Permitted-Cross-Domain-Policies",
@@ -123993,19 +124506,19 @@
             },
             {
               "key": "Set-Cookie",
-              "value": "_pbm_session=O5EtnA6u4it9jjQ%2FDIiIMdS0%2BSxLoKd7z%2BJJazfxeVm5kLVIEk2IGrhfpRkNwCLYZgbo4ehRQQ2%2BjZ6XOhWKbF7ChtfBRxoDgKE%2FSvjPa5ZKKdMRiJPJl%2Bgg6%2FQEzm5gvyBVa39ZntqWw0WpxIUhIC38s0nRfiDPz1TOHnGUZ1tosn4XaAdbGlK3qMvNjO1YuMQdywCMYr7lSRQ6rOVo9sRRTIcISdXN6xjBNt%2BAASZ8JnJpUVKEonNLyWU5JhV92snmXReJTQeKcBxb6Te9Rl5bIW%2BejPhrMvyQxhIsat8cEM%2BJ9RteKw%3D%3D--Lb6z4E7pJyLH8o%2BY--wCOEyWk0p7Iqt43mMpt8Yg%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
+              "value": "_pbm_session=sKSiuvkNTUqahkRu9cpBF9SXVD71%2FLcV7zuxih%2BcjQpfjQK%2FWOogZkb3t%2Fe5ixHMVmpd6%2BUcSWBfxGiP%2BBggtm6f3rvdouu60OVcSHes8tapbnDV252woOm%2FpIY%2B%2F4CNH2JMM0234n2ENWuJTtpW7PkPVcCHZ%2FBPuBYkklj6%2BdY1okM9J3gMcZbIRPsNSmzMNvFtgdSxZqwWacKQL2PdWqNiwaCwwPB1RhQ2QfDf354XuY%2FdfH5UIMgrVn%2BkIAXiAbMhC%2B28mGBviQReTACaSkfb%2BTeOrZY%2F40kiHWt1rCIyZ2oRiGYfSQ%3D%3D--7K5SxzCQKAvLgrG2--E4ydsxZU9DdXHadIdfETXA%3D%3D; path=/; secure; HttpOnly; SameSite=Lax"
             },
             {
               "key": "X-Request-Id",
-              "value": "0044d03a-41c7-4c79-96bc-d185bcc407b8"
+              "value": "c3a4b6b3-7854-4014-a9dd-686194970eeb"
             },
             {
               "key": "X-Runtime",
-              "value": "0.135388"
+              "value": "0.076784"
             },
             {
               "key": "Strict-Transport-Security",
-              "value": "max-age=63072000"
+              "value": "max-age=63072000; includeSubDomains"
             },
             {
               "key": "Strict-Transport-Security",
@@ -124033,10 +124546,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 207,
+          "responseTime": 150,
           "responseSize": 15
         },
-        "id": "6952662f-0a68-4835-92cf-f72206f7bf95",
+        "id": "018f9514-f4c5-4bbf-8386-f77096adb13e",
         "assertions": [
           {
             "assertion": "Response status code is 200",
@@ -124047,10 +124560,1708 @@
             "skipped": false
           }
         ]
+      },
+      {
+        "cursor": {
+          "ref": "217549fc-a1c6-4651-adb4-47c3e5093935",
+          "length": 9,
+          "cycles": 1,
+          "position": 8,
+          "iteration": 0,
+          "httpRequestId": "5a13181f-5ff8-4f39-9153-63ba63f1428f"
+        },
+        "item": {
+          "id": "0f17ff8d-6b38-401a-bd8b-cf8c203f3d9c",
+          "name": "Deactivate a user Copy 2",
+          "request": {
+            "description": {
+              "content": "Removes a user from your Postman team and deactivates the account. This blocks the user from authenticating in to Postman.",
+              "type": "text/plain"
+            },
+            "url": {
+              "protocol": "https",
+              "path": [
+                "scim",
+                "v2",
+                "Users",
+                "{{userId}}"
+              ],
+              "host": [
+                "api",
+                "getpostman",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "method": "PATCH",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "a807eff1-fe60-4143-945e-c1edef55ca0a",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apikey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "name": "Content-Type",
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:User\"\n    ],\n    \"id\": \"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99\",\n    \"userName\": \"taylor-lee@example.com\",\n    \"name\": {\n        \"givenName\": \"Taylor\",\n        \"familyName\": \"Lee\"\n    },\n    \"externalId\": \"12345678\",\n    \"active\": false,\n    \"meta\": {\n        \"resourceType\": \"User\",\n        \"created\": \"2021-02-22T04:24:13.000Z\",\n        \"lastModified\": \"2021-02-22T04:24:13.000Z\"\n    }\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "60dc2bf2-5c0a-46a8-8393-cbb806f59bd0",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"scimType\": \"invalidSyntax\",\n    \"detail\": \"You’ve used operation that Postman doesn’t support.\",\n    \"status\": \"400\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "522e65e9-dd73-465d-ae67-c8db47b41632",
+              "name": "Invalid Team",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "invalidApiKey"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Team doesn't exist.\",\n    \"status\": \"400\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "ba67d711-6604-4286-8ad1-5ac706600008",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "invalidApiKey"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Unable to access the team. Check if you have entered a valid API key.\",\n    \"status\": \"401\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "a352139d-221c-469f-967c-60fc4388eabc",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"This person isn’t a member of the team.\",\n    \"status\": \"403\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "0c21616f-1786-4916-b000-c3ca635796ec",
+              "name": "Admin Team Mismatch",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Your API key was generated by a Team Admin who is no longer on your team. Use an API key generated by a Team Admin.\",\n    \"status\": \"403\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "1b6d8121-750f-4156-85c0-35d48b8d6ac5",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"This person isn’t a member of the team.\",\n    \"status\": \"404\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "21756463-3fa3-4583-b1e5-d8053b7d7159",
+              "name": "Too Many Requests",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"That’s 180 attempts in less than a minute. Wait for a minute and then try again.\",\n    \"status\": 429\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "72be44a5-ec5c-4b02-b8fc-7fdba4ca3016",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Couldn’t update this team member’s information. Try again — it should work next time around.\",\n    \"status\": \"500\"\n}",
+              "cookie": []
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "72a5fa70-bdd9-4c1d-9cf5-7f31999364cb",
+                "type": "text/javascript",
+                "exec": [
+                  "const email = pm.iterationData.get('email')",
+                  "const users = pm.collectionVariables.get('users')",
+                  "",
+                  "if (!users) {",
+                  "  const apiKey = pm.collectionVariables.get('apiKey')",
+                  "  const getAllUsers = {",
+                  "    url: 'https://api.getpostman.com/scim/v2/Users?count=10000',",
+                  "    method: 'GET',",
+                  "    header: `Authorization:${apiKey}`",
+                  "  }",
+                  "",
+                  "  pm.sendRequest(getAllUsers, mapUserList)",
+                  "} else {",
+                  "  setUserToBeDeactivated(JSON.parse(users))",
+                  "}",
+                  "",
+                  "function mapUserList (err, res) {",
+                  "  const userList = res.json().Resources",
+                  "  const users = userList.map(user => {",
+                  "    return {",
+                  "      id: user.id,",
+                  "      email: user.emails[0].value",
+                  "    }",
+                  "  })",
+                  "",
+                  "  pm.collectionVariables.set('users', JSON.stringify(users))",
+                  "  setUserToBeDeactivated(users)",
+                  "}",
+                  "",
+                  "function setUserToBeDeactivated (users) {",
+                  "  const userId = users.find(user => user.email === email).id",
+                  "  pm.collectionVariables.set('userId', userId)",
+                  "}",
+                  ""
+                ],
+                "_lastExecutionId": "1a2a4f4c-4164-4a07-b568-3f758ec0416f"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "Removes a user from your Postman team and deactivates the account. This blocks the user from authenticating in to Postman.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "scim",
+              "v2",
+              "Users",
+              "%7B%7BuserId%7D%7D"
+            ],
+            "host": [
+              "api",
+              "getpostman",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "{{apiKey}}"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "system": true
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "d3b5cabd-d407-4efe-9d3f-7684ca8aa9cd",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "api.getpostman.com",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "227",
+              "system": true
+            }
+          ],
+          "method": "PATCH",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "f183f78a-6637-410e-9ffa-0f007c286fc8",
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 10 Sep 2024 02:38:40 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "155"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "nginx/1.25.3"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"9b-dCqXEHtfIkAWVhK0sM0lRrgKmbc\""
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Kong-Upstream-Latency",
+              "value": "3"
+            },
+            {
+              "key": "X-Kong-Proxy-Latency",
+              "value": "5"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              115,
+              99,
+              104,
+              101,
+              109,
+              97,
+              115,
+              34,
+              58,
+              91,
+              34,
+              117,
+              114,
+              110,
+              58,
+              105,
+              101,
+              116,
+              102,
+              58,
+              112,
+              97,
+              114,
+              97,
+              109,
+              115,
+              58,
+              115,
+              99,
+              105,
+              109,
+              58,
+              97,
+              112,
+              105,
+              58,
+              109,
+              101,
+              115,
+              115,
+              97,
+              103,
+              101,
+              115,
+              58,
+              50,
+              46,
+              48,
+              58,
+              69,
+              114,
+              114,
+              111,
+              114,
+              34,
+              93,
+              44,
+              34,
+              100,
+              101,
+              116,
+              97,
+              105,
+              108,
+              34,
+              58,
+              34,
+              85,
+              110,
+              97,
+              98,
+              108,
+              101,
+              32,
+              116,
+              111,
+              32,
+              97,
+              99,
+              99,
+              101,
+              115,
+              115,
+              32,
+              116,
+              104,
+              101,
+              32,
+              116,
+              101,
+              97,
+              109,
+              46,
+              32,
+              67,
+              104,
+              101,
+              99,
+              107,
+              32,
+              105,
+              102,
+              32,
+              121,
+              111,
+              117,
+              32,
+              104,
+              97,
+              118,
+              101,
+              32,
+              101,
+              110,
+              116,
+              101,
+              114,
+              101,
+              100,
+              32,
+              97,
+              32,
+              118,
+              97,
+              108,
+              105,
+              100,
+              32,
+              65,
+              80,
+              73,
+              32,
+              107,
+              101,
+              121,
+              46,
+              34,
+              44,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              34,
+              52,
+              48,
+              49,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 59,
+          "responseSize": 155
+        },
+        "id": "0f17ff8d-6b38-401a-bd8b-cf8c203f3d9c"
+      },
+      {
+        "cursor": {
+          "ref": "217549fc-a1c6-4651-adb4-47c3e5093935",
+          "length": 9,
+          "cycles": 1,
+          "position": 8,
+          "iteration": 0,
+          "httpRequestId": "5a13181f-5ff8-4f39-9153-63ba63f1428f"
+        },
+        "item": {
+          "id": "0f17ff8d-6b38-401a-bd8b-cf8c203f3d9c",
+          "name": "Deactivate a user Copy 2",
+          "request": {
+            "description": {
+              "content": "Removes a user from your Postman team and deactivates the account. This blocks the user from authenticating in to Postman.",
+              "type": "text/plain"
+            },
+            "url": {
+              "protocol": "https",
+              "path": [
+                "scim",
+                "v2",
+                "Users",
+                "{{userId}}"
+              ],
+              "host": [
+                "api",
+                "getpostman",
+                "com"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "method": "PATCH",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "a807eff1-fe60-4143-945e-c1edef55ca0a",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apikey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "name": "Content-Type",
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:User\"\n    ],\n    \"id\": \"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99\",\n    \"userName\": \"taylor-lee@example.com\",\n    \"name\": {\n        \"givenName\": \"Taylor\",\n        \"familyName\": \"Lee\"\n    },\n    \"externalId\": \"12345678\",\n    \"active\": false,\n    \"meta\": {\n        \"resourceType\": \"User\",\n        \"created\": \"2021-02-22T04:24:13.000Z\",\n        \"lastModified\": \"2021-02-22T04:24:13.000Z\"\n    }\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "60dc2bf2-5c0a-46a8-8393-cbb806f59bd0",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"scimType\": \"invalidSyntax\",\n    \"detail\": \"You’ve used operation that Postman doesn’t support.\",\n    \"status\": \"400\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "522e65e9-dd73-465d-ae67-c8db47b41632",
+              "name": "Invalid Team",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "invalidApiKey"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Team doesn't exist.\",\n    \"status\": \"400\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "ba67d711-6604-4286-8ad1-5ac706600008",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "invalidApiKey"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Unable to access the team. Check if you have entered a valid API key.\",\n    \"status\": \"401\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "a352139d-221c-469f-967c-60fc4388eabc",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"This person isn’t a member of the team.\",\n    \"status\": \"403\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "0c21616f-1786-4916-b000-c3ca635796ec",
+              "name": "Admin Team Mismatch",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Your API key was generated by a Team Admin who is no longer on your team. Use an API key generated by a Team Admin.\",\n    \"status\": \"403\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "1b6d8121-750f-4156-85c0-35d48b8d6ac5",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"This person isn’t a member of the team.\",\n    \"status\": \"404\"\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "21756463-3fa3-4583-b1e5-d8053b7d7159",
+              "name": "Too Many Requests",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"That’s 180 attempts in less than a minute. Wait for a minute and then try again.\",\n    \"status\": 429\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "72be44a5-ec5c-4b02-b8fc-7fdba4ca3016",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "scim",
+                    "v2",
+                    "Users",
+                    "405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+                  ],
+                  "host": [
+                    "api",
+                    "getpostman",
+                    "com"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{apiKey}}"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [],
+              "body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Couldn’t update this team member’s information. Try again — it should work next time around.\",\n    \"status\": \"500\"\n}",
+              "cookie": []
+            }
+          ],
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "72a5fa70-bdd9-4c1d-9cf5-7f31999364cb",
+                "type": "text/javascript",
+                "exec": [
+                  "const email = pm.iterationData.get('email')",
+                  "const users = pm.collectionVariables.get('users')",
+                  "",
+                  "if (!users) {",
+                  "  const apiKey = pm.collectionVariables.get('apiKey')",
+                  "  const getAllUsers = {",
+                  "    url: 'https://api.getpostman.com/scim/v2/Users?count=10000',",
+                  "    method: 'GET',",
+                  "    header: `Authorization:${apiKey}`",
+                  "  }",
+                  "",
+                  "  pm.sendRequest(getAllUsers, mapUserList)",
+                  "} else {",
+                  "  setUserToBeDeactivated(JSON.parse(users))",
+                  "}",
+                  "",
+                  "function mapUserList (err, res) {",
+                  "  const userList = res.json().Resources",
+                  "  const users = userList.map(user => {",
+                  "    return {",
+                  "      id: user.id,",
+                  "      email: user.emails[0].value",
+                  "    }",
+                  "  })",
+                  "",
+                  "  pm.collectionVariables.set('users', JSON.stringify(users))",
+                  "  setUserToBeDeactivated(users)",
+                  "}",
+                  "",
+                  "function setUserToBeDeactivated (users) {",
+                  "  const userId = users.find(user => user.email === email).id",
+                  "  pm.collectionVariables.set('userId', userId)",
+                  "}",
+                  ""
+                ],
+                "_lastExecutionId": "1a2a4f4c-4164-4a07-b568-3f758ec0416f"
+              }
+            }
+          ]
+        },
+        "request": {
+          "description": {
+            "content": "Removes a user from your Postman team and deactivates the account. This blocks the user from authenticating in to Postman.",
+            "type": "text/plain"
+          },
+          "url": {
+            "protocol": "https",
+            "path": [
+              "scim",
+              "v2",
+              "Users",
+              "%7B%7BuserId%7D%7D"
+            ],
+            "host": [
+              "api",
+              "getpostman",
+              "com"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "{{apiKey}}"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "system": true
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "d3b5cabd-d407-4efe-9d3f-7684ca8aa9cd",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "api.getpostman.com",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "227",
+              "system": true
+            }
+          ],
+          "method": "PATCH",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "f183f78a-6637-410e-9ffa-0f007c286fc8",
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Tue, 10 Sep 2024 02:38:40 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "155"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Server",
+              "value": "nginx/1.25.3"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"9b-dCqXEHtfIkAWVhK0sM0lRrgKmbc\""
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "X-Kong-Upstream-Latency",
+              "value": "3"
+            },
+            {
+              "key": "X-Kong-Proxy-Latency",
+              "value": "5"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              115,
+              99,
+              104,
+              101,
+              109,
+              97,
+              115,
+              34,
+              58,
+              91,
+              34,
+              117,
+              114,
+              110,
+              58,
+              105,
+              101,
+              116,
+              102,
+              58,
+              112,
+              97,
+              114,
+              97,
+              109,
+              115,
+              58,
+              115,
+              99,
+              105,
+              109,
+              58,
+              97,
+              112,
+              105,
+              58,
+              109,
+              101,
+              115,
+              115,
+              97,
+              103,
+              101,
+              115,
+              58,
+              50,
+              46,
+              48,
+              58,
+              69,
+              114,
+              114,
+              111,
+              114,
+              34,
+              93,
+              44,
+              34,
+              100,
+              101,
+              116,
+              97,
+              105,
+              108,
+              34,
+              58,
+              34,
+              85,
+              110,
+              97,
+              98,
+              108,
+              101,
+              32,
+              116,
+              111,
+              32,
+              97,
+              99,
+              99,
+              101,
+              115,
+              115,
+              32,
+              116,
+              104,
+              101,
+              32,
+              116,
+              101,
+              97,
+              109,
+              46,
+              32,
+              67,
+              104,
+              101,
+              99,
+              107,
+              32,
+              105,
+              102,
+              32,
+              121,
+              111,
+              117,
+              32,
+              104,
+              97,
+              118,
+              101,
+              32,
+              101,
+              110,
+              116,
+              101,
+              114,
+              101,
+              100,
+              32,
+              97,
+              32,
+              118,
+              97,
+              108,
+              105,
+              100,
+              32,
+              65,
+              80,
+              73,
+              32,
+              107,
+              101,
+              121,
+              46,
+              34,
+              44,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              34,
+              52,
+              48,
+              49,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 59,
+          "responseSize": 155
+        },
+        "id": "0f17ff8d-6b38-401a-bd8b-cf8c203f3d9c"
       }
     ],
     "transfers": {
-      "responseTotal": 120796
+      "responseTotal": 121106
     },
     "failures": [
       {
@@ -124061,8 +126272,8 @@
           "message": "expected null to be a number",
           "stack": "AssertionError: expected null to be a number\n   at Object.eval sandbox-script.js:3:3)",
           "checksum": "bced45db0f79c3dbcbb20a0ec5b478b1",
-          "id": "c440aaa1-8eec-4d05-9653-c0c9e8796276",
-          "timestamp": 1725641079996,
+          "id": "746b5551-dd28-49d8-bd5e-693f57ebf683",
+          "timestamp": 1725935919012,
           "stacktrace": [
             {
               "fileName": "sandbox-script.js",
@@ -124077,7 +126288,7 @@
         },
         "at": "assertion:2 in test-script",
         "source": {
-          "id": "d11abc73-fba7-4008-8bd1-f010dce7490b",
+          "id": "a01f070e-d02e-4cc8-8e68-6a735c0e5605",
           "name": "Find if name corresponds to a known region",
           "request": {
             "url": {
@@ -124105,7 +126316,7 @@
               "_": {
                 "postman_previewlanguage": null
               },
-              "id": "b2cc1538-45df-4361-b0c3-722c1e7eff6c",
+              "id": "6b48dafa-8dec-4f15-8d9b-343b22a2a044",
               "name": "This should fail",
               "originalRequest": {
                 "url": {
@@ -124136,7 +126347,7 @@
               "_": {
                 "postman_previewlanguage": null
               },
-              "id": "4744ff1a-60c5-4af2-b878-37f64d93ef8f",
+              "id": "9f31a5a9-67a2-4620-96e0-546c6a0641d3",
               "name": "Find if name corresponds to a known region",
               "originalRequest": {
                 "url": {
@@ -124168,7 +126379,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "dcdcac2c-9e1c-4443-ad7b-22abe3b4923d",
+                "id": "606e5b32-3856-485b-bc7a-9f8c0d34d8e8",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
@@ -124245,25 +126456,25 @@
                   "});",
                   ""
                 ],
-                "_lastExecutionId": "bf8f62fb-33f3-4e8e-9861-5b4b02efc062"
+                "_lastExecutionId": "92e0a2d5-a463-4af1-ba30-0614efc56305"
               }
             },
             {
               "listen": "prerequest",
               "script": {
-                "id": "d23e4e30-672a-4988-bcdf-77f7b002a72d",
+                "id": "918061b4-8da3-4cf3-a30d-57123119b942",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
                   ""
                 ],
-                "_lastExecutionId": "625fe1e6-4cb2-4944-885c-ae011422a041"
+                "_lastExecutionId": "d2aa0e70-00db-4ba5-9f3b-57c1fd9431c4"
               }
             }
           ]
         },
         "parent": {
-          "id": "c29eddd8-c619-4074-9636-68ef8387a304",
+          "id": "aaaedd95-0cbf-4f4c-9d72-7b0b61910466",
           "name": "Regions",
           "description": {
             "content": "Region Management\n\nToDo - Change visualizaition of regions to show location on map",
@@ -124271,7 +126482,7 @@
           },
           "item": [
             {
-              "id": "84b05d9a-c43f-4bbc-9955-261e4dfc8a8b",
+              "id": "c0ddfc3e-553d-4bb9-924d-3e67aaad9cfc",
               "name": "Get location and machine counts",
               "request": {
                 "url": {
@@ -124294,7 +126505,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "3f368167-b330-40e3-91e1-ea3d7aa14eee",
+                    "id": "626e9889-ea84-45ce-bb92-5b4210ba3ba3",
                     "type": "text/javascript",
                     "packages": {},
                     "exec": [
@@ -124317,13 +126528,13 @@
                       "});",
                       ""
                     ],
-                    "_lastExecutionId": "9fd6a517-f6c3-436f-bbbe-c3e1c4589527"
+                    "_lastExecutionId": "8e62f998-c093-4109-8f1c-b7b0e4a4f7cf"
                   }
                 }
               ]
             },
             {
-              "id": "6523295f-9ea3-405c-a687-f66ad68c40cf",
+              "id": "270a5b3c-6799-497e-b3a0-dbc4afaf50a0",
               "name": "Fetch all regions",
               "request": {
                 "url": {
@@ -124345,7 +126556,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "ce7fa0ee-f0f1-47fc-bb3c-9707abde8d9b",
+                    "id": "7f6fc187-8f07-42d6-96c2-6589f05b6507",
                     "type": "text/javascript",
                     "packages": {},
                     "exec": [
@@ -124371,13 +126582,13 @@
                       "});",
                       ""
                     ],
-                    "_lastExecutionId": "23cf3c92-38dd-47be-8cf6-87ca3cd19bb0"
+                    "_lastExecutionId": "945c532c-6e36-43d5-987b-435d7268727a"
                   }
                 }
               ]
             },
             {
-              "id": "d11abc73-fba7-4008-8bd1-f010dce7490b",
+              "id": "a01f070e-d02e-4cc8-8e68-6a735c0e5605",
               "name": "Find if name corresponds to a known region",
               "request": {
                 "url": {
@@ -124405,7 +126616,7 @@
                   "_": {
                     "postman_previewlanguage": null
                   },
-                  "id": "b2cc1538-45df-4361-b0c3-722c1e7eff6c",
+                  "id": "6b48dafa-8dec-4f15-8d9b-343b22a2a044",
                   "name": "This should fail",
                   "originalRequest": {
                     "url": {
@@ -124436,7 +126647,7 @@
                   "_": {
                     "postman_previewlanguage": null
                   },
-                  "id": "4744ff1a-60c5-4af2-b878-37f64d93ef8f",
+                  "id": "9f31a5a9-67a2-4620-96e0-546c6a0641d3",
                   "name": "Find if name corresponds to a known region",
                   "originalRequest": {
                     "url": {
@@ -124468,7 +126679,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "dcdcac2c-9e1c-4443-ad7b-22abe3b4923d",
+                    "id": "606e5b32-3856-485b-bc7a-9f8c0d34d8e8",
                     "type": "text/javascript",
                     "packages": {},
                     "exec": [
@@ -124545,19 +126756,19 @@
                       "});",
                       ""
                     ],
-                    "_lastExecutionId": "bf8f62fb-33f3-4e8e-9861-5b4b02efc062"
+                    "_lastExecutionId": "92e0a2d5-a463-4af1-ba30-0614efc56305"
                   }
                 },
                 {
                   "listen": "prerequest",
                   "script": {
-                    "id": "d23e4e30-672a-4988-bcdf-77f7b002a72d",
+                    "id": "918061b4-8da3-4cf3-a30d-57123119b942",
                     "type": "text/javascript",
                     "packages": {},
                     "exec": [
                       ""
                     ],
-                    "_lastExecutionId": "625fe1e6-4cb2-4944-885c-ae011422a041"
+                    "_lastExecutionId": "d2aa0e70-00db-4ba5-9f3b-57c1fd9431c4"
                   }
                 }
               ]
@@ -124566,14 +126777,14 @@
           "event": []
         },
         "cursor": {
-          "ref": "4493a0a7-8fdb-47e0-848e-164a7fa16dc0",
-          "length": 8,
+          "ref": "285da6e6-c432-42b5-87a4-7041d2495a03",
+          "length": 9,
           "cycles": 1,
           "position": 2,
           "iteration": 0,
-          "httpRequestId": "3aa6cdf0-9e20-4734-95e4-80906d770cd4",
-          "scriptId": "dcdcac2c-9e1c-4443-ad7b-22abe3b4923d",
-          "execution": "bf8f62fb-33f3-4e8e-9861-5b4b02efc062"
+          "httpRequestId": "cab95c02-2d6d-41e7-9d3f-0698d260d511",
+          "scriptId": "606e5b32-3856-485b-bc7a-9f8c0d34d8e8",
+          "execution": "92e0a2d5-a463-4af1-ba30-0614efc56305"
         }
       },
       {
@@ -124584,8 +126795,8 @@
           "message": "expected null to be a number",
           "stack": "AssertionError: expected null to be a number\n   at Object.eval sandbox-script.js:3:7)",
           "checksum": "da6734b3e90dbdd3c68232bb4abca715",
-          "id": "3b8a65fa-91f8-4915-91ca-3c6bba0928e1",
-          "timestamp": 1725641080920,
+          "id": "01381724-84f1-4a87-a74b-260517410945",
+          "timestamp": 1725935919568,
           "stacktrace": [
             {
               "fileName": "sandbox-script.js",
@@ -124600,7 +126811,7 @@
         },
         "at": "assertion:2 in test-script",
         "source": {
-          "id": "f81cc8cc-2bcc-49f8-977e-e2d420bce580",
+          "id": "35aff95e-6bf0-4474-89c9-03e9c5ff8cbe",
           "name": "Find if name corresponds to a known region",
           "request": {
             "url": {
@@ -124628,7 +126839,7 @@
               "_": {
                 "postman_previewlanguage": null
               },
-              "id": "bc69a71b-0c05-478e-b293-d9e61c6e4243",
+              "id": "3c556b9f-04b6-4fc1-949f-b46beb6a3271",
               "name": "This should fail",
               "originalRequest": {
                 "url": {
@@ -124659,7 +126870,7 @@
               "_": {
                 "postman_previewlanguage": null
               },
-              "id": "5adaee73-5af4-478a-8463-b9c03fe67a83",
+              "id": "9eca60a8-b055-4267-a1ad-ed40c731d98c",
               "name": "Find if name corresponds to a known region",
               "originalRequest": {
                 "url": {
@@ -124691,7 +126902,7 @@
             {
               "listen": "test",
               "script": {
-                "id": "82e46993-3552-48cc-86d2-1f5909b64fcd",
+                "id": "d12d4c1c-386e-45fc-aac9-db9c5157356e",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
@@ -124768,25 +126979,25 @@
                   "});",
                   ""
                 ],
-                "_lastExecutionId": "abbdfe66-0c1e-4258-8130-6b84ea978879"
+                "_lastExecutionId": "6353f0dd-3f91-46e9-9511-4baeab52dc11"
               }
             },
             {
               "listen": "prerequest",
               "script": {
-                "id": "73256aec-74d7-4143-9878-bffa9936cfdb",
+                "id": "c3b36f19-0743-4d4c-ac8a-afd531a6a037",
                 "type": "text/javascript",
                 "packages": {},
                 "exec": [
                   ""
                 ],
-                "_lastExecutionId": "02311882-56d4-49c3-914e-bc8f0f2a2b30"
+                "_lastExecutionId": "ba3da770-a034-40b3-bce3-c6692a8d770f"
               }
             }
           ]
         },
         "parent": {
-          "id": "fb763617-ec65-4fef-a006-1b6f845d753d",
+          "id": "6620834a-356d-4790-8443-4750b927797f",
           "name": "Regions Copy",
           "description": {
             "content": "Region Management\n\nToDo - Change visualizaition of regions to show location on map",
@@ -124794,7 +127005,7 @@
           },
           "item": [
             {
-              "id": "430952c4-6112-4818-beb7-f2eb010b5c7e",
+              "id": "3d7d6007-a653-4a17-89d7-241c4ff9ca38",
               "name": "Get location and machine counts",
               "request": {
                 "url": {
@@ -124817,7 +127028,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "f1be5e3b-c74c-4e1f-be2c-40b8f42a8c04",
+                    "id": "5a70b75e-8f67-4b3f-ab8a-dae8fbbc9c39",
                     "type": "text/javascript",
                     "packages": {},
                     "exec": [
@@ -124840,13 +127051,13 @@
                       "});",
                       ""
                     ],
-                    "_lastExecutionId": "b912c51f-1f7e-45b3-bc63-d188678971fa"
+                    "_lastExecutionId": "5ebe71b3-dcd1-4bfb-8654-54511c09dd57"
                   }
                 }
               ]
             },
             {
-              "id": "f693bcaa-2f21-4cb1-b195-68c9b0f90c44",
+              "id": "fafbad0b-6a1a-4d33-bcf4-4cff5e06d6f7",
               "name": "Fetch all regions",
               "request": {
                 "url": {
@@ -124868,7 +127079,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "c1eedb60-e09b-43ce-bd61-f8cc9fbcb9fb",
+                    "id": "ac574251-6f7c-400b-bba7-1c33cd7db552",
                     "type": "text/javascript",
                     "packages": {},
                     "exec": [
@@ -124894,13 +127105,13 @@
                       "});",
                       ""
                     ],
-                    "_lastExecutionId": "1c4737ec-499c-453b-baa8-d481edc18644"
+                    "_lastExecutionId": "97a345c9-1a1f-42ff-8862-859cc049b5cf"
                   }
                 }
               ]
             },
             {
-              "id": "f81cc8cc-2bcc-49f8-977e-e2d420bce580",
+              "id": "35aff95e-6bf0-4474-89c9-03e9c5ff8cbe",
               "name": "Find if name corresponds to a known region",
               "request": {
                 "url": {
@@ -124928,7 +127139,7 @@
                   "_": {
                     "postman_previewlanguage": null
                   },
-                  "id": "bc69a71b-0c05-478e-b293-d9e61c6e4243",
+                  "id": "3c556b9f-04b6-4fc1-949f-b46beb6a3271",
                   "name": "This should fail",
                   "originalRequest": {
                     "url": {
@@ -124959,7 +127170,7 @@
                   "_": {
                     "postman_previewlanguage": null
                   },
-                  "id": "5adaee73-5af4-478a-8463-b9c03fe67a83",
+                  "id": "9eca60a8-b055-4267-a1ad-ed40c731d98c",
                   "name": "Find if name corresponds to a known region",
                   "originalRequest": {
                     "url": {
@@ -124991,7 +127202,7 @@
                 {
                   "listen": "test",
                   "script": {
-                    "id": "82e46993-3552-48cc-86d2-1f5909b64fcd",
+                    "id": "d12d4c1c-386e-45fc-aac9-db9c5157356e",
                     "type": "text/javascript",
                     "packages": {},
                     "exec": [
@@ -125068,19 +127279,19 @@
                       "});",
                       ""
                     ],
-                    "_lastExecutionId": "abbdfe66-0c1e-4258-8130-6b84ea978879"
+                    "_lastExecutionId": "6353f0dd-3f91-46e9-9511-4baeab52dc11"
                   }
                 },
                 {
                   "listen": "prerequest",
                   "script": {
-                    "id": "73256aec-74d7-4143-9878-bffa9936cfdb",
+                    "id": "c3b36f19-0743-4d4c-ac8a-afd531a6a037",
                     "type": "text/javascript",
                     "packages": {},
                     "exec": [
                       ""
                     ],
-                    "_lastExecutionId": "02311882-56d4-49c3-914e-bc8f0f2a2b30"
+                    "_lastExecutionId": "ba3da770-a034-40b3-bce3-c6692a8d770f"
                   }
                 }
               ]
@@ -125089,14 +127300,14 @@
           "event": []
         },
         "cursor": {
-          "ref": "a7a2dd03-4780-417d-aaf6-1b2be43967c1",
-          "length": 8,
+          "ref": "aa505550-4afa-4a7b-b43c-3ebc90479a68",
+          "length": 9,
           "cycles": 1,
           "position": 6,
           "iteration": 0,
-          "httpRequestId": "f2d1a8cc-5297-4bfb-ab40-6f58788fe0c8",
-          "scriptId": "82e46993-3552-48cc-86d2-1f5909b64fcd",
-          "execution": "abbdfe66-0c1e-4258-8130-6b84ea978879"
+          "httpRequestId": "eabc0dc9-6796-459c-993e-1a1145bf3f57",
+          "scriptId": "d12d4c1c-386e-45fc-aac9-db9c5157356e",
+          "execution": "6353f0dd-3f91-46e9-9511-4baeab52dc11"
         }
       }
     ],

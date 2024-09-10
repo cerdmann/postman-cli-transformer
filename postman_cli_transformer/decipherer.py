@@ -27,6 +27,9 @@ http_verbs = ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"]
 def line_decipherer(line):
     line = strip_ansi_color_codes(line)
 
+    if line.strip() == "":
+        return LINE_TYPES.EMPTY_LINE
+
     if line[0] == BOX_ICON:
         return LINE_TYPES.FOLDER_LINE
 
@@ -47,9 +50,6 @@ def line_decipherer(line):
 
     if line[0] == RIGHT_ARROW_ICON:
         return LINE_TYPES.ROOT_REQUEST_LINE
-
-    if line.strip() == "":
-        return LINE_TYPES.EMPTY_LINE
 
     if line[0] in TABLE_PARTS_LIST:
         return LINE_TYPES.SUMMARY_LINE

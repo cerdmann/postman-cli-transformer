@@ -5,9 +5,8 @@
             "name": "Regions",
             "requests": [
                 {
-                    "name": "Get location and machine counts",
-                    "url": "https://pinballmap.com//api/v1/regions/location_and_machine_counts.json",
                     "httpVerb": "GET",
+                    "name": "Get location and machine counts",
                     "response": {
                         "code": "200 OK",
                         "size": "1.34kB",
@@ -17,30 +16,30 @@
                         {
                             "desc": "Response status code is 200",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         },
                         {
                             "desc": "Response time is less than 500ms",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         },
                         {
                             "desc": "Response has the required fields - num_locations and num_lmxes",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         }
-                    ]
+                    ],
+                    "url": "https://pinballmap.com//api/v1/regions/location_and_machine_counts.json"
                 },
                 {
-                    "name": "Fetch all regions",
-                    "url": "https://pinballmap.com//api/v1/regions.json",
                     "httpVerb": "GET",
+                    "name": "Fetch all regions",
                     "response": {
                         "code": "200 OK",
                         "size": "29.2kB",
@@ -50,30 +49,30 @@
                         {
                             "desc": "Response status code is 200",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         },
                         {
                             "desc": "Response time is less than 500ms",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         },
                         {
                             "desc": "Validate the response schema for the presence of all required fields",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         }
-                    ]
+                    ],
+                    "url": "https://pinballmap.com//api/v1/regions.json"
                 },
                 {
-                    "name": "Find if name corresponds to a known region",
-                    "url": "https://pinballmap.com//api/v1/regions/does_region_exist.json?name=minnesota",
                     "httpVerb": "GET",
+                    "name": "Find if name corresponds to a known region",
                     "response": {
                         "code": "200 OK",
                         "size": "1.84kB",
@@ -83,39 +82,40 @@
                         {
                             "desc": "Response status code is 200",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         },
                         {
                             "desc": "Response time is within an acceptable range",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         },
                         {
                             "desc": "Region object structure is as expected",
                             "status": {
-                                "result": "FAILED",
-                                "details": "1"
+                                "details": "1",
+                                "result": "FAILED"
                             }
                         },
                         {
                             "desc": "All required fields in the 'region' object are present and not empty",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         },
                         {
                             "desc": "Region object has correct data types for fields",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         }
-                    ]
+                    ],
+                    "url": "https://pinballmap.com//api/v1/regions/does_region_exist.json?name=minnesota"
                 }
             ]
         },
@@ -123,9 +123,8 @@
             "name": "Machines",
             "requests": [
                 {
-                    "name": "Fetch all machines",
-                    "url": "https://pinballmap.com//api/v1/machines.json?region_id=119&manufacturer=Stern",
                     "httpVerb": "GET",
+                    "name": "Fetch all machines",
                     "response": {
                         "code": "200 OK",
                         "size": "65.14kB",
@@ -135,32 +134,33 @@
                         {
                             "desc": "Response status code is 200",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         },
                         {
                             "desc": "Response time is less than 500ms",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         },
                         {
                             "desc": "Response has the required fields",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         },
                         {
                             "desc": "Response content type is application/json",
                             "status": {
-                                "result": "SUCCESS",
-                                "details": ""
+                                "details": "",
+                                "result": "SUCCESS"
                             }
                         }
-                    ]
+                    ],
+                    "url": "https://pinballmap.com//api/v1/machines.json?region_id=119&manufacturer=Stern"
                 }
             ]
         }

@@ -41,6 +41,10 @@ class Processor:
     def _process_rest_of_lines(self):
         for line in self.lines_to_process:
             match line_decipherer(line):
+                case LINE_TYPES.EMPTY_LINE:
+                    self.processing_helper.update_current_line_type(
+                        LINE_TYPES.EMPTY_LINE
+                    )
                 case LINE_TYPES.FOLDER_LINE:
                     self.processing_helper.update_current_line_type(
                         LINE_TYPES.FOLDER_LINE
@@ -49,25 +53,39 @@ class Processor:
                     self.parsed["folders"].append(folder_json)
                     self.processing_helper.current_folder += 1
                     self.processing_helper.current_request = -1
-                case LINE_TYPES.EMPTY_LINE:
+                case LINE_TYPES.ROOT_REQUEST_LINE:
                     self.processing_helper.update_current_line_type(
-                        LINE_TYPES.EMPTY_LINE
+                        LINE_TYPES.ROOT_REQUEST_LINE
                     )
+                    if self.processing_helper.root_request_folder == -1:
+                        folder_json = parse_folder("❏ <REQUESTS_WITHOUT_FOLDER>")
+                        self.parsed["folders"].append(folder_json)
+                        self.processing_helper.current_folder += 1
+                        self.processing_helper.root_request_folder = (
+                            self.processing_helper.current_folder
+                        )
+                        self.processing_helper.current_request = -1
+
+                    request_json = parse_request(line)
+                    self.parsed["folders"][self.processing_helper.root_request_folder][
+                        "requests"
+                    ].append(request_json)
+                    self.processing_helper.current_request += 1
                 case LINE_TYPES.REQUEST_LINE:
                     self.processing_helper.update_current_line_type(
                         LINE_TYPES.REQUEST_LINE
                     )
-                    request_name = parse_request(line)
-                    self.processing_helper.current_request_name = request_name
-                case LINE_TYPES.URL_LINE:
-                    self.processing_helper.update_current_line_type(LINE_TYPES.URL_LINE)
-                    request_name = self.processing_helper.current_request_name
-                    self.processing_helper.current_request_name = ""
-                    url_json = parse_url(line, request_name)
+                    request_json = parse_request(line)
                     self.parsed["folders"][self.processing_helper.current_folder][
                         "requests"
-                    ].append(url_json)
+                    ].append(request_json)
                     self.processing_helper.current_request += 1
+                case LINE_TYPES.URL_LINE:
+                    self.processing_helper.update_current_line_type(LINE_TYPES.URL_LINE)
+                    url_json = parse_url(line)
+                    self.parsed["folders"][self.processing_helper.current_folder][
+                        "requests"
+                    ][self.processing_helper.current_request]["urls"].append(url_json)
                 case LINE_TYPES.TEST_LINE:
                     self.processing_helper.update_current_line_type(
                         LINE_TYPES.TEST_LINE
@@ -83,7 +101,7 @@ class ProcessingHelper:
     current_line_type = ""
     current_folder = -1
     current_request = -1
-    current_request_name = ""
+    root_request_folder = -1
 
     def update_current_line_type(self, new_line_type):
         self.previous_line_type = self.current_line_type
