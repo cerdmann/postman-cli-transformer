@@ -31,6 +31,14 @@ You can also use:
 python -m postman_cli_transformer --help
 ```
 
+As this is intended to be used as a transformer for the Postman CLI output, usage would look something like this with the CLI output transformed into JSON and output to the file output.json
+
+**PLEASE NOTE: THE VERBOSE FLAG IS NOT SUPPORTED YET ON THE CLI COMMAND**
+
+```bash
+postman collection run 11111111-11111111-1111-1111-1111-111111111111 -e 11111111-11111111-1111-1111-1111-111111111111  | postman-cli-transformer output.json
+```
+
 ## Development
 
 To contribute to this tool, first checkout the code. Then create a new virtual environment:

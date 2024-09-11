@@ -21,15 +21,13 @@ from postman_cli_transformer.processor import Processor
               Each charachter is represented as (<original character> - <unicode of character>)
               Line breaks(10) are preserved but not given a representation""",
 )
-@click.option(
-    "-t",
-    "--extract-tags",
-    required=False,
-    type=click.File("w"),
-    help="""file location to output unicode codes of characters from STDIN.
-              Each charachter is represented as (<original character> - <unicode of character>)
-              Line breaks(10) are preserved but not given a representation""",
-)
+# @click.option(
+#     "-t",
+#     "--extract-tags",
+#     required=False,
+#     type=click.BOOL,
+#     help="""undeveloped, but will eventually extract tags from tests descriptions""",
+# )
 @click.version_option()
 def cli(output, unicode_out_file):
     """This script will take as input the STDOUT from
