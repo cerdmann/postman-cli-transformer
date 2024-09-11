@@ -45,6 +45,18 @@ class Processor:
                     self.processing_helper.update_current_line_type(
                         LINE_TYPES.EMPTY_LINE
                     )
+                    if (
+                        self.processing_helper.previous_line_type
+                        == LINE_TYPES.ERROR_LINE
+                    ):
+                        error = {
+                            "type": self.processing_helper.error_type,
+                            "detail": "\n".join(self.processing_helper.error_lines),
+                        }
+                        self.parsed["errors"].append(error)
+                        self.processing_helper.error_lines = []
+                        self.processing_helper.error_type = ""
+
                 case LINE_TYPES.FOLDER_LINE:
                     self.processing_helper.update_current_line_type(
                         LINE_TYPES.FOLDER_LINE
@@ -95,6 +107,9 @@ class Processor:
                         "requests"
                     ][self.processing_helper.current_request]["tests"].append(test_json)
                 case LINE_TYPES.SUMMARY_LINE:
+                    self.processing_helper.update_current_line_type(
+                        LINE_TYPES.SUMMARY_LINE
+                    )
                     if not self.processing_helper.started_table:
                         self.processing_helper.started_table = True
                         self.parsed["summary"] = {
@@ -141,6 +156,25 @@ class Processor:
                                 "max": summary_parts[8].rstrip(","),
                                 "s.d.": summary_parts[10].rstrip("]"),
                             }
+                case LINE_TYPES.ERROR_HEADER_LINE:
+                    self.processing_helper.update_current_line_type(
+                        LINE_TYPES.ERROR_HEADER_LINE
+                    )
+                    self.parsed["errors"] = []
+
+                case LINE_TYPES.ERROR_LINE:
+                    self.processing_helper.update_current_line_type(
+                        LINE_TYPES.ERROR_LINE
+                    )
+                    error_parts = line.split()
+
+                    if "AssertionError" in line:
+                        del error_parts[:2]
+                        self.processing_helper.error_type = "AssertionError"
+
+                    error_description = " ".join(error_parts)
+
+                    self.processing_helper.error_lines.append(error_description)
 
     def _add_summary(self, title, parts):
         self.parsed["summary"][title] = {
@@ -150,12 +184,15 @@ class Processor:
 
 
 class ProcessingHelper:
-    previous_line_type = ""
-    current_line_type = ""
-    current_folder = -1
-    current_request = -1
-    root_request_folder = -1
-    started_table = False
+    def __init__(self):
+        self.previous_line_type = ""
+        self.current_line_type = ""
+        self.current_folder = -1
+        self.current_request = -1
+        self.root_request_folder = -1
+        self.started_table = False
+        self.error_lines = []
+        self.error_type = ""
 
     def update_current_line_type(self, new_line_type):
         self.previous_line_type = self.current_line_type

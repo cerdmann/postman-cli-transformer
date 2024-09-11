@@ -649,3 +649,185 @@ You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37
     }
 
     assert json.dumps(results) == json.dumps(expected_results)
+
+
+def test_should_be_able_to_process_error_descriptions():
+    lines = create_array_from_text("""postman
+
+Pinball Map Collection
+
+❏ Regions
+↳ Fetch all regions
+
+  GET https://pinballmap.com//api/v1/regions.json [200 OK, 29.2kB, 98ms]
+  ✓  Response status code is 200
+  ✓  Response time is within an acceptable range
+  1. Region object structure is as expected
+  ✓  All required fields in the region object are present and not empty
+  ✓  Region object has correct data types for fields
+
+❏ Machines
+↳ Find if name corresponds to a known region
+
+  GET https://pinballmap.com//api/v1/regions/does_region_exist.json?name=minnesota [200 OK, 1.83kB, 87ms]
+  ✓  Response status code is 200
+  ✓  Response time is within an acceptable range
+  2. Region object structure is as expected
+  ✓  All required fields in the region object are present and not empty
+  ✓  Region object has correct data types for fields
+
+┌─────────────────────────┬────────────────────┬───────────────────┐
+│                         │           executed │            failed │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              iterations │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│                requests │                  4 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│            test-scripts │                  2 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│      prerequest-scripts │                  4 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              assertions │                  0 │                 2 │
+├─────────────────────────┴────────────────────┴───────────────────┤
+│ total run duration: 487ms                                        │
+├──────────────────────────────────────────────────────────────────┤
+│ total data received: 604B (approx)                               │
+├──────────────────────────────────────────────────────────────────┤
+│ average response time: 103ms [min: 51ms, max: 253ms, s.d.: 86ms] │
+└──────────────────────────────────────────────────────────────────┘
+
+  #  failure                                  detail                                                                                                                                                           
+                                                                                                                                                                                                               
+ 1.  AssertionError                           1Region object structure is as expected                                                                                                                           
+                                              2expected null to be a number                                                                                                                                     
+                                              xat assertion:2 in test-script                                                                                                                                    
+                                              yinside "Regions / Find if name corresponds to a known region"                                                                                                    
+                                                                                                                                                                                                               
+ 2.  AssertionError                           3Region object structure is as expected                                                                                                                           
+                                              4expected null to be a number                                                                                                                                     
+                                              aat assertion:2 in test-script                                                                                                                                    
+                                              binside "Regions / Find if name corresponds to a known region"                                                                                     
+
+Postman CLI run data uploaded to Postman Cloud successfully.
+You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37b-a01d-43b4-bcf2-4cc75f1d3d7b/run/33123329-986f44d8-9cda-4445-9179-137678aa1303                             
+""")
+
+    processor = Processor(lines)
+    results = processor.parsed
+
+    expected_results = {
+        "collectionName": "Pinball Map Collection",
+        "folders": [
+            {
+                "name": "Regions",
+                "requests": [
+                    {
+                        "name": "Fetch all regions",
+                        "urls": [
+                            {
+                                "url": "https://pinballmap.com//api/v1/regions.json",
+                                "httpVerb": "GET",
+                                "response": {
+                                    "code": "200 OK",
+                                    "size": "29.2kB",
+                                    "time": "98ms",
+                                },
+                            },
+                        ],
+                        "tests": [
+                            {
+                                "desc": "Response status code is 200",
+                                "status": {"result": "SUCCESS", "details": ""},
+                            },
+                            {
+                                "desc": "Response time is within an acceptable range",
+                                "status": {"result": "SUCCESS", "details": ""},
+                            },
+                            {
+                                "desc": "Region object structure is as expected",
+                                "status": {"result": "FAILED", "details": "1"},
+                            },
+                            {
+                                "desc": "All required fields in the region object are present and not empty",
+                                "status": {"result": "SUCCESS", "details": ""},
+                            },
+                            {
+                                "desc": "Region object has correct data types for fields",
+                                "status": {"result": "SUCCESS", "details": ""},
+                            },
+                        ],
+                    },
+                ],
+            },
+            {
+                "name": "Machines",
+                "requests": [
+                    {
+                        "name": "Find if name corresponds to a known region",
+                        "urls": [
+                            {
+                                "url": "https://pinballmap.com//api/v1/regions/does_region_exist.json?name=minnesota",
+                                "httpVerb": "GET",
+                                "response": {
+                                    "code": "200 OK",
+                                    "size": "1.83kB",
+                                    "time": "87ms",
+                                },
+                            },
+                        ],
+                        "tests": [
+                            {
+                                "desc": "Response status code is 200",
+                                "status": {"result": "SUCCESS", "details": ""},
+                            },
+                            {
+                                "desc": "Response time is within an acceptable range",
+                                "status": {"result": "SUCCESS", "details": ""},
+                            },
+                            {
+                                "desc": "Region object structure is as expected",
+                                "status": {"result": "FAILED", "details": "2"},
+                            },
+                            {
+                                "desc": "All required fields in the region object are present and not empty",
+                                "status": {"result": "SUCCESS", "details": ""},
+                            },
+                            {
+                                "desc": "Region object has correct data types for fields",
+                                "status": {"result": "SUCCESS", "details": ""},
+                            },
+                        ],
+                    },
+                ],
+            },
+        ],
+        "summary": {
+            "iterations": {"executed": "1", "failed": "0"},
+            "requests": {"executed": "4", "failed": "0"},
+            "test-scripts": {"executed": "2", "failed": "0"},
+            "prerequest-scripts": {"executed": "4", "failed": "0"},
+            "assertions": {"executed": "0", "failed": "2"},
+            "totals": {
+                "totalRunDuration": "487ms",
+                "totalDataReceived": "604B (approx)",
+                "responseTimes": {
+                    "average": "103ms",
+                    "min": "51ms",
+                    "max": "253ms",
+                    "s.d.": "86ms",
+                },
+            },
+        },
+        "errors": [
+            {
+                "type": "AssertionError",
+                "detail": '1Region object structure is as expected\n2expected null to be a number\nxat assertion:2 in test-script\nyinside "Regions / Find if name corresponds to a known region"',
+            },
+            {
+                "type": "AssertionError",
+                "detail": '3Region object structure is as expected\n4expected null to be a number\naat assertion:2 in test-script\nbinside "Regions / Find if name corresponds to a known region"',
+            },
+        ],
+    }
+
+    assert json.dumps(results) == json.dumps(expected_results)
