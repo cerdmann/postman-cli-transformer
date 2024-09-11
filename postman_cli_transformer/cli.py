@@ -21,6 +21,15 @@ from postman_cli_transformer.processor import Processor
               Each charachter is represented as (<original character> - <unicode of character>)
               Line breaks(10) are preserved but not given a representation""",
 )
+@click.option(
+    "-t",
+    "--extract-tags",
+    required=False,
+    type=click.File("w"),
+    help="""file location to output unicode codes of characters from STDIN.
+              Each charachter is represented as (<original character> - <unicode of character>)
+              Line breaks(10) are preserved but not given a representation""",
+)
 @click.version_option()
 def cli(output, unicode_out_file):
     """This script will take as input the STDOUT from
@@ -37,26 +46,20 @@ def cli(output, unicode_out_file):
     Output to file foo.json:
         postman-cli-transformer foo.json
 
+    \b
+    Output to file foo.json and extract tags from tests:
+        postman-cli-transformer foo.json --extract-tags
+
     """
 
     stdin_data = sys.stdin.read()
 
     parsed_stdin = parse(stdin_data)
 
-    click.echo("Starting.........")
-    click.echo(parsed_stdin)
-
-    my_results = []
-
-    for line in io.StringIO(stdin_data):
-        my_results.append(line_decipherer(line))
-    print(my_results)
-
     if unicode_out_file:
         process_as_unicode(io.StringIO(stdin_data), unicode_out_file)
 
-    for line in io.StringIO(stdin_data):
-        output.write(line)
+    output.write(parsed_stdin)
     output.flush()
 
 
@@ -80,35 +83,6 @@ def parse(data):
 
     processor = Processor(raw_lines)
     results = processor.parsed
-
-    # if line.startswith(ENTER_ICON):
-
-    #     parsed["line%s" % line_number] = {}
-    #     parsed["line%s" % line_number]["contents"] = line.strip()
-    #     line_number += 1
-    #     line = data_as_file.readline()
-
-    # for line in data_as_file:
-    #     if line.startswith("\n"):
-    #         line_number += 1
-    #         break
-
-    #     if line.startswith("\u001b"):
-    #         parsed["line%s" % line_number] = {}
-    #         parsed["line%s" % line_number]["contents"] = (line
-    #                                                       .replace("\u001b","")
-    #                                                       .replace("\u2500","")
-    #                                                       .replace("[90m","")
-    #                                                       .replace("[39m","")
-    #                                                       .replace("\u2502","")
-    #                                                       .replace("\u253c","")
-    #                                                       .replace("\u2524","")
-    #                                                       .replace("\u2534","")
-    #                                                       .replace("\u2514","")
-    #                                                       .replace("\u2518","")
-    #                                                       .replace("\u251c","")
-    #                                                       .strip())
-    #     line_number += 1
 
     json_str = json.dumps(results)
 

@@ -53,9 +53,16 @@ class Processor:
                             "type": self.processing_helper.error_type,
                             "detail": "\n".join(self.processing_helper.error_lines),
                         }
-                        self.parsed["errors"].append(error)
+
+                        error_node = self._search_for_error(
+                            self.processing_helper.error_id, self.parsed
+                        )
+
+                        error_node["details"] = error
+
                         self.processing_helper.error_lines = []
                         self.processing_helper.error_type = ""
+                        self.processing_helper.error_id = ""
 
                 case LINE_TYPES.FOLDER_LINE:
                     self.processing_helper.update_current_line_type(
@@ -160,7 +167,6 @@ class Processor:
                     self.processing_helper.update_current_line_type(
                         LINE_TYPES.ERROR_HEADER_LINE
                     )
-                    self.parsed["errors"] = []
 
                 case LINE_TYPES.ERROR_LINE:
                     self.processing_helper.update_current_line_type(
@@ -169,11 +175,11 @@ class Processor:
                     error_parts = line.split()
 
                     if "AssertionError" in line:
+                        self.processing_helper.error_id = error_parts[0].rstrip(".")
                         del error_parts[:2]
                         self.processing_helper.error_type = "AssertionError"
 
                     error_description = " ".join(error_parts)
-
                     self.processing_helper.error_lines.append(error_description)
 
     def _add_summary(self, title, parts):
@@ -181,6 +187,13 @@ class Processor:
             "executed": parts[3],
             "failed": parts[5],
         }
+
+    def _search_for_error(self, error_id, results):
+        for folder in results["folders"]:
+            for request in folder["requests"]:
+                for test in request["tests"]:
+                    if test["status"]["error_id"] == error_id:
+                        return test["status"]
 
 
 class ProcessingHelper:
@@ -191,6 +204,7 @@ class ProcessingHelper:
         self.current_request = -1
         self.root_request_folder = -1
         self.started_table = False
+        self.error_id = ""
         self.error_lines = []
         self.error_type = ""
 

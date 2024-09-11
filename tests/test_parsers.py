@@ -8,7 +8,11 @@ def test_successful_test_parsing():
     test_line = "  \u2713  Response status code is 200\n"
     assert parse_test(test_line) == {
         "desc": "Response status code is 200",
-        "status": {"result": "SUCCESS", "details": ""},
+        "status": {
+            "result": "SUCCESS",
+            "error_id": "",
+            "details": {},
+        },
     }
 
 
@@ -16,7 +20,12 @@ def test_failed_test_parsing():
     test_line = "  1. Region object structure is as expected\n"
     assert parse_test(test_line) == {
         "desc": "Region object structure is as expected",
-        "status": {"result": "FAILED", "details": "1"},
+        "status": {
+            "result": "FAILED",
+            "error_id": "1",
+            "details": {},
+        },
+        # Note: actual order details get added at the end of the doc parsing
     }
 
 

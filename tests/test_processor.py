@@ -24,7 +24,7 @@ Pinball Map Collection
     assert json.dumps(results) == json.dumps(expected_results)
 
 
-def test_should_be_able_to_process_folders2():
+def test_should_be_able_to_process_folders():
     lines = create_array_from_text("""postman
 
 Pinball Map Collection
@@ -205,15 +205,27 @@ Pinball Map Collection
                         "tests": [
                             {
                                 "desc": "Response status code is 200",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response time is less than 500ms",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response has the required fields",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                         ],
                     },
@@ -242,23 +254,43 @@ Pinball Map Collection
                         "tests": [
                             {
                                 "desc": "Response status code is 200",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response time is within an acceptable range",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Region object structure is as expected",
-                                "status": {"result": "FAILED", "details": "1"},
+                                "status": {
+                                    "result": "FAILED",
+                                    "error_id": "1",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "All required fields in the 'region' object are present and not empty",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Region object has correct data types for fields",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                         ],
                     },
@@ -283,19 +315,35 @@ Pinball Map Collection
                         "tests": [
                             {
                                 "desc": "Response status code is 200",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response time is less than 500ms",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response has the required fields",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response content type is application/json",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                         ],
                     }
@@ -375,15 +423,27 @@ Pinball Map Collection
                         "tests": [
                             {
                                 "desc": "Response status code is 200",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response time is less than 500ms",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response has the required fields",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                         ],
                     },
@@ -412,23 +472,43 @@ Pinball Map Collection
                         "tests": [
                             {
                                 "desc": "Response status code is 200",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response time is within an acceptable range",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Region object structure is as expected",
-                                "status": {"result": "FAILED", "details": "1"},
+                                "status": {
+                                    "result": "FAILED",
+                                    "error_id": "1",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "All required fields in the region object are present and not empty",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Region object has correct data types for fields",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                         ],
                     },
@@ -453,19 +533,35 @@ Pinball Map Collection
                         "tests": [
                             {
                                 "desc": "Response status code is 200",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response time is less than 500ms",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response has the required fields",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response content type is application/json",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                         ],
                     },
@@ -737,23 +833,46 @@ You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37
                         "tests": [
                             {
                                 "desc": "Response status code is 200",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response time is within an acceptable range",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Region object structure is as expected",
-                                "status": {"result": "FAILED", "details": "1"},
+                                "status": {
+                                    "result": "FAILED",
+                                    "error_id": "1",
+                                    "details": {
+                                        "type": "AssertionError",
+                                        "detail": '1Region object structure is as expected\n2expected null to be a number\nxat assertion:2 in test-script\nyinside "Regions / Find if name corresponds to a known region"',
+                                    },
+                                },
                             },
                             {
                                 "desc": "All required fields in the region object are present and not empty",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Region object has correct data types for fields",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                         ],
                     },
@@ -778,23 +897,46 @@ You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37
                         "tests": [
                             {
                                 "desc": "Response status code is 200",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Response time is within an acceptable range",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Region object structure is as expected",
-                                "status": {"result": "FAILED", "details": "2"},
+                                "status": {
+                                    "result": "FAILED",
+                                    "error_id": "2",
+                                    "details": {
+                                        "type": "AssertionError",
+                                        "detail": '3Region object structure is as expected\n4expected null to be a number\naat assertion:2 in test-script\nbinside "Regions / Find if name corresponds to a known region"',
+                                    },
+                                },
                             },
                             {
                                 "desc": "All required fields in the region object are present and not empty",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                             {
                                 "desc": "Region object has correct data types for fields",
-                                "status": {"result": "SUCCESS", "details": ""},
+                                "status": {
+                                    "result": "SUCCESS",
+                                    "error_id": "",
+                                    "details": {},
+                                },
                             },
                         ],
                     },
@@ -818,16 +960,6 @@ You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37
                 },
             },
         },
-        "errors": [
-            {
-                "type": "AssertionError",
-                "detail": '1Region object structure is as expected\n2expected null to be a number\nxat assertion:2 in test-script\nyinside "Regions / Find if name corresponds to a known region"',
-            },
-            {
-                "type": "AssertionError",
-                "detail": '3Region object structure is as expected\n4expected null to be a number\naat assertion:2 in test-script\nbinside "Regions / Find if name corresponds to a known region"',
-            },
-        ],
     }
 
     assert json.dumps(results) == json.dumps(expected_results)

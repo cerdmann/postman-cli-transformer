@@ -9,11 +9,19 @@ def parse_test(test):
     test_desc = ""
     test_status = ""
     if test_result.startswith(CHECKMARK_ICON):
-        test_status = {"result": "SUCCESS", "details": ""}
+        test_status = {
+            "result": "SUCCESS",
+            "error_id": "",
+            "details": {},
+        }
         test_desc = test_result.lstrip(CHECKMARK_ICON).strip()
     else:
         failed_test = test_result.split(".")
-        test_status = {"result": "FAILED", "details": failed_test[0]}
+        test_status = {
+            "result": "FAILED",
+            "error_id": failed_test[0],
+            "details": {},
+        }
         test_desc = failed_test[1].strip()
 
     return {"desc": test_desc, "status": test_status}
