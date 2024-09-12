@@ -92,6 +92,33 @@
 								"type": "text/javascript",
 								"packages": {}
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const email = pm.iterationData.get('email')",
+									"const users = pm.collectionVariables.get('users')",
+									"",
+									"if (!users) {",
+									"  const apiKey = pm.collectionVariables.get('apiKey')",
+									"  const getAllUsers = {",
+									"    url: 'https://api.getpostman.com/scim/v2/Users?count=10000',",
+									"    method: 'GET',",
+									"    header: `Authorization:${apiKey}`",
+									"  }",
+									"",
+									"  pm.sendRequest(getAllUsers, \"\")",
+									"} else {",
+									"  setUserToBeDeactivated(\"\")",
+									"}",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
 					"request": {
@@ -745,6 +772,507 @@
 		},
 		{
 			"name": "Deactivate a user Copy 2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const email = pm.iterationData.get('email')",
+							"const users = pm.collectionVariables.get('users')",
+							"",
+							"if (!users) {",
+							"  const apiKey = pm.collectionVariables.get('apiKey')",
+							"  const getAllUsers = {",
+							"    url: 'https://api.getpostman.com/scim/v2/Users?count=10000',",
+							"    method: 'GET',",
+							"    header: `Authorization:${apiKey}`",
+							"  }",
+							"",
+							"  pm.sendRequest(getAllUsers, mapUserList)",
+							"} else {",
+							"  setUserToBeDeactivated(JSON.parse(users))",
+							"}",
+							"",
+							"function mapUserList (err, res) {",
+							"  const userList = res.json().Resources",
+							"  const users = userList.map(user => {",
+							"    return {",
+							"      id: user.id,",
+							"      email: user.emails[0].value",
+							"    }",
+							"  })",
+							"",
+							"  pm.collectionVariables.set('users', JSON.stringify(users))",
+							"  setUserToBeDeactivated(users)",
+							"}",
+							"",
+							"function setUserToBeDeactivated (users) {",
+							"  const userId = users.find(user => user.email === email).id",
+							"  pm.collectionVariables.set('userId', userId)",
+							"}",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.getpostman.com/scim/v2/Users/{{userId}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"scim",
+						"v2",
+						"Users",
+						"{{userId}}"
+					]
+				},
+				"description": "Removes a user from your Postman team and deactivates the account. This blocks the user from authenticating in to Postman."
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/scim/v2/Users/405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:schemas:core:2.0:User\"\n    ],\n    \"id\": \"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99\",\n    \"userName\": \"taylor-lee@example.com\",\n    \"name\": {\n        \"givenName\": \"Taylor\",\n        \"familyName\": \"Lee\"\n    },\n    \"externalId\": \"12345678\",\n    \"active\": false,\n    \"meta\": {\n        \"resourceType\": \"User\",\n        \"created\": \"2021-02-22T04:24:13.000Z\",\n        \"lastModified\": \"2021-02-22T04:24:13.000Z\"\n    }\n}"
+				},
+				{
+					"name": "Bad Request",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{apiKey}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/scim/v2/Users/405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"scimType\": \"invalidSyntax\",\n    \"detail\": \"You’ve used operation that Postman doesn’t support.\",\n    \"status\": \"400\"\n}"
+				},
+				{
+					"name": "Invalid Team",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "invalidApiKey"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/scim/v2/Users/405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Team doesn't exist.\",\n    \"status\": \"400\"\n}"
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "invalidApiKey"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/scim/v2/Users/405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Unable to access the team. Check if you have entered a valid API key.\",\n    \"status\": \"401\"\n}"
+				},
+				{
+					"name": "Forbidden",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{apiKey}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/scim/v2/Users/405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"This person isn’t a member of the team.\",\n    \"status\": \"403\"\n}"
+				},
+				{
+					"name": "Admin Team Mismatch",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{apiKey}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/scim/v2/Users/405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Your API key was generated by a Team Admin who is no longer on your team. Use an API key generated by a Team Admin.\",\n    \"status\": \"403\"\n}"
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{apiKey}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/scim/v2/Users/405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"This person isn’t a member of the team.\",\n    \"status\": \"404\"\n}"
+				},
+				{
+					"name": "Too Many Requests",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{apiKey}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/scim/v2/Users/405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+							]
+						}
+					},
+					"status": "Too Many Requests",
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"That’s 180 attempts in less than a minute. Wait for a minute and then try again.\",\n    \"status\": 429\n}"
+				},
+				{
+					"name": "Internal Server Error",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{apiKey}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ],\n    \"Operations\": [\n        {\n            \"op\": \"replace\",\n            \"value\": {\n                \"active\": false\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.getpostman.com/scim/v2/Users/405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99",
+							"protocol": "https",
+							"host": [
+								"api",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"405775fe15ed41872a8eea4c8aa2b38cda9749812cc55c99"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:Error\"\n    ],\n    \"detail\": \"Couldn’t update this team member’s information. Try again — it should work next time around.\",\n    \"status\": \"500\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Deactivate a user Copy 3",
 			"event": [
 				{
 					"listen": "prerequest",

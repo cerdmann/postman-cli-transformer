@@ -10,3 +10,4 @@ venv
 
 cli_out.txt
 output.json
+junit.xml

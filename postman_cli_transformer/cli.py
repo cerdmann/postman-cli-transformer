@@ -1,35 +1,23 @@
+from datetime import datetime
 import click
 import json
 import sys
 import io
 
-from postman_cli_transformer.decipherer import line_decipherer
-from postman_cli_transformer.parsers import parse_test
-from postman_cli_transformer.parsers import parse_url
-from postman_cli_transformer.unicode_constants import *
+from postman_cli_transformer.junit_transformer import junit_transform
 from postman_cli_transformer.processor import Processor
 
 
 @click.command()
 @click.argument("output", type=click.File("w"), default="-", required=False)
 @click.option(
-    "-uf",
-    "--unicode-out-file",
+    "--junit-out-file",
     required=False,
     type=click.File("w"),
-    help="""file location to output unicode codes of characters from STDIN.
-              Each charachter is represented as (<original character> - <unicode of character>)
-              Line breaks(10) are preserved but not given a representation""",
+    help="File location to output junit xml file from transformed CLI results.",
 )
-# @click.option(
-#     "-t",
-#     "--extract-tags",
-#     required=False,
-#     type=click.BOOL,
-#     help="""undeveloped, but will eventually extract tags from tests descriptions""",
-# )
 @click.version_option()
-def cli(output, unicode_out_file):
+def cli(output, junit_out_file):
     """This script will take as input the STDOUT from
     a Postman CLI collection run and transform the
     output text to a file containing the output data
@@ -45,8 +33,8 @@ def cli(output, unicode_out_file):
         postman-cli-transformer foo.json
 
     \b
-    Output to file foo.json and extract tags from tests:
-        postman-cli-transformer foo.json --extract-tags
+    Output json to file foo.json and output junit xml to file bar.xml :
+        postman-cli-transformer foo.json --junit-out-file bar.xml
 
     """
 
@@ -54,22 +42,13 @@ def cli(output, unicode_out_file):
 
     parsed_stdin = parse(stdin_data)
 
-    if unicode_out_file:
-        process_as_unicode(io.StringIO(stdin_data), unicode_out_file)
+    if junit_out_file:
+        current_time_of_test_run = datetime.now().isoformat()
+
+        results = junit_transform(json.loads(parsed_stdin), current_time_of_test_run)
+        junit_out_file.write(results)
 
     output.write(parsed_stdin)
-    output.flush()
-
-
-def process_as_unicode(file, output):
-    for line in file:
-        for char in line:
-            unicodeInt = ord(char)
-            if unicodeInt != 10:
-                output.write(" (%c - %s) " % (char, unicodeInt))
-            else:
-                output.write(char)
-
     output.flush()
 
 

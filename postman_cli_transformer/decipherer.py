@@ -67,6 +67,10 @@ def line_decipherer(line):
     if re.search(r"^[\s\d][0-9].  Assertion", line):
         return LINE_TYPES.ERROR_LINE
 
+    if len(line.split()) >= 2:
+        if "Error" in line.split()[1]:
+            return LINE_TYPES.ERROR_LINE
+
     if line[:21] == "                     ":
         return LINE_TYPES.ERROR_LINE
 

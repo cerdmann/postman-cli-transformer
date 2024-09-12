@@ -17,6 +17,10 @@ def parse_test(test):
         test_desc = test_result.lstrip(CHECKMARK_ICON).strip()
     else:
         failed_test = test_result.split(".")
+        if len(failed_test) == 1:
+            # Found this funky period when forcing a type error in postman
+            # collection run
+            failed_test = test_result.split("⠄")
         test_status = {
             "result": "FAILED",
             "error_id": failed_test[0],

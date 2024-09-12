@@ -174,10 +174,11 @@ class Processor:
                     )
                     error_parts = line.split()
 
-                    if "AssertionError" in line:
+                    if "Error" in error_parts[1]:
+                        error_type = error_parts[1]
                         self.processing_helper.error_id = error_parts[0].rstrip(".")
                         del error_parts[:2]
-                        self.processing_helper.error_type = "AssertionError"
+                        self.processing_helper.error_type = error_type
 
                     error_description = " ".join(error_parts)
                     self.processing_helper.error_lines.append(error_description)

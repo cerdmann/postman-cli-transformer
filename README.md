@@ -39,6 +39,12 @@ As this is intended to be used as a transformer for the Postman CLI output, usag
 postman collection run 11111111-11111111-1111-1111-1111-111111111111 -e 11111111-11111111-1111-1111-1111-111111111111  | postman-cli-transformer output.json
 ```
 
+To output both JSON and a Junit formatted xml file use:
+
+```bash
+postman collection run 11111111-11111111-1111-1111-1111-111111111111 -e 11111111-11111111-1111-1111-1111-111111111111  | postman-cli-transformer output.json --junit-out-file junit.xml
+```
+
 ## Development
 
 To contribute to this tool, first checkout the code. Then create a new virtual environment:

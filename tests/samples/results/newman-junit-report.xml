@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tesithintsuites name="Craig Private Pinball Map Collection" tests="9" time="1.162">
-  <testsuite name="Regions / Get location and machine counts" id="c0ddfc3e-553d-4bb9-924d-3e67aaad9cfc" timestamp="2024-09-10T02:38:38.463Z" tests="3" failures="0" errors="0" time="0.285">
-    <testcase name="Response status code is 200" time="0.285" classname="RegionsGetLocationAndMachineCounts"/>
-    <testcase name="Response time is less than 500ms" time="0.285" classname="RegionsGetLocationAndMachineCounts"/>
-    <testcase name="Response has the required fields - num_locations and num_lmxes" time="0.285" classname="RegionsGetLocationAndMachineCounts"/>
+<testsuites name="Craig Private Pinball Map Collection" tests="10" time="1.402">
+  <testsuite name="Regions / Get location and machine counts" id="52ea2775-86f5-4c41-95ac-05687a067481" timestamp="2024-09-11T19:09:55.831Z" tests="3" failures="0" errors="0" time="0.264">
+    <testcase name="Response status code is 200" time="0.264" classname="RegionsGetLocationAndMachineCounts"/>
+    <testcase name="Response time is less than 500ms" time="0.264" classname="RegionsGetLocationAndMachineCounts"/>
+    <testcase name="Response has the required fields - num_locations and num_lmxes" time="0.264" classname="RegionsGetLocationAndMachineCounts"/>
   </testsuite>
-  <testsuite name="Regions / Fetch all regions" id="270a5b3c-6799-497e-b3a0-dbc4afaf50a0" timestamp="2024-09-10T02:38:38.463Z" tests="3" failures="0" errors="0" time="0.098">
-    <testcase name="Response status code is 200" time="0.098" classname="RegionsFetchAllRegions"/>
-    <testcase name="Response time is less than 500ms" time="0.098" classname="RegionsFetchAllRegions"/>
-    <testcase name="Validate the response schema for the presence of all required fields" time="0.098" classname="RegionsFetchAllRegions"/>
+  <testsuite name="Regions / Fetch all regions" id="d7a26dbb-6464-4d74-9bcd-e6cbf17b568d" timestamp="2024-09-11T19:09:55.831Z" tests="3" failures="0" errors="0" time="0.116">
+    <testcase name="Response status code is 200" time="0.116" classname="RegionsFetchAllRegions"/>
+    <testcase name="Response time is less than 500ms" time="0.116" classname="RegionsFetchAllRegions"/>
+    <testcase name="Validate the response schema for the presence of all required fields" time="0.116" classname="RegionsFetchAllRegions"/>
   </testsuite>
-  <testsuite name="Regions / Find if name corresponds to a known region" id="a01f070e-d02e-4cc8-8e68-6a735c0e5605" timestamp="2024-09-10T02:38:38.463Z" tests="5" failures="1" errors="0" time="0.085">
-    <testcase name="Response status code is 200" time="0.085" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
-    <testcase name="Response time is w an acceptable range" time="0.085" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
-    <testcase name="Region object structure is as expected" time="0.085" classname="RegionsFindIfNameCorrespondsToAKnownRegion">
+  <testsuite name="Regions / Find if name corresponds to a known region" id="b95ac1b7-d316-419d-a7eb-2b1a7b50f5ed" timestamp="2024-09-11T19:09:55.831Z" tests="5" failures="1" errors="0" time="0.079">
+    <testcase name="Response status code is 200" time="0.079" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Response time is within an acceptable range" time="0.079" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Region object structure is as expected" time="0.079" classname="RegionsFindIfNameCorrespondsToAKnownRegion">
       <failure type="AssertionFailure" message="expected null to be a number">
         <![CDATA[Failed 1 times.]]>
         <![CDATA[Collection JSON ID: c0e8c839-7ec2-4d32-a577-5932b2a72304.]]>
@@ -25,29 +25,29 @@
    at Object.eval sandbox-script.js:3:3).]]>
       </failure>
     </testcase>
-    <testcase name="All required fields in the 'region' object are present and not empty" time="0.085" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
-    <testcase name="Region object has correct data types for fields" time="0.085" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="All required fields in the 'region' object are present and not empty" time="0.079" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Region object has correct data types for fields" time="0.079" classname="RegionsFindIfNameCorrespondsToAKnownRegion"/>
   </testsuite>
-  <testsuite name="Machines / Fetch all machines" id="1bb03005-b22b-4547-91c3-3544ecd8ef2a" timestamp="2024-09-10T02:38:38.463Z" tests="4" failures="0" errors="0" time="0.153">
-    <testcase name="Response status code is 200" time="0.153" classname="MachinesFetchAllMachines"/>
-    <testcase name="Response time is less than 500ms" time="0.153" classname="MachinesFetchAllMachines"/>
-    <testcase name="Response has the required fields" time="0.153" classname="MachinesFetchAllMachines"/>
-    <testcase name="Response content type is application/json" time="0.153" classname="MachinesFetchAllMachines"/>
+  <testsuite name="Machines / Fetch all machines" id="02509f61-a96c-4f61-a7db-3bfc62e9e057" timestamp="2024-09-11T19:09:55.831Z" tests="4" failures="0" errors="0" time="0.181">
+    <testcase name="Response status code is 200" time="0.181" classname="MachinesFetchAllMachines"/>
+    <testcase name="Response time is less than 500ms" time="0.181" classname="MachinesFetchAllMachines"/>
+    <testcase name="Response has the required fields" time="0.181" classname="MachinesFetchAllMachines"/>
+    <testcase name="Response content type is application/json" time="0.181" classname="MachinesFetchAllMachines"/>
   </testsuite>
-  <testsuite name="Repeats / Regions Copy / Get location and machine counts" id="3d7d6007-a653-4a17-89d7-241c4ff9ca38" timestamp="2024-09-10T02:38:38.463Z" tests="3" failures="0" errors="0" time="0.096">
-    <testcase name="Response status code is 200" time="0.096" classname="RepeatsRegionsCopyGetLocationAndMachineCounts"/>
-    <testcase name="Response time is less than 500ms" time="0.096" classname="RepeatsRegionsCopyGetLocationAndMachineCounts"/>
-    <testcase name="Response has the required fields - num_locations and num_lmxes" time="0.096" classname="RepeatsRegionsCopyGetLocationAndMachineCounts"/>
+  <testsuite name="Repeats / Regions Copy / Get location and machine counts" id="75daf0af-3692-439e-a33c-66f67213c3d6" timestamp="2024-09-11T19:09:55.831Z" tests="3" failures="0" errors="0" time="0.098">
+    <testcase name="Response status code is 200" time="0.098" classname="RepeatsRegionsCopyGetLocationAndMachineCounts"/>
+    <testcase name="Response time is less than 500ms" time="0.098" classname="RepeatsRegionsCopyGetLocationAndMachineCounts"/>
+    <testcase name="Response has the required fields - num_locations and num_lmxes" time="0.098" classname="RepeatsRegionsCopyGetLocationAndMachineCounts"/>
   </testsuite>
-  <testsuite name="Repeats / Regions Copy / Fetch all regions" id="fafbad0b-6a1a-4d33-bcf4-4cff5e06d6f7" timestamp="2024-09-10T02:38:38.463Z" tests="3" failures="0" errors="0" time="0.096">
-    <testcase name="Response status code is 200" time="0.096" classname="RepeatsRegionsCopyFetchAllRegions"/>
-    <testcase name="Response time is less than 500ms" time="0.096" classname="RepeatsRegionsCopyFetchAllRegions"/>
-    <testcase name="Validate the response schema for the presence of all required fields" time="0.096" classname="RepeatsRegionsCopyFetchAllRegions"/>
+  <testsuite name="Repeats / Regions Copy / Fetch all regions" id="f2233a81-fe23-4596-a1fe-ecd1744bcffb" timestamp="2024-09-11T19:09:55.831Z" tests="3" failures="0" errors="0" time="0.093">
+    <testcase name="Response status code is 200" time="0.093" classname="RepeatsRegionsCopyFetchAllRegions"/>
+    <testcase name="Response time is less than 500ms" time="0.093" classname="RepeatsRegionsCopyFetchAllRegions"/>
+    <testcase name="Validate the response schema for the presence of all required fields" time="0.093" classname="RepeatsRegionsCopyFetchAllRegions"/>
   </testsuite>
-  <testsuite name="Repeats / Regions Copy / Find if name corresponds to a known region" id="35aff95e-6bf0-4474-89c9-03e9c5ff8cbe" timestamp="2024-09-10T02:38:38.463Z" tests="5" failures="1" errors="0" time="0.081">
-    <testcase name="Response status code is 200" time="0.081" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
-    <testcase name="Response time is within an acceptable range" time="0.081" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
-    <testcase name="Region object structure is as expected" time="0.081" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion">
+  <testsuite name="Repeats / Regions Copy / Find if name corresponds to a known region" id="48cbd365-d22a-4b23-8c76-0d1b020d0483" timestamp="2024-09-11T19:09:55.831Z" tests="5" failures="1" errors="0" time="0.082">
+    <testcase name="Response status code is 200" time="0.082" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Response time is within an acceptable range" time="0.082" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Region object structure is as expected" time="0.082" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion">
       <failure type="AssertionFailure" message="expected null to be a number">
         <![CDATA[Failed 1 times.]]>
         <![CDATA[Collection JSON ID: c0e8c839-7ec2-4d32-a577-5932b2a72304.]]>
@@ -59,12 +59,13 @@
    at Object.eval sandbox-script.js:3:7).]]>
       </failure>
     </testcase>
-    <testcase name="All required fields in the 'region' object are present and not empty" time="0.081" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
-    <testcase name="Region object has correct data types for fields" time="0.081" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="All required fields in the 'region' object are present and not empty" time="0.082" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
+    <testcase name="Region object has correct data types for fields" time="0.082" classname="RepeatsRegionsCopyFindIfNameCorrespondsToAKnownRegion"/>
   </testsuite>
-  <testsuite name="Repeats / Machines Copy / Fetch all machines" id="018f9514-f4c5-4bbf-8386-f77096adb13e" timestamp="2024-09-10T02:38:38.463Z" tests="2" failures="0" errors="0" time="0.150">
-    <testcase name="Response status code is 200" time="0.150" classname="RepeatsMachinesCopyFetchAllMachines"/>
-    <testcase name="Response time is less than 500ms" time="0.150" classname="RepeatsMachinesCopyFetchAllMachines"/>
+  <testsuite name="Repeats / Machines Copy / Fetch all machines" id="e147e0bc-0250-4422-9ebf-37176b244490" timestamp="2024-09-11T19:09:55.831Z" tests="2" failures="0" errors="0" time="0.131">
+    <testcase name="Response status code is 200" time="0.131" classname="RepeatsMachinesCopyFetchAllMachines"/>
+    <testcase name="Response time is less than 500ms" time="0.131" classname="RepeatsMachinesCopyFetchAllMachines"/>
   </testsuite>
-  <testsuite name="Deactivate a user Copy 2" id="0f17ff8d-6b38-401a-bd8b-cf8c203f3d9c" timestamp="2024-09-10T02:38:38.463Z" tests="0" failures="0" errors="0" time="0.059"/>
+  <testsuite name="Deactivate a user Copy 2" id="7b5b5ed7-c569-4702-8cae-e786b22da56c" timestamp="2024-09-11T19:09:55.831Z" tests="0" failures="0" errors="0" time="0.060"/>
+  <testsuite name="Deactivate a user Copy 3" id="a656d06f-3991-41ae-8f74-71987f4a1a9c" timestamp="2024-09-11T19:09:55.831Z" tests="0" failures="0" errors="0" time="0.061"/>
 </testsuites>
