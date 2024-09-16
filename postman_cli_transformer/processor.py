@@ -21,6 +21,7 @@ class Processor:
         # Class property definiing
         self.processing_helper = ProcessingHelper()
         self.parsed = {"collectionName": "", "folders": []}
+        self.errored = False
         self.lines_to_process = lines_to_process
 
         # Get header info out of the way
@@ -167,6 +168,7 @@ class Processor:
                     self.processing_helper.update_current_line_type(
                         LINE_TYPES.ERROR_HEADER_LINE
                     )
+                    self.errored = True
 
                 case LINE_TYPES.ERROR_LINE:
                     self.processing_helper.update_current_line_type(

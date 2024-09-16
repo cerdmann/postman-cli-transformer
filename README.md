@@ -45,6 +45,8 @@ To output both JSON and a Junit formatted xml file use:
 postman collection run 11111111-11111111-1111-1111-1111-111111111111 -e 11111111-11111111-1111-1111-1111-111111111111  | postman-cli-transformer output.json --junit-out-file junit.xml
 ```
 
+Furthermore, the tool will exit with a code of 1 if any of the tests run by the CLI fail. This behavior may be turned off by a flag.
+
 ## Development
 
 To contribute to this tool, first checkout the code. Then create a new virtual environment:

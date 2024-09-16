@@ -9,24 +9,34 @@ from postman_cli_transformer.processor import Processor
 
 
 @click.command()
-@click.argument("output", type=click.File("w"), default="-", required=False)
+@click.argument("output", type=click.File("w"), required=True)
 @click.option(
+    "-junit",
     "--junit-out-file",
     required=False,
     type=click.File("w"),
     help="File location to output junit xml file from transformed CLI results.",
 )
+@click.option(
+    "-bup",
+    "--bubble-up-exit-code",
+    default=True,
+    required=False,
+    type=click.BOOL,
+    help="""Defaults to True. Since this tool is used to transform output results from the Postman CLI,
+     it will exit with an error if the underlying Postman CLI output contains an error. 
+    This will facilitate the failure of the task in a CI/CD pipeline. If you do not want 
+     this behavior and wish the exit code to reflect the exit state of this app, set 
+     this flag to False.""",
+)
 @click.version_option()
-def cli(output, junit_out_file):
+def cli(output, junit_out_file, bubble_up_exit_code):
     """This script will take as input the STDOUT from
     a Postman CLI collection run and transform the
     output text to a file containing the output data
-    organized in a JSON format. This JSON data is then
-    written into a specific file.
-
-    \b
-    Output to stdout:
-        postman-cli-transformer
+    organized in a JSON format. It will also preserve
+    the CLI standard out and send to STDOUT at the end
+    of its execution.
 
     \b
     Output to file foo.json:
@@ -40,7 +50,7 @@ def cli(output, junit_out_file):
 
     stdin_data = sys.stdin.read()
 
-    parsed_stdin = parse(stdin_data)
+    parsed_stdin, errored = parse(stdin_data)
 
     if junit_out_file:
         current_time_of_test_run = datetime.now().isoformat()
@@ -51,6 +61,12 @@ def cli(output, junit_out_file):
     output.write(parsed_stdin)
     output.flush()
 
+    click.echo(stdin_data)
+
+    if bubble_up_exit_code:
+        if errored:
+            raise click.exceptions.Exit(1)
+
 
 def parse(data):
     raw_lines = []
@@ -60,7 +76,8 @@ def parse(data):
 
     processor = Processor(raw_lines)
     results = processor.parsed
+    errored = processor.errored
 
     json_str = json.dumps(results)
 
-    return json_str
+    return json_str, errored

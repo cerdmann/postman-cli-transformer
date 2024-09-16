@@ -37,6 +37,7 @@ Pinball Map Collection
 
     processor = Processor(lines)
     results = processor.parsed
+    errored = processor.errored
 
     expected_results = {
         "collectionName": "Pinball Map Collection",
@@ -48,6 +49,7 @@ Pinball Map Collection
     }
 
     assert json.dumps(results) == json.dumps(expected_results)
+    assert errored is False
 
 
 def test_should_be_able_to_process_urls():
@@ -73,6 +75,7 @@ Pinball Map Collection
 
     processor = Processor(lines)
     results = processor.parsed
+    errored = processor.errored
 
     expected_results = {
         "collectionName": "Pinball Map Collection",
@@ -145,6 +148,7 @@ Pinball Map Collection
     }
 
     assert json.dumps(results) == json.dumps(expected_results)
+    assert errored is False
 
 
 def test_should_be_able_to_process_tests():
@@ -182,6 +186,7 @@ Pinball Map Collection
 
     processor = Processor(lines)
     results = processor.parsed
+    errored = processor.errored
 
     expected_results = {
         "collectionName": "Pinball Map Collection",
@@ -353,6 +358,7 @@ Pinball Map Collection
     }
 
     assert json.dumps(results) == json.dumps(expected_results)
+    assert errored is False
 
 
 def test_should_be_able_to_process_root_level_requests():
@@ -400,6 +406,7 @@ Pinball Map Collection
 
     processor = Processor(lines)
     results = processor.parsed
+    errored = processor.errored
 
     expected_results = {
         "collectionName": "Pinball Map Collection",
@@ -624,6 +631,7 @@ Pinball Map Collection
     }
 
     assert json.dumps(results) == json.dumps(expected_results)
+    assert errored is False
 
 
 def test_should_be_able_to_process_the_summary_table():
@@ -667,6 +675,7 @@ You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37
 
     processor = Processor(lines)
     results = processor.parsed
+    errored = processor.errored
 
     expected_results = {
         "collectionName": "Deactivate User Accounts",
@@ -745,6 +754,7 @@ You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37
     }
 
     assert json.dumps(results) == json.dumps(expected_results)
+    assert errored is False
 
 
 def test_should_be_able_to_process_error_descriptions():
@@ -810,6 +820,7 @@ You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37
 
     processor = Processor(lines)
     results = processor.parsed
+    errored = processor.errored
 
     expected_results = {
         "collectionName": "Pinball Map Collection",
@@ -963,3 +974,4 @@ You can view the run data in Postman at: https://go.postman.co/workspace/71a6b37
     }
 
     assert json.dumps(results) == json.dumps(expected_results)
+    assert errored is True
