@@ -58,7 +58,6 @@ class Processor:
                         error_node = self._search_for_error(
                             self.processing_helper.error_id, self.parsed
                         )
-
                         error_node["details"] = error
 
                         self.processing_helper.error_lines = []

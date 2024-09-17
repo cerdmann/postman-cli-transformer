@@ -42,9 +42,6 @@ def line_decipherer(line):
     if line[:3] == start_of_test_line:
         return LINE_TYPES.TEST_LINE
 
-    if "AssertionError" in line or "TypeError" in line:
-        return LINE_TYPES.ERROR_LINE
-
     # This regex looks at the start of the line for a failed test which could
     # count up to 999 followed by a period. If it is the first failed test it
     # would look like '<space><space>1.' the 100th failed test would look like
@@ -52,6 +49,9 @@ def line_decipherer(line):
     # 0-9 in third followed by a period
     if re.search(r"^[\s\d][\s\d][0-9].", line):
         return LINE_TYPES.TEST_LINE
+
+    if "AssertionError" in line or "TypeError" in line:
+        return LINE_TYPES.ERROR_LINE
 
     if line[0] == ENTER_ICON:
         return LINE_TYPES.REQUEST_LINE
