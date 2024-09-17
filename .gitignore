@@ -11,3 +11,4 @@ venv
 cli_out.txt
 output.json
 junit.xml
+cli-output-cleaned.txt

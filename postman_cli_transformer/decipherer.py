@@ -30,12 +30,20 @@ def line_decipherer(line):
     if line.strip() == "":
         return LINE_TYPES.EMPTY_LINE
 
+    # The following occurs when you set next request in a script. No reason to
+    # keep it
+    if line.strip().startswith("Attempting to set next request to"):
+        return LINE_TYPES.EMPTY_LINE
+
     if line[0] == BOX_ICON:
         return LINE_TYPES.FOLDER_LINE
 
     start_of_test_line = "  " + CHECKMARK_ICON
     if line[:3] == start_of_test_line:
         return LINE_TYPES.TEST_LINE
+
+    if "AssertionError" in line or "TypeError" in line:
+        return LINE_TYPES.ERROR_LINE
 
     # This regex looks at the start of the line for a failed test which could
     # count up to 999 followed by a period. If it is the first failed test it
@@ -54,7 +62,8 @@ def line_decipherer(line):
     if line[0] in TABLE_PARTS_LIST:
         return LINE_TYPES.SUMMARY_LINE
 
-    if line[:12].strip() == "#  failure":
+    stripped_line = "".join(line.split())
+    if "failure" in stripped_line and "detail" in stripped_line:
         return LINE_TYPES.ERROR_HEADER_LINE
 
     # This regex looks at the start of the line for a test error result which

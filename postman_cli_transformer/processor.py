@@ -176,9 +176,14 @@ class Processor:
                     )
                     error_parts = line.split()
 
-                    if "Error" in error_parts[1]:
+                    if (
+                        "AssertionError" in error_parts[1]
+                        or "TypeError" in error_parts[1]
+                    ):
                         error_type = error_parts[1]
-                        self.processing_helper.error_id = error_parts[0].rstrip(".")
+                        self.processing_helper.error_id = (
+                            error_parts[0].rstrip(".").lstrip("0")
+                        )
                         del error_parts[:2]
                         self.processing_helper.error_type = error_type
 
