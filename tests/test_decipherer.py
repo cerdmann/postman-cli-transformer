@@ -23,6 +23,20 @@ def test_identification_of_failed_test_line():
     assert result == LINE_TYPES.TEST_LINE
 
 
+def test_identification_of_another_failed_test_line():
+    test_line = "  1. POST - /api/products - Has all required fields - SUCCESS: true - Has expected status code"
+    result = line_decipherer(test_line)
+
+    assert result == LINE_TYPES.TEST_LINE
+
+
+def test_identification_of_type_error_failed_test_line():
+    test_line = "  1⠄ TypeError in test-script"
+    result = line_decipherer(test_line)
+
+    assert result == LINE_TYPES.TEST_LINE
+
+
 def test_identification_of_a_request_line():
     request_line = "↳ Fetch all regions\n"
     result = line_decipherer(request_line)
@@ -148,8 +162,31 @@ def test_identification_of_error_header():
     assert result == LINE_TYPES.ERROR_HEADER_LINE
 
 
+def test_identification_of_alternate_error_header():
+    table_line = "[31m   # [39m[31m failure        [39m[31m detail                                                                                                [39m\n"
+    result = line_decipherer(table_line)
+
+    assert result == LINE_TYPES.ERROR_HEADER_LINE
+
+
 def test_identification_of_start_of_error():
     table_line = " 1.  AssertionError  Region object structure is as expected\n"
+    result = line_decipherer(table_line)
+
+    assert result == LINE_TYPES.ERROR_LINE
+
+
+def test_identification_of_type_error_start_of_error():
+    table_line = (
+        " 1.  TypeError                                pm.nothing is not a function\n"
+    )
+    result = line_decipherer(table_line)
+
+    assert result == LINE_TYPES.ERROR_LINE
+
+
+def test_identification_of_another_start_of_error():
+    table_line = " 01.  AssertionError  POST - /api/products - Has all required fields - SUCCESS: true - Has expected status code\n"
     result = line_decipherer(table_line)
 
     assert result == LINE_TYPES.ERROR_LINE

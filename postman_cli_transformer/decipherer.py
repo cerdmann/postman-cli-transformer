@@ -38,6 +38,14 @@ def line_decipherer(line):
     if line[0] == BOX_ICON:
         return LINE_TYPES.FOLDER_LINE
 
+    split_line = line.split()
+    if len(split_line) >= 2:
+        if split_line[1] == "AssertionError":
+            return LINE_TYPES.ERROR_LINE
+
+        if split_line[1] == "TypeError" and len(split_line) > 4:
+            return LINE_TYPES.ERROR_LINE
+
     start_of_test_line = "  " + CHECKMARK_ICON
     if line[:3] == start_of_test_line:
         return LINE_TYPES.TEST_LINE
@@ -49,9 +57,6 @@ def line_decipherer(line):
     # 0-9 in third followed by a period
     if re.search(r"^[\s\d][\s\d][0-9].", line):
         return LINE_TYPES.TEST_LINE
-
-    if "AssertionError" in line or "TypeError" in line:
-        return LINE_TYPES.ERROR_LINE
 
     if line[0] == ENTER_ICON:
         return LINE_TYPES.REQUEST_LINE

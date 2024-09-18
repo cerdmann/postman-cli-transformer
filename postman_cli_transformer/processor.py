@@ -174,7 +174,6 @@ class Processor:
                         LINE_TYPES.ERROR_LINE
                     )
                     error_parts = line.split()
-
                     if (
                         "AssertionError" in error_parts[1]
                         or "TypeError" in error_parts[1]
